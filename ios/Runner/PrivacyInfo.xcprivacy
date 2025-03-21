@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+    <!-- NSPrivacyCollectedDataTypes -->
+    <key>NSPrivacyCollectedDataTypes</key>
+    <array>
+        <!-- connectivity_plus -->
+        <dict>
+            <key>NSPrivacyCollectedDataType</key>
+            <string>Network Information</string>
+            <key>NSPrivacyDataUsageDescription</key>
+            <string>Used to check network connectivity status.</string>
+            <key>NSPrivacyCollectedDataTypeTracking</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypeLinked</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypePurposes</key>
+            <array>
+            <string>App Functionality</string>
+            </array>
+
+        </dict>
+
+        <!-- flutter_inappwebview -->
+        <dict>
+            <key>NSPrivacyCollectedDataType</key>
+            <string>Browsing History</string>
+            <key>NSPrivacyDataUsageDescription</key>
+            <string>Used to display and interact with web content.</string>
+            <key>NSPrivacyCollectedDataTypeTracking</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypeLinked</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypePurposes</key>
+                        <array>
+                        <string>App Functionality</string>
+                        </array>
+
+        </dict>
+
+        <!-- flutter_local_notifications -->
+        <dict>
+            <key>NSPrivacyCollectedDataType</key>
+            <string>Device Identifiers</string>
+            <key>NSPrivacyDataUsageDescription</key>
+            <string>Used for scheduling and managing local notifications.</string>
+            <key>NSPrivacyCollectedDataTypeTracking</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypeLinked</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypePurposes</key>
+                        <array>
+                        <string>App Functionality</string>
+                        </array>
+
+        </dict>
+
+        <!-- image_picker_ios -->
+        <dict>
+            <key>NSPrivacyCollectedDataType</key>
+            <string>Photos</string>
+            <key>NSPrivacyDataUsageDescription</key>
+            <string>Used to select images from the photo library.</string>
+            <key>NSPrivacyCollectedDataTypeTracking</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypeLinked</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypePurposes</key>
+                        <array>
+                        <string>Personalization</string>
+                        </array>
+
+        </dict>
+
+        <!-- package_info_plus -->
+        <dict>
+            <key>NSPrivacyCollectedDataType</key>
+            <string>App Usage Data</string>
+            <key>NSPrivacyDataUsageDescription</key>
+            <string>Used to retrieve app version and package information.</string>
+            <key>NSPrivacyCollectedDataTypeTracking</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypeLinked</key>
+             <false/>
+             <key>NSPrivacyCollectedDataTypePurposes</key>
+                         <array>
+                         <string>App Functionality</string>
+                         </array>
+
+        </dict>
+
+        <!-- share_plus -->
+        <dict>
+            <key>NSPrivacyCollectedDataType</key>
+            <string>Shared Content</string>
+            <key>NSPrivacyDataUsageDescription</key>
+            <string>Used to share content with other apps.</string>
+            <key>NSPrivacyCollectedDataTypeTracking</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypeLinked</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypePurposes</key>
+                        <array>
+                        <string>App Functionality</string>
+                        </array>
+
+        </dict>
+
+        <!-- sqflite -->
+        <dict>
+            <key>NSPrivacyCollectedDataType</key>
+            <string>Local Storage</string>
+            <key>NSPrivacyDataUsageDescription</key>
+            <string>Used for local database storage.</string>
+            <key>NSPrivacyCollectedDataTypeTracking</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypeLinked</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypePurposes</key>
+                        <array>
+                        <string>App Functionality</string>
+                        </array>
+
+        </dict>
+    </array>
+
+    <!--  NSPrivacyAccessedAPITypes -->
+    <key>NSPrivacyAccessedAPITypes</key>
+    <array>
+        <!-- Flutter SDK -->
+        <dict>
+            <key>NSPrivacyAccessedAPIType</key>
+            <string>Networking</string>
+            <key>NSPrivacyAccessedAPITypesReason</key>
+            <string>Used for internet connectivity and web requests.</string>
+        </dict>
+
+        <!-- connectivity_plus -->
+        <dict>
+            <key>NSPrivacyAccessedAPIType</key>
+            <string>Networking</string>
+            <key>NSPrivacyAccessedAPITypesReason</key>
+            <string>Used to check and manage network connectivity status.</string>
+        </dict>
+
+        <!-- flutter_inappwebview -->
+        <dict>
+            <key>NSPrivacyAccessedAPIType</key>
+            <string>WebBrowsing</string>
+            <key>NSPrivacyAccessedAPITypesReason</key>
+            <string>Used to display and interact with web content inside the app.</string>
+        </dict>
+
+        <!-- flutter_local_notifications -->
+        <dict>
+            <key>NSPrivacyAccessedAPIType</key>
+            <string>Notifications</string>
+            <key>NSPrivacyAccessedAPITypesReason</key>
+            <string>Used for scheduling and displaying local notifications.</string>
+        </dict>
+
+        <!-- image_picker_ios -->
+        <dict>
+            <key>NSPrivacyAccessedAPIType</key>
+            <string>PhotoLibrary</string>
+            <key>NSPrivacyAccessedAPITypesReason</key>
+            <string>Used to pick images from the user’s photo library.</string>
+        </dict>
+        <dict>
+            <key>NSPrivacyAccessedAPIType</key>
+            <string>Camera</string>
+            <key>NSPrivacyAccessedAPITypesReason</key>
+            <string>Used to capture photos using the device’s camera.</string>
+        </dict>
+
+        <!-- package_info_plus -->
+        <dict>
+            <key>NSPrivacyAccessedAPIType</key>
+            <string>Identifiers</string>
+            <key>NSPrivacyAccessedAPITypesReason</key>
+            <string>Used to retrieve app version and package information.</string>
+        </dict>
+
+        <!-- share_plus -->
+        <dict>
+            <key>NSPrivacyAccessedAPIType</key>
+            <string>Social</string>
+            <key>NSPrivacyAccessedAPITypesReason</key>
+            <string>Used for sharing content via other apps.</string>
+        </dict>
+
+        <!-- sqflite -->
+        <dict>
+            <key>NSPrivacyAccessedAPIType</key>
+            <string>FileSystem</string>
+            <key>NSPrivacyAccessedAPITypesReason</key>
+            <string>Used for local database storage.</string>
+        </dict>
+    </array>
+</dict>
+</plist>
