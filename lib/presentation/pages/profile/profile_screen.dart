@@ -1,10 +1,10 @@
-import 'package:dip_menu/presentation/logic/controller/profile_controller.dart';
-import 'package:dip_menu/presentation/pages/profile/widget/profile_list_card_screen.dart';
-import 'package:dip_menu/presentation/pages/profile/widget/profile_picture.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/profile_controller.dart';
+import 'package:dipmenu_ios/presentation/pages/profile/widget/profile_list_card_screen.dart';
+import 'package:dipmenu_ios/presentation/pages/profile/widget/profile_picture.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 class ProfileScreen extends StatefulWidget {
@@ -195,7 +195,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                 : Colors.black45,
                                             size: 15.w)),
                                     Text(NameValues.withoutLogin.tr,
-                                        style: context.theme.textTheme.headline4
+                                        style: context.theme.textTheme.headlineLarge
                                             ?.copyWith(
                                                 color: Colors.red,
                                                 fontWeight: FontWeight.w700))
@@ -271,7 +271,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           fit: BoxFit.fill,
           child: Icon(Icons.dark_mode, color: color, size: 16.sp)),
       title: Text('Dark Theme',
-          style: context.theme.textTheme.headline4!
+          style: context.theme.textTheme.headlineLarge!
               .copyWith(color: color, fontWeight: FontWeight.w400)),
       trailing: GetBuilder<ProfileController>(builder: (controller) {
         return Switch(

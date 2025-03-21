@@ -1,4 +1,4 @@
-import 'package:dip_menu/presentation/logic/controller/favourite_controller.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/favourite_controller.dart';
 import 'package:get/get.dart';
 
 import '../controller/connection_manager_controller.dart';

@@ -1,12 +1,12 @@
-import 'package:dip_menu/presentation/pages/sub_category/widget/sub_category_list.dart';
-import 'package:dip_menu/presentation/routes/routes.dart';
+import 'package:dipmenu_ios/presentation/pages/sub_category/widget/sub_category_list.dart';
+import 'package:dipmenu_ios/presentation/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../extra/common_widgets/empty_widget.dart';
 import '../../../logic/controller/dim_menu_search_controller.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 class SearchCard extends StatelessWidget {

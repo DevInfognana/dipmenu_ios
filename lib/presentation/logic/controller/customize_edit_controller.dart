@@ -1,5 +1,5 @@
-import 'package:dip_menu/data/model/product_preview/custom_menu_data.dart';
-import 'package:dip_menu/data/model/product_preview/item_size_data.dart';
+import 'package:dipmenu_ios/data/model/product_preview/custom_menu_data.dart';
+import 'package:dipmenu_ios/data/model/product_preview/item_size_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import '../../../data/model/price.dart';
@@ -9,7 +9,7 @@ import '../../../domain/reporties/auth_api.dart';
 import '../../../domain/reporties/product_preview.dart';
 import '../../../extra/common_widgets/common_product_page_widgets.dart';
 import '../../../extra/common_widgets/discount_operations.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 
 class CustomizeEditController extends GetxController with StateMixin {
   dynamic argumentData = Get.arguments;

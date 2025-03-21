@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:dip_menu/presentation/logic/controller/payment_detail_controller.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/payment_detail_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
@@ -15,7 +15,7 @@ import '../../../data/model/payment_model.dart';
 import '../../../data/model/payment_response.dart';
 import '../../../domain/entities/dio_exception.dart';
 import '../../../domain/reporties/payment_api.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 
 
 class PaymentController extends GetxController with StateMixin {
@@ -81,8 +81,8 @@ class PaymentController extends GetxController with StateMixin {
             'Content-Type': 'application/json',
             'x-access-token': SharedPrefs.instance.getString('token'),
           },
-          sendTimeout: 120 * 1000,
-          receiveTimeout: 120 * 1000,
+          sendTimeout: Duration(seconds: 120), //sendTimeout: 120 * 1000,
+          receiveTimeout: Duration(seconds: 120), //receiveTimeout: 120 * 1000,
         ),
       );
       if (response.statusCode == 200 || response.statusCode == 201) {
@@ -322,7 +322,7 @@ confirmOrderAlertDialog(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children:  [
                         Text("Thanks for Order",
-                            style: TextStore.textTheme.headline4!
+                            style: TextStore.textTheme.headlineLarge!
                                 .copyWith(color: Colors.green,fontWeight: FontWeight.bold)),
                       ],
                     ),
@@ -332,7 +332,7 @@ confirmOrderAlertDialog(
                     child: Text(
                       'Your payment has been confirmed.\n You can check the details.',
                       textAlign: TextAlign.center,
-                      style: TextStore.textTheme.headline6!
+                      style: TextStore.textTheme.headlineSmall!
                           .copyWith(color: Colors.black),
                     ),
                   ),
@@ -342,10 +342,10 @@ confirmOrderAlertDialog(
                       crossAxisAlignment: WrapCrossAlignment.center,
                       children: [
                         Text('Order Id',
-                            style: TextStore.textTheme.headline5!.copyWith(
+                            style: TextStore.textTheme.headlineMedium!.copyWith(
                                 color: Colors.black, fontWeight: FontWeight.bold)),
                         Text("  #$orderId",
-                            style: TextStore.textTheme.headline5!.copyWith(
+                            style: TextStore.textTheme.headlineMedium!.copyWith(
                                 color: Colors.black, fontWeight: FontWeight.bold))
                       ],
                     ),
@@ -353,7 +353,7 @@ confirmOrderAlertDialog(
                   SizedBox(height: 0.9.h),
                   TextScaleFactorClamper(
                     child: Text("Please make ensure your order",
-                        style: TextStore.textTheme.headline6!
+                        style: TextStore.textTheme.headlineSmall!
                             .copyWith(color: Colors.black)),
                   ),
                   TextScaleFactorClamper(
@@ -361,7 +361,7 @@ confirmOrderAlertDialog(
                       style: ElevatedButton.styleFrom(
                           backgroundColor: darkSeafoamGreen1,
                           fixedSize:  Size(30.w, 4.h),
-                          textStyle: TextStore.textTheme.headline5!
+                          textStyle: TextStore.textTheme.headlineMedium!
                               .copyWith(color: Colors.white),
                           elevation: 6),
                       onPressed: () {
@@ -372,7 +372,7 @@ confirmOrderAlertDialog(
                   ),
                   // TextScaleFactorClamper(
                   //   child: Text("Once your order arrive",
-                  //       style: TextStore.textTheme.headline6!
+                  //       style: TextStore.textTheme.headlineSmall!
                   //           .copyWith(color: Colors.black)),
                   // ),
 
@@ -398,7 +398,7 @@ confirmOrderAlertDialog(
                             child: TextScaleFactorClamper(
                               child: Text(
                                 'Back to Home',
-                                  style: TextStore.textTheme.headline5!
+                                  style: TextStore.textTheme.headlineMedium!
                                       .copyWith(color: Colors.white)
                                 // style: TextStyle(fontSize: 18, color: Colors.white),
                               ),
@@ -520,7 +520,7 @@ failedPayment(BuildContext context, String? errormessage, int values) {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(errormessage!,
-                              style: TextStore.textTheme.headline6!.copyWith(
+                              style: TextStore.textTheme.headlineSmall!.copyWith(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold)),
                         ],
@@ -530,7 +530,7 @@ failedPayment(BuildContext context, String? errormessage, int values) {
                           Expanded(
                               child: Text(
                                   '${errormessage!} \n${'Mobile Number : (662) 429-6540'} \n${'Email ID : velvetcream@gmail.com'}',
-                                  style: TextStore.textTheme.headline6!.copyWith(
+                                  style: TextStore.textTheme.headlineSmall!.copyWith(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold)))
                         ],

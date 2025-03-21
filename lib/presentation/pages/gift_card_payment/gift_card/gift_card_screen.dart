@@ -1,9 +1,9 @@
-import 'package:dip_menu/core/config/theme.dart';
-import 'package:dip_menu/core/static/stactic_values.dart';
-import 'package:dip_menu/extra/common_widgets/back_button.dart';
-// import 'package:dip_menu/extra/common_widgets/text_form_field_2.dart';
-import 'package:dip_menu/extra/common_widgets/text_scalar_factor.dart';
-import 'package:dip_menu/presentation/logic/controller/gift_card_controller.dart';
+import 'package:dipmenu_ios/core/config/theme.dart';
+import 'package:dipmenu_ios/core/static/stactic_values.dart';
+import 'package:dipmenu_ios/extra/common_widgets/back_button.dart';
+// import 'package:dipmenu_ios/extra/common_widgets/text_form_field_2.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_scalar_factor.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/gift_card_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -142,7 +142,7 @@ class _GiftCardScreenState extends State<GiftCardScreen>
                                   ),
                                   Text('Buy Gift Card',
                                       textAlign: TextAlign.center,
-                                      style: TextStore.textTheme.headline3!
+                                      style: TextStore.textTheme.displaySmall!
                                           .copyWith(
                                               color: descriptionColor,
                                               fontWeight: FontWeight.w300)),
@@ -175,7 +175,7 @@ class _GiftCardScreenState extends State<GiftCardScreen>
                                   AuthTextFromField(
                                     readOnly: false,
                                     labelStyle: context
-                                        .theme.textTheme.headline4!
+                                        .theme.textTheme.headlineLarge!
                                         .copyWith(
                                             color: hintColor,
                                             fontWeight: FontWeight.w500),
@@ -211,7 +211,7 @@ class _GiftCardScreenState extends State<GiftCardScreen>
                                     controller:
                                         giftCardController.messageController,
                                     labelStyle: context
-                                        .theme.textTheme.headline4!
+                                        .theme.textTheme.headlineLarge!
                                         .copyWith(
                                         color: hintColor,
                                         fontWeight: FontWeight.w500),
@@ -266,7 +266,7 @@ class _GiftCardScreenState extends State<GiftCardScreen>
                                           child: Text(
                                             NameValues.proceedToPay,
                                             style: TextStore
-                                                .textTheme.headline4!
+                                                .textTheme.headlineLarge!
                                                 .copyWith(color: Colors.white),
                                           )),
                                     ),
@@ -303,7 +303,7 @@ class _GiftCardScreenState extends State<GiftCardScreen>
                                               Text('Redeem Code',
                                                   textAlign: TextAlign.center,
                                                   style: TextStore
-                                                      .textTheme.headline3!
+                                                      .textTheme.displaySmall!
                                                       .copyWith(
                                                           color:
                                                               descriptionColor,
@@ -315,7 +315,7 @@ class _GiftCardScreenState extends State<GiftCardScreen>
                                                 controller: giftCardController
                                                     .couponCodeController,
                                                 labelStyle: context
-                                                    .theme.textTheme.headline4!
+                                                    .theme.textTheme.headlineLarge!
                                                     .copyWith(
                                                     color: hintColor,
                                                     fontWeight: FontWeight.w500),
@@ -398,7 +398,7 @@ class _GiftCardScreenState extends State<GiftCardScreen>
                                                         'Redeem',
                                                         style: TextStore
                                                             .textTheme
-                                                            .headline4!
+                                                            .headlineLarge!
                                                             .copyWith(
                                                                 color: Colors
                                                                     .white),
@@ -422,7 +422,7 @@ class _GiftCardScreenState extends State<GiftCardScreen>
                                 children: [
                                   Text('Topup Wallet',
                                       textAlign: TextAlign.center,
-                                      style: TextStore.textTheme.headline3!
+                                      style: TextStore.textTheme.displaySmall!
                                           .copyWith(
                                               color: descriptionColor,
                                               fontWeight: FontWeight.w300)),
@@ -430,7 +430,7 @@ class _GiftCardScreenState extends State<GiftCardScreen>
                                   AuthTextFromField(
                                     readOnly: true,
                                     labelStyle: context
-                                        .theme.textTheme.headline4!
+                                        .theme.textTheme.headlineLarge!
                                         .copyWith(
                                         color: hintColor,
                                         fontWeight: FontWeight.w500),
@@ -458,7 +458,7 @@ class _GiftCardScreenState extends State<GiftCardScreen>
                                     controller:
                                         giftCardController.amountController1,
                                     labelStyle: context
-                                        .theme.textTheme.headline4!
+                                        .theme.textTheme.headlineLarge!
                                         .copyWith(
                                         color: hintColor,
                                         fontWeight: FontWeight.w500),
@@ -529,7 +529,7 @@ class _GiftCardScreenState extends State<GiftCardScreen>
                                           child: Text(
                                             NameValues.proceedToPay,
                                             style: TextStore
-                                                .textTheme.headline4!
+                                                .textTheme.headlineLarge!
                                                 .copyWith(color: Colors.white),
                                           )),
                                     ),
@@ -657,7 +657,7 @@ class _GiftCardScreenState extends State<GiftCardScreen>
                               ),
                               Text('Buy Gift Card',
                                   textAlign: TextAlign.center,
-                                  style: TextStore.textTheme.headline3!
+                                  style: TextStore.textTheme.displaySmall!
                                       .copyWith(
                                           color: descriptionColor,
                                           fontWeight: FontWeight.w300)),
@@ -745,7 +745,7 @@ class _GiftCardScreenState extends State<GiftCardScreen>
                                         padding: EdgeInsets.symmetric(
                                             vertical: 2.h, horizontal: 24.w)),
                                     child: Text(NameValues.proceedToPay,
-                                        style: TextStore.textTheme.headline3!
+                                        style: TextStore.textTheme.displaySmall!
                                             .copyWith(color: Colors.white))
                                     ),
                               ),
@@ -765,7 +765,7 @@ class _GiftCardScreenState extends State<GiftCardScreen>
                             children: [
                               Text('Redeem Code',
                                   textAlign: TextAlign.center,
-                                  style: TextStore.textTheme.headline3!
+                                  style: TextStore.textTheme.displaySmall!
                                       .copyWith(
                                           color: descriptionColor,
                                           fontWeight: FontWeight.w300)),
@@ -820,7 +820,7 @@ class _GiftCardScreenState extends State<GiftCardScreen>
                                         padding: EdgeInsets.symmetric(
                                             vertical: 2.h, horizontal: 30.w)),
                                     child: Text(
-                                      'Redeem',style: TextStore.textTheme.headline3!
+                                      'Redeem',style: TextStore.textTheme.displaySmall!
                                         .copyWith(color: Colors.white),
                                     )),
                               ),
@@ -912,7 +912,7 @@ class _GiftCardScreenState extends State<GiftCardScreen>
                                         padding: EdgeInsets.symmetric(
                                             vertical: 2.h, horizontal: 24.w)),
                                     child: Text(NameValues.proceedToPay,
-                                        style: TextStore.textTheme.headline3!
+                                        style: TextStore.textTheme.displaySmall!
                                             .copyWith(color: Colors.white))),
                               ),
                             ],

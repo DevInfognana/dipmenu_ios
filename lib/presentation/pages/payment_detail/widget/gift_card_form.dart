@@ -92,7 +92,7 @@
 //                             vertical: 1.h, horizontal: 2.w)),
 //                     child: Text(
 //                       NameValues.apply,
-//                       style: TextStore.textTheme.headline6!
+//                       style: TextStore.textTheme.headlineSmall!
 //                           .copyWith(color: Colors.white),
 //                     ))
 //                 : ElevatedButton(
@@ -106,7 +106,7 @@
 //                             vertical: 1.h, horizontal: 2.w)),
 //                     child: Text(
 //                       NameValues.remove,
-//                       style: TextStore.textTheme.headline6!
+//                       style: TextStore.textTheme.headlineSmall!
 //                           .copyWith(color: Colors.white),
 //                     )),
 //           )

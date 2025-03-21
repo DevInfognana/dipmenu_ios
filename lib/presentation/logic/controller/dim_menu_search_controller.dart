@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import '../../../data/model/search/search_data_model.dart';
 import '../../../domain/reporties/search_api.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 
 class DipMenuSearchController extends GetxController {
 

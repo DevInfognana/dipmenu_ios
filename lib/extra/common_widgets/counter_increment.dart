@@ -83,7 +83,7 @@ Widget addButton(
               borderRadius: BorderRadius.circular(3), color: Colors.white),
           child: Center(
             child: Text('$quanity',
-                style: TextStore.textTheme.headline3!.copyWith(
+                style: TextStore.textTheme.displaySmall!.copyWith(
                     color: Colors.white, fontWeight: FontWeight.bold)),
           )),
       InkWell(

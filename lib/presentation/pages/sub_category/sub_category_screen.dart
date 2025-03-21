@@ -1,6 +1,6 @@
-import 'package:dip_menu/presentation/pages/sub_category/widget/sub_category_list.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
-import 'package:dip_menu/presentation/pages/sub_category/widget/sub_category_topcard.dart';
+import 'package:dipmenu_ios/presentation/pages/sub_category/widget/sub_category_list.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/sub_category/widget/sub_category_topcard.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../extra/common_widgets/bottom_navigation.dart';

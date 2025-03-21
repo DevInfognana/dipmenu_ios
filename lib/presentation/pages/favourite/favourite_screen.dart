@@ -1,12 +1,12 @@
-// import 'package:dip_menu/core/config/theme.dart';
-import 'package:dip_menu/presentation/pages/favourite/widget/cart_widget.dart';
+// import 'package:dipmenu_ios/core/config/theme.dart';
+import 'package:dipmenu_ios/presentation/pages/favourite/widget/cart_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../extra/common_widgets/empty_widget.dart';
 import '../../logic/controller/favourite_controller.dart';
 
 import 'package:lottie/lottie.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 class FavouriteScreen extends StatefulWidget {
@@ -59,7 +59,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> with SingleTickerProv
                               SizedBox(height: 5.h),
                               Text(NameValues.nothingFavourite,
                                   textAlign: TextAlign.center,
-                                  style: context.theme.textTheme.headline3!.copyWith(
+                                  style: context.theme.textTheme.displaySmall!.copyWith(
                                       color: Colors.grey,
                                       fontWeight: FontWeight.w600))
                             ],

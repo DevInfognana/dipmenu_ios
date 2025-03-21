@@ -1,8 +1,8 @@
-import 'package:dip_menu/extra/common_widgets/text_form_field_2.dart';
-import 'package:dip_menu/presentation/logic/controller/authentication_controller.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_form_field_2.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/authentication_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 class ForgotPasswordScreen extends StatelessWidget {
@@ -84,10 +84,10 @@ class ForgotPasswordScreen extends StatelessWidget {
                           Text(NameValues.forgotPassword.tr,
                               textAlign: TextAlign.center,
                               style:  context
-                                  .theme.textTheme.headline2
+                                  .theme.textTheme.displayMedium
                                   ?.copyWith(
                                   fontWeight: FontWeight.bold),
-                              // style: context.theme.textTheme.headline2!.copyWith(
+                              // style: context.theme.textTheme.displayMedium!.copyWith(
                               //     color: Colors.black,
                               //     fontWeight: FontWeight.bold)
                           ),

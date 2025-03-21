@@ -17,7 +17,7 @@ emptyWidget(String? title) {
           height: 50.h, width: 12.w, reverse: true, fit: BoxFit.fill),
       Text(title!,
           textAlign: TextAlign.center,
-          style: TextStore.textTheme.headline3!
+          style: TextStore.textTheme.displaySmall!
               .copyWith(color: Colors.grey, fontWeight: FontWeight.w600))
     ],
   );

@@ -1,4 +1,4 @@
-import 'package:dip_menu/extra/common_widgets/text_scalar_factor.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_scalar_factor.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 

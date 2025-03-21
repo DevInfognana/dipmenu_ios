@@ -1,7 +1,7 @@
-import 'package:dip_menu/extra/common_widgets/counter_increment.dart';
-import 'package:dip_menu/extra/common_widgets/description_text.dart';
-import 'package:dip_menu/presentation/pages/product_preview/widget/merch_category.dart';
-import 'package:dip_menu/presentation/pages/rewards_product_preview/customize_screen/widget/dropdown.dart';
+import 'package:dipmenu_ios/extra/common_widgets/counter_increment.dart';
+import 'package:dipmenu_ios/extra/common_widgets/description_text.dart';
+import 'package:dipmenu_ios/presentation/pages/product_preview/widget/merch_category.dart';
+import 'package:dipmenu_ios/presentation/pages/rewards_product_preview/customize_screen/widget/dropdown.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -75,7 +75,7 @@ class _MerchCategoryState extends State<CustomizeRewardMerchCategory> {
     return Flexible(
       child: Text(widget.rewardsCustomizeEditController?.argumentData['name'],
           overflow: TextOverflow.clip,
-          style: TextStore.textTheme.headline3!.copyWith(
+          style: TextStore.textTheme.displaySmall!.copyWith(
               fontWeight: FontWeight.bold,
               color: Get.isDarkMode ? Colors.white : Colors.black)),
     );
@@ -86,7 +86,7 @@ class _MerchCategoryState extends State<CustomizeRewardMerchCategory> {
     return GetBuilder<RewardsCustomizeEditController>(builder: (_) {
       return Text(
           '${widget.rewardsCustomizeEditController?.priceCalculation1(widget.rewardsCustomizeEditController!.productQuality.toInt(), widget.rewardsCustomizeEditController!.totalPrice)} pts',
-          style: TextStore.textTheme.headline3?.copyWith(color: mainColor));
+          style: TextStore.textTheme.displaySmall?.copyWith(color: mainColor));
     });
   }
   // Widget priceContent() {
@@ -103,7 +103,7 @@ class _MerchCategoryState extends State<CustomizeRewardMerchCategory> {
   //                 : 0.h),
   //         child: Text(
   //             '\$ ${numberFormat.format(widget.productPreviewController?.slashedPrice)}',
-  //             style: TextStore.textTheme.headline3?.copyWith(
+  //             style: TextStore.textTheme.displaySmall?.copyWith(
   //                 decoration: TextDecoration.lineThrough,
   //                 fontWeight: FontWeight.w300,
   //                 color: mainColor)));
@@ -122,11 +122,11 @@ class _MerchCategoryState extends State<CustomizeRewardMerchCategory> {
   //       child: widget.productPreviewController!.totalPrice == 0.0
   //           ? Text(
   //           '\$ ${numberFormat.format(widget.productPreviewController!.priceCalculation1(1, double.parse(widget.productPreviewController!.totalPrice.toStringAsFixed(2))))}',
-  //           style: TextStore.textTheme.headline3?.copyWith(
+  //           style: TextStore.textTheme.displaySmall?.copyWith(
   //               fontWeight: FontWeight.w900, color: Colors.green))
   //           : Text(
   //           '\$ ${numberFormat.format(double.parse(widget.productPreviewController!.totalPrice.toStringAsFixed(2)))}',
-  //           style: TextStore.textTheme.headline3?.copyWith(
+  //           style: TextStore.textTheme.displaySmall?.copyWith(
   //               fontWeight: FontWeight.w900, color: Colors.green)),
   //     );
   //   });
@@ -176,7 +176,7 @@ class _MerchCategoryState extends State<CustomizeRewardMerchCategory> {
                 widget.rewardsCustomizeEditController!.decreaseCount();
               },
               label: Text(widget.rewardsCustomizeEditController!.productQuality.toString(),
-                  style: TextStore.textTheme.headline3?.copyWith(
+                  style: TextStore.textTheme.displaySmall?.copyWith(
                       color: Get.isDarkMode ? Colors.white : borderColor,
                       fontWeight: FontWeight.bold))));
     });
@@ -190,7 +190,7 @@ class _MerchCategoryState extends State<CustomizeRewardMerchCategory> {
           ? (widget.rewardsCustomizeEditController!.productDescription!.length < 64
           ? Text(widget.rewardsCustomizeEditController!.productDescription!,
           textAlign: TextAlign.left,
-          style: TextStore.textTheme.headline5!.copyWith(
+          style: TextStore.textTheme.headlineMedium!.copyWith(
               fontSize: 11.sp,
               color: Get.isDarkMode ? Colors.white : borderColor))
           : ExpandableText(
@@ -198,7 +198,7 @@ class _MerchCategoryState extends State<CustomizeRewardMerchCategory> {
           trimLines: 2))
           : Text(widget.rewardsCustomizeEditController!.productDescription!,
           textAlign: TextAlign.left,
-          style: TextStore.textTheme.headline5!.copyWith(
+          style: TextStore.textTheme.headlineMedium!.copyWith(
               fontSize: 11.sp,
               color: Get.isDarkMode ? Colors.white : borderColor)));
     });
@@ -210,7 +210,7 @@ class _MerchCategoryState extends State<CustomizeRewardMerchCategory> {
   //       crossAxisAlignment: WrapCrossAlignment.center,
   //       children: [
   //         // Text('Total Price',
-  //         //     style: TextStore.textTheme.headline4?.copyWith(
+  //         //     style: TextStore.textTheme.headlineLarge?.copyWith(
   //         //         color: Get.isDarkMode ? Colors.white : Colors.black,
   //         //         fontWeight: FontWeight.bold)),
   //         GetBuilder<ProductPreviewController>(builder: (_) {
@@ -220,7 +220,7 @@ class _MerchCategoryState extends State<CustomizeRewardMerchCategory> {
   //               widget.productPreviewController!.totalPrice)
   //               .toStringAsFixed(2);
   //           return Text('\$ ${numberFormat.format(double.parse(values))}',
-  //               style: TextStore.textTheme.headline3?.copyWith(
+  //               style: TextStore.textTheme.displaySmall?.copyWith(
   //                   fontWeight: FontWeight.w900, color: Colors.green));
   //         })
   //       ]);

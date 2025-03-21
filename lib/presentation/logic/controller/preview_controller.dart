@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 import '../../../core/enum/permission_handling.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 
 class PreviewController extends GetxController {
   var currentIndex = 0.obs;

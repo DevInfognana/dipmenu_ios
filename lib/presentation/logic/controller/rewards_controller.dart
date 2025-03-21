@@ -1,5 +1,5 @@
-import 'package:dip_menu/data/model/rewards_model.dart';
-import 'package:dip_menu/domain/reporties/rewards_api.dart';
+import 'package:dipmenu_ios/data/model/rewards_model.dart';
+import 'package:dipmenu_ios/domain/reporties/rewards_api.dart';
 import 'package:get/get.dart';
 
 import '../../../data/model/price.dart';

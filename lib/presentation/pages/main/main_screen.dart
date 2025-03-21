@@ -1,9 +1,9 @@
-import 'package:dip_menu/core/config/app_textstyle.dart';
-import 'package:dip_menu/data/model/home/category/category_data_model.dart';
-import 'package:dip_menu/extra/common_widgets/back_button.dart';
-import 'package:dip_menu/extra/common_widgets/image_view.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
-import 'package:dip_menu/presentation/routes/routes.dart';
+import 'package:dipmenu_ios/core/config/app_textstyle.dart';
+import 'package:dipmenu_ios/data/model/home/category/category_data_model.dart';
+import 'package:dipmenu_ios/extra/common_widgets/back_button.dart';
+import 'package:dipmenu_ios/extra/common_widgets/image_view.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/presentation/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
@@ -122,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         //                   homeController
                         //                       .homeCategoryList[index].name!,
                         //                   style: context
-                        //                       .theme.textTheme.headline4
+                        //                       .theme.textTheme.headlineLarge
                         //                       ?.copyWith(
                         //                           fontWeight: FontWeight.bold),
                         //                 )),
@@ -185,7 +185,7 @@ class _HomeScreenState extends State<HomeScreen> {
     //   //       style: ElevatedButton.styleFrom(
     //   //           backgroundColor: darkSeafoamGreen1,
     //   //           fixedSize: Size(30.w, 4.h),
-    //   //           textStyle: TextStore.textTheme.headline5!
+    //   //           textStyle: TextStore.textTheme.headlineMedium!
     //   //               .copyWith(color: Colors.white),
     //   //           elevation: 6),
     //   //       onPressed: () {
@@ -207,7 +207,7 @@ class _HomeScreenState extends State<HomeScreen> {
     //   //       style: ElevatedButton.styleFrom(
     //   //           fixedSize: Size(30.w, 4.h),
     //   //           backgroundColor: darkSeafoamGreen1,
-    //   //           textStyle: TextStore.textTheme.headline5!
+    //   //           textStyle: TextStore.textTheme.headlineMedium!
     //   //               .copyWith(color: Colors.white),
     //   //           elevation: 6),
     //   //       onPressed: () {
@@ -230,7 +230,7 @@ class _HomeScreenState extends State<HomeScreen> {
     //   //       style: ElevatedButton.styleFrom(
     //   //           backgroundColor: darkSeafoamGreen1,
     //   //           fixedSize: Size(30.w, 4.h),
-    //   //           textStyle: TextStore.textTheme.headline5!
+    //   //           textStyle: TextStore.textTheme.headlineMedium!
     //   //               .copyWith(color: Colors.white),
     //   //           elevation: 6),
     //   //       onPressed: () {
@@ -258,7 +258,7 @@ class _HomeScreenState extends State<HomeScreen> {
             backgroundColor: darkSeafoamGreen1,
             fixedSize: Size(30.w, 4.h),
             textStyle:
-            TextStore.textTheme.headline5!.copyWith(color: Colors.white),
+            TextStore.textTheme.headlineMedium!.copyWith(color: Colors.white),
             elevation: 6),
         onPressed: () {
           if (SharedPrefs.instance.getString('token') != null) {
@@ -299,7 +299,7 @@ class HomeScreenCardView extends StatelessWidget {
                     padding: EdgeInsets.all(0.5.h),
                     child: Text(
                       categoryData!.name!,
-                      style: context.theme.textTheme.headline4
+                      style: context.theme.textTheme.headlineLarge
                           ?.copyWith(fontWeight: FontWeight.bold),
                     )),
               ),

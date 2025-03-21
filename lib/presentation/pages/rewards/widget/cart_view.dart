@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 import '../../../logic/controller/rewards_controller.dart';
 import '../../sub_category/widget/sub_category_list.dart';

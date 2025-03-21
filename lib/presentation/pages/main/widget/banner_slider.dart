@@ -1,6 +1,6 @@
 // import 'package:cached_network_image/cached_network_image.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
-// import 'package:dip_menu/domain/provider/http_request.dart';
+// import 'package:dipmenu_ios/domain/provider/http_request.dart';
 // import 'package:flutter/material.dart';
 // import 'package:sizer/sizer.dart';
 //

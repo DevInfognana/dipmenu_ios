@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:dip_menu/core/config/icon_config.dart';
-import 'package:dip_menu/extra/common_widgets/image_view.dart';
+import 'package:dipmenu_ios/core/config/icon_config.dart';
+import 'package:dipmenu_ios/extra/common_widgets/image_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -63,7 +63,7 @@ class _MenuCategoryItemState extends State<MenuCategoryItem> {
               : Padding(
                   padding: EdgeInsets.symmetric(vertical: 1.w),
                   child: Text(widget.title,
-                      style: TextStore.textTheme.subtitle2!.copyWith(
+                      style: TextStore.textTheme.titleMedium!.copyWith(
                         fontSize: 2,
                           color: Colors.transparent, fontWeight: FontWeight.bold)
                   )),
@@ -252,7 +252,7 @@ class _MenuCategoryItemState extends State<MenuCategoryItem> {
                                                                       .center,
                                                               style: TextStore
                                                                   .textTheme1
-                                                                  .headline6!
+                                                                  .headlineSmall!
                                                                   .copyWith(
                                                                       color: Colors
                                                                           .black,
@@ -284,7 +284,7 @@ class _MenuCategoryItemState extends State<MenuCategoryItem> {
                                                                       .center,
                                                               style: TextStore
                                                                   .textTheme1
-                                                                  .headline6!
+                                                                  .headlineSmall!
                                                                   .copyWith(
                                                                       color: Colors
                                                                           .black,
@@ -309,7 +309,7 @@ class _MenuCategoryItemState extends State<MenuCategoryItem> {
                                                         '\$ ${numberFormat.format(productDiscountPrize(productSlashValues(double.parse(productprize))))}',
                                                         style: TextStore
                                                             .textTheme1
-                                                            .headline5!
+                                                            .headlineMedium!
                                                             .copyWith(
                                                                 color:
                                                                     mainColor,
@@ -324,7 +324,7 @@ class _MenuCategoryItemState extends State<MenuCategoryItem> {
                                         //     // child: Text(
                                         //     //   'Weight ${widget.customizeMenuItems[index].weight}',
                                         //     //   style: TextStore
-                                        //     //       .textTheme1.headline6!
+                                        //     //       .textTheme1.headlineSmall!
                                         //     //       .copyWith(color: mainColor),
                                         //     // ),
                                         //   ),

@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 
-// import 'package:dip_menu/core/static/stactic_values.dart';
-import 'package:dip_menu/extra/common_widgets/discount_operations.dart';
+// import 'package:dipmenu_ios/core/static/stactic_values.dart';
+import 'package:dipmenu_ios/extra/common_widgets/discount_operations.dart';
 
-// import 'package:dip_menu/extra/common_widgets/snack_bar.dart';
+// import 'package:dipmenu_ios/extra/common_widgets/snack_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -69,7 +69,7 @@ class _MenuCategoryItemState extends State<CusMenuCategoryItem> {
               : Padding(
                   padding: EdgeInsets.symmetric(vertical: 1.w),
                   child: Text(widget.title,
-                      style: TextStore.textTheme.headline5!.copyWith(
+                      style: TextStore.textTheme.headlineMedium!.copyWith(
                           color: Colors.transparent, fontWeight: FontWeight.bold))),
           // widget.controller.categoryIdValues == 4 &&
           //         widget.controller.isWeightCheck == '0'
@@ -274,7 +274,7 @@ class _MenuCategoryItemState extends State<CusMenuCategoryItem> {
                                                             TextAlign.center,
                                                         style: TextStore
                                                             .textTheme1
-                                                            .headline6!
+                                                            .headlineSmall!
                                                             .copyWith(
                                                                 color: Colors
                                                                     .black,
@@ -304,7 +304,7 @@ class _MenuCategoryItemState extends State<CusMenuCategoryItem> {
                                                             TextAlign.center,
                                                         style: TextStore
                                                             .textTheme1
-                                                            .headline6!
+                                                            .headlineSmall!
                                                             .copyWith(
                                                                 color: Colors
                                                                     .black,
@@ -325,7 +325,7 @@ class _MenuCategoryItemState extends State<CusMenuCategoryItem> {
                                               child: Text(
                                                   '\$ ${numberFormat.format(productDiscountPrize(productSlashValues(double.parse(productprize))))}',
                                                   style: TextStore
-                                                      .textTheme1.headline5!
+                                                      .textTheme1.headlineMedium!
                                                       .copyWith(
                                                           color: mainColor,
                                                           fontWeight:
@@ -340,7 +340,7 @@ class _MenuCategoryItemState extends State<CusMenuCategoryItem> {
                                     //     height: 2.h,
                                     //     child: Text(
                                     //       'Weight ${widget.customizeMenuItems[index].weight}',
-                                    //       style: TextStore.textTheme1.headline6!
+                                    //       style: TextStore.textTheme1.headlineSmall!
                                     //           .copyWith(color: mainColor),
                                     //     ),
                                     //   ),

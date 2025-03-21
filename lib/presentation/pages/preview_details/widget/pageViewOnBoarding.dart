@@ -38,11 +38,11 @@ class PageViewOnBoarding extends StatelessWidget {
           Image.asset(onBoardingList[index].image!, height: 30.h, width: 60.w),
           Text(onBoardingList[index].title!.tr,
               textAlign: TextAlign.center,
-              style: TextStore.textTheme.headline1!
+              style: TextStore.textTheme.displayLarge!
                   .copyWith(color: titleColor, fontWeight: FontWeight.w500)),
           Text(onBoardingList[index].body!,
               textAlign: TextAlign.center,
-              style: TextStore.textTheme.headline5!.copyWith(
+              style: TextStore.textTheme.headlineMedium!.copyWith(
                   color: descriptionColor, fontWeight: FontWeight.w500)),
           const Spacer(),
           OnBoardingIndicator(controller: controller, margin: 15),

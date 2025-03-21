@@ -1,4 +1,4 @@
-import 'package:dip_menu/core/config/theme.dart';
+import 'package:dipmenu_ios/core/config/theme.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -40,13 +40,13 @@ class _DescriptionTextWidgetState extends State<DescriptionTextWidget> {
       child: secondHalf!.isEmpty
           ? Text(firstHalf!,
               textAlign: TextAlign.left,
-              style: TextStore.textTheme.headline6!
+              style: TextStore.textTheme.headlineSmall!
                   .copyWith(color: borderColor))
           : Column(
               children: <Widget>[
                 Text(flag ? ("${firstHalf!}...") : (firstHalf! + secondHalf!),
                     textAlign: TextAlign.justify,
-                    style: TextStore.textTheme.headline6!
+                    style: TextStore.textTheme.headlineSmall!
                         .copyWith(color: borderColor)),
                 Material(
                   type: MaterialType.transparency,
@@ -102,7 +102,7 @@ class ExpandableTextState extends State<ExpandableText> {
     Color widgetColor =Get.isDarkMode ? Colors.white : borderColor;
     TextSpan link = TextSpan(
         text: _readMore ? " ... see more" : " see less",
-        style: TextStore.textTheme.headline6!
+        style: TextStore.textTheme.headlineSmall!
             .copyWith(color: colorClickableText),
         recognizer: TapGestureRecognizer()..onTap = _onTapLink
     );

@@ -10,7 +10,7 @@
 //   @override
 //   Widget build(BuildContext context) {
 //     return Text(title.tr,
-//         style: context.theme.textTheme.headline2!.copyWith(
+//         style: context.theme.textTheme.displayMedium!.copyWith(
 //             color: Colors.black,
 //             height: 2.0,
 //

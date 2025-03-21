@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:dip_menu/core/config/app_textstyle.dart';
-import 'package:dip_menu/core/config/theme.dart';
-import 'package:dip_menu/data/model/cartlist_model.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/core/config/app_textstyle.dart';
+import 'package:dipmenu_ios/core/config/theme.dart';
+import 'package:dipmenu_ios/data/model/cartlist_model.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -280,7 +280,7 @@ class PaymentDetailController extends GetxController with StateMixin {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text("Thanks for Order",
-                              style: TextStore.textTheme.headline4!.copyWith(
+                              style: TextStore.textTheme.headlineLarge!.copyWith(
                                   color: Colors.green,
                                   fontWeight: FontWeight.bold)),
                         ],
@@ -289,7 +289,7 @@ class PaymentDetailController extends GetxController with StateMixin {
                       Text(
                         'Your payment has been confirmed.\n You can check the details.',
                         textAlign: TextAlign.center,
-                        style: TextStore.textTheme.headline6!
+                        style: TextStore.textTheme.headlineSmall!
                             .copyWith(color: Colors.black),
                       ),
                       SizedBox(height: 0.9.h),
@@ -297,24 +297,24 @@ class PaymentDetailController extends GetxController with StateMixin {
                         crossAxisAlignment: WrapCrossAlignment.center,
                         children: [
                           Text('Order Id',
-                              style: TextStore.textTheme.headline5!.copyWith(
+                              style: TextStore.textTheme.headlineMedium!.copyWith(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold)),
                           Text("  #$orderId",
-                              style: TextStore.textTheme.headline5!.copyWith(
+                              style: TextStore.textTheme.headlineMedium!.copyWith(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold))
                         ],
                       ),
                       SizedBox(height: 0.9.h),
                       Text("Please make ensure your order",
-                          style: TextStore.textTheme.headline5!
+                          style: TextStore.textTheme.headlineMedium!
                               .copyWith(color: Colors.black)),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             backgroundColor: darkSeafoamGreen1,
                             fixedSize: Size(30.w, 4.h),
-                            textStyle: TextStore.textTheme.headline5!
+                            textStyle: TextStore.textTheme.headlineMedium!
                                 .copyWith(color: Colors.white),
                             elevation: 6),
                         onPressed: () {
@@ -333,7 +333,7 @@ class PaymentDetailController extends GetxController with StateMixin {
                         child: Text('Check-in'),
                       ),
                       // Text("Once your order arrive",
-                      //     style: TextStore.textTheme.headline6!
+                      //     style: TextStore.textTheme.headlineSmall!
                       //         .copyWith(color: Colors.black)),
                       SizedBox(height: 1.h),
                       Row(
@@ -354,7 +354,7 @@ class PaymentDetailController extends GetxController with StateMixin {
                                   padding: EdgeInsets.symmetric(
                                       vertical: 2.h, horizontal: 10.w)),
                               child: Text('Back to Home',
-                                  style: TextStore.textTheme.headline5!
+                                  style: TextStore.textTheme.headlineMedium!
                                       .copyWith(color: Colors.white)
                                   //style: TextStyle(fontSize: 18, color: Colors.white),
                                   )),
@@ -430,14 +430,14 @@ class PaymentDetailController extends GetxController with StateMixin {
           onWillPop: () async => false,
           child: Platform.isIOS
               ? CupertinoAlertDialog(
-                  // title: Text('', style: TextStore.textTheme.headline3!
+                  // title: Text('', style: TextStore.textTheme.displaySmall!
                   //     .copyWith(color: borderColor,fontWeight: FontWeight.bold),
                   //     textAlign: TextAlign.center),
                   content: TextScaleFactorClamper(
                     child: Text(
                         'Do you want to schedule this order at a particular time ?',
                         textAlign: TextAlign.justify,
-                        style: TextStore.textTheme.headline5!
+                        style: TextStore.textTheme.headlineMedium!
                             ),
                   ),
                   actions: <Widget>[
@@ -450,7 +450,7 @@ class PaymentDetailController extends GetxController with StateMixin {
                         child: Text(
                           "Schedule for later",
                           textAlign: TextAlign.center,
-                          style: TextStore.textTheme.headline5!
+                          style: TextStore.textTheme.headlineMedium!
                               // .copyWith(color: Colors.black),
                         )),
                     TextButton(
@@ -461,14 +461,14 @@ class PaymentDetailController extends GetxController with StateMixin {
                               status: RxStatus.success());
                         },
                         child: Text(NameValues.orderNow,
-                            style: TextStore.textTheme.headline5!
+                            style: TextStore.textTheme.headlineMedium!
                                 .copyWith(color: mainColor)))
                   ],
                 )
               : AlertDialog(
             backgroundColor: Colors.white,
                   title: Text('Order Type',
-                      style: TextStore.textTheme.headline3!.copyWith(
+                      style: TextStore.textTheme.displaySmall!.copyWith(
                           color: borderColor, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center),
                   shape: RoundedRectangleBorder(
@@ -477,7 +477,7 @@ class PaymentDetailController extends GetxController with StateMixin {
                     child: Text(
                         'Do you want to schedule this order at a particular time ?',
                         textAlign: TextAlign.justify,
-                        style: TextStore.textTheme.headline5!
+                        style: TextStore.textTheme.headlineMedium!
                             .copyWith(color: Colors.black)),
                   ),
                   actions: [
@@ -504,7 +504,7 @@ class PaymentDetailController extends GetxController with StateMixin {
                               ),
                               // child: const Text('Schedule for later')
                               child: Text(NameValues.scheduleLater,
-                                  style: TextStore.textTheme.headline5!
+                                  style: TextStore.textTheme.headlineMedium!
                                       .copyWith(color: Colors.white))),
                           ElevatedButton(
                               onPressed: () {
@@ -518,7 +518,7 @@ class PaymentDetailController extends GetxController with StateMixin {
                                   padding: EdgeInsets.symmetric(
                                       vertical: 1.h, horizontal: 2.2.w)),
                               child: Text(NameValues.orderNow,
-                                  style: TextStore.textTheme.headline5!
+                                  style: TextStore.textTheme.headlineMedium!
                                       .copyWith(color: Colors.white))),
                           SizedBox(width: 1.w),
                         ],
@@ -542,13 +542,13 @@ class PaymentDetailController extends GetxController with StateMixin {
             child: Platform.isIOS
                 ? CupertinoAlertDialog(
                     title: Text('Confirm Order ',
-                        style: TextStore.textTheme.headline3!.copyWith(
+                        style: TextStore.textTheme.displaySmall!.copyWith(
                             fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center),
                     content: Text(
                       SharedPrefs.instance.getString('disclaimer')!,
                       textAlign: TextAlign.justify,
-                      style: TextStore.textTheme.headline5!
+                      style: TextStore.textTheme.headlineMedium!
                           // .copyWith(color: Colors.black),
                     ),
                     actions: <Widget>[
@@ -558,7 +558,7 @@ class PaymentDetailController extends GetxController with StateMixin {
                             change(paymentConfirmationValues = false);
                           },
                           child: Text("Back",
-                              style: TextStore.textTheme.headline5!
+                              style: TextStore.textTheme.headlineMedium!
                                  )),
                       TextButton(
                           onPressed: () {
@@ -595,7 +595,7 @@ class PaymentDetailController extends GetxController with StateMixin {
                             }
                           },
                           child: Text('Continue',
-                              style: TextStore.textTheme.headline5!
+                              style: TextStore.textTheme.headlineMedium!
                                   .copyWith(color: mainColor)))
                     ],
                   )
@@ -604,13 +604,13 @@ class PaymentDetailController extends GetxController with StateMixin {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.w)),
                     title: Text('Confirm Order ',
-                        style: TextStore.textTheme.headline3!.copyWith(
+                        style: TextStore.textTheme.displaySmall!.copyWith(
                             color: borderColor, fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center),
                     content: Text(
                       SharedPrefs.instance.getString('disclaimer')!,
                       textAlign: TextAlign.justify,
-                      style: TextStore.textTheme.headline5!
+                      style: TextStore.textTheme.headlineMedium!
                           .copyWith(color: Colors.black),
                     ),
                     actions: [
@@ -631,7 +631,7 @@ class PaymentDetailController extends GetxController with StateMixin {
                                       borderRadius:
                                           BorderRadius.circular(3.w))),
                               child: Text('Back',
-                                  style: TextStore.textTheme.headline5!
+                                  style: TextStore.textTheme.headlineMedium!
                                       .copyWith(color: Colors.white))),
                           ElevatedButton(
                               onPressed: () {
@@ -676,7 +676,7 @@ class PaymentDetailController extends GetxController with StateMixin {
                                       borderRadius:
                                           BorderRadius.circular(3.w))),
                               child: Text('Continue',
-                                  style: TextStore.textTheme.headline5!
+                                  style: TextStore.textTheme.headlineMedium!
                                       .copyWith(color: Colors.white)))
                         ],
                       )
@@ -834,7 +834,7 @@ class PaymentDetailController extends GetxController with StateMixin {
                                       padding: EdgeInsets.symmetric(
                                           vertical: 2.h, horizontal: 14.w)),
                                   child: Text('Submit',
-                                      style: TextStore.textTheme.headline5!
+                                      style: TextStore.textTheme.headlineMedium!
                                           .copyWith(color: Colors.white))),
                             ],
                           ),
@@ -863,12 +863,12 @@ class PaymentDetailController extends GetxController with StateMixin {
         child: RichText(
           text: TextSpan(
               text: "Dip wallet Balance : ",
-              style: Get.context?.theme.textTheme.headline5
+              style: Get.context?.theme.textTheme.headlineMedium
                   ?.copyWith(fontWeight: FontWeight.bold),
               children: [
                 TextSpan(
                     text: '\$ ${walletValue.toStringAsFixed(2)}',
-                    style: TextStore.textTheme.headline5!.copyWith(
+                    style: TextStore.textTheme.headlineMedium!.copyWith(
                         color: Colors.redAccent, fontWeight: FontWeight.bold))
               ]),
         ),

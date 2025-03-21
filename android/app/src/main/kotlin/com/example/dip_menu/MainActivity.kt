@@ -1,4 +1,4 @@
-package com.example.dip_menu
+package com.example.dipmenu_ios
 
 import io.flutter.embedding.android.FlutterActivity
 

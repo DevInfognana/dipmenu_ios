@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:dip_menu/core/config/theme.dart';
-import 'package:dip_menu/core/static/stactic_values.dart';
-import 'package:dip_menu/extra/common_widgets/text_scalar_factor.dart';
-import 'package:dip_menu/presentation/routes/routes.dart';
+import 'package:dipmenu_ios/core/config/theme.dart';
+import 'package:dipmenu_ios/core/static/stactic_values.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_scalar_factor.dart';
+import 'package:dipmenu_ios/presentation/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
@@ -52,7 +52,7 @@ class _DriveThruScreenState extends State<DriveThruScreen> {
                     child: AuthTitleText(text: NameValues.driveThru)),
                 // TextScaleFactorClamper(
                 //   child: Text(NameValues.driveThru,
-                //       style: TextStore.textTheme.headline3!.copyWith(
+                //       style: TextStore.textTheme.displaySmall!.copyWith(
                 //           color: Colors.black, fontWeight: FontWeight.bold)),
                 // ),
                 const Spacer(flex: 5),
@@ -210,7 +210,7 @@ class _DriveThruScreenState extends State<DriveThruScreen> {
                                     vertical: 2.h, horizontal: 24.w)),
                             child: TextScaleFactorClamper(
                               child: Text('Submit',
-                                  style: TextStore.textTheme.headline3!
+                                  style: TextStore.textTheme.displaySmall!
                                       .copyWith(color: Colors.white)),
                             )),
                       ),
@@ -226,7 +226,7 @@ class _DriveThruScreenState extends State<DriveThruScreen> {
 
 textView(String? values) {
   return Text(values!,
-      style: Get.context!.theme.textTheme.headline3
+      style: Get.context!.theme.textTheme.displaySmall
           ?.copyWith(fontWeight: FontWeight.bold));
 }
 
@@ -243,9 +243,9 @@ imageView(String? values, String? text, int index) {
               child: Image.asset(values!,
                   height: index == 3 ? 13.h : 9.h, width: 21.w)),
           Text(text!,
-              style: Get.context!.theme.textTheme.headline6
+              style: Get.context!.theme.textTheme.headlineSmall
                   ?.copyWith(fontWeight: FontWeight.bold),
-              // style: TextStore.textTheme.headline6!
+              // style: TextStore.textTheme.headlineSmall!
               //     .copyWith(color: Colors.black, fontWeight: FontWeight.bold)
           )
         ],

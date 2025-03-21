@@ -1,4 +1,4 @@
-import 'package:dip_menu/core/config/theme.dart';
+import 'package:dipmenu_ios/core/config/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -42,7 +42,7 @@ class AuthTextFromField2 extends StatelessWidget {
       readOnly: readOnly!,
       keyboardType: keyboardType,
       validator: (value) => validator(value),
-      style: values==0? context.theme.textTheme.headline5:context.theme.textTheme.headline5!.copyWith(color: Colors.black),
+      style: values==0? context.theme.textTheme.headlineMedium:context.theme.textTheme.headlineMedium!.copyWith(color: Colors.black),
       inputFormatters: inputFormatters,
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.fromLTRB(10.0, 1.0, 10.0, 1.0),
@@ -52,7 +52,7 @@ class AuthTextFromField2 extends StatelessWidget {
         labelText: labelText,
         errorMaxLines: 4,
         labelStyle: context
-            .theme.textTheme.headline4!
+            .theme.textTheme.headlineLarge!
             .copyWith(
             color: hintColor,
             fontWeight: FontWeight.w500),

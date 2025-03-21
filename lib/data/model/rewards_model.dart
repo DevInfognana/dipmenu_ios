@@ -1,5 +1,5 @@
-import 'package:dip_menu/data/model/price.dart';
-import 'package:dip_menu/data/model/sub_category/category_product.dart';
+import 'package:dipmenu_ios/data/model/price.dart';
+import 'package:dipmenu_ios/data/model/sub_category/category_product.dart';
 
 import 'home/category/category_data_model.dart';
 

@@ -1,6 +1,6 @@
-import 'package:dip_menu/core/static/stactic_values.dart';
-import 'package:dip_menu/extra/common_widgets/text_scalar_factor.dart';
-import 'package:dip_menu/presentation/logic/controller/main_controller.dart';
+import 'package:dipmenu_ios/core/static/stactic_values.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_scalar_factor.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/main_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_background_service/flutter_background_service.dart';
 import 'package:get/get.dart';
@@ -211,7 +211,7 @@ import 'dart:io' show Platform;
 //                               child: Text(
 //                                   'No Internet found. Check your connection or try again.',
 //                                   textAlign: TextAlign.left,
-//                                   style: TextStore.textTheme.headline4!
+//                                   style: TextStore.textTheme.headlineLarge!
 //                                       .copyWith(color: Colors.black)))
 //                         ],
 //                       ),
@@ -224,7 +224,7 @@ import 'dart:io' show Platform;
 //                             primary: mainColor,
 //                             padding: const EdgeInsets.symmetric(
 //                                 horizontal: 15, vertical: 7),
-//                             textStyle: TextStore.textTheme.headline4!
+//                             textStyle: TextStore.textTheme.headlineLarge!
 //                                 .copyWith(color: Colors.black)),
 //                         child: Text(NameValues.tryAgain),
 //                       ),
@@ -246,7 +246,7 @@ import 'dart:io' show Platform;
 //                 shape: RoundedRectangleBorder(
 //                     borderRadius: BorderRadius.circular(5.w)),
 //                 content: Text('Do you want to exit an App?',
-//                     style: TextStore.textTheme.headline5!
+//                     style: TextStore.textTheme.headlineMedium!
 //                         .copyWith(color: descriptionColor),
 //                     textAlign: TextAlign.center),
 //                 actions: [
@@ -260,7 +260,7 @@ import 'dart:io' show Platform;
 //                           style: ElevatedButton.styleFrom(
 //                               backgroundColor: Colors.grey),
 //                           child: Text('No',
-//                               style: TextStore.textTheme.headline4!
+//                               style: TextStore.textTheme.headlineLarge!
 //                                   .copyWith(color: Colors.white))),
 //                       SizedBox(width: 2.w),
 //                       ElevatedButton(
@@ -272,7 +272,7 @@ import 'dart:io' show Platform;
 //                           style: ElevatedButton.styleFrom(
 //                               backgroundColor: mainColor),
 //                           child: Text('Yes',
-//                               style: TextStore.textTheme.headline4!
+//                               style: TextStore.textTheme.headlineLarge!
 //                                   .copyWith(color: Colors.white)))
 //                     ],
 //                   ),
@@ -371,10 +371,10 @@ class _MainScreenState extends State<MainScreen> {
                     controller.getConnectivityType();
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: mainColor,
+                    backgroundColor: mainColor,
                     padding:
                         const EdgeInsets.symmetric(horizontal: 15, vertical: 7),
-                    textStyle: context.theme.textTheme.headline4!
+                    textStyle: context.theme.textTheme.headlineLarge!
                         .copyWith(color: Colors.black),
                   ),
                   child: Text(NameValues.tryAgain),

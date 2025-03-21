@@ -1,8 +1,8 @@
-import 'package:dip_menu/extra/packages/linear_progress_bar.dart';
-import 'package:dip_menu/extra/packages/scrollable_list_tab_scroller.dart';
-import 'package:dip_menu/presentation/pages/rewards_product_preview/widget/dropdown_rewards.dart';
-import 'package:dip_menu/presentation/pages/rewards_product_preview/widget/merch_product.dart';
-import 'package:dip_menu/presentation/pages/rewards_product_preview/widget/top_card.dart';
+import 'package:dipmenu_ios/extra/packages/linear_progress_bar.dart';
+import 'package:dipmenu_ios/extra/packages/scrollable_list_tab_scroller.dart';
+import 'package:dipmenu_ios/presentation/pages/rewards_product_preview/widget/dropdown_rewards.dart';
+import 'package:dipmenu_ios/presentation/pages/rewards_product_preview/widget/merch_product.dart';
+import 'package:dipmenu_ios/presentation/pages/rewards_product_preview/widget/top_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
@@ -12,7 +12,7 @@ import '../../../extra/common_widgets/common_product_page_widgets.dart';
 import '../../../extra/common_widgets/counter_increment.dart';
 import '../../../extra/common_widgets/description_text.dart';
 import '../../logic/controller/rewards_product_view_controller.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 class RewardsProductPreviewScreen extends StatefulWidget {
   const RewardsProductPreviewScreen({Key? key}) : super(key: key);
@@ -174,7 +174,7 @@ class _RewardsProductPreviewScreenState
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(3.w)),
                           label: Text(NameValues.add,
-                              style: TextStore.textTheme.headline4!
+                              style: TextStore.textTheme.headlineLarge!
                                   .copyWith(color: Colors.white)),
                           backgroundColor: mainColor),
                     ),
@@ -191,7 +191,7 @@ class _RewardsProductPreviewScreenState
     return Flexible(
         child: Text(rewardsProductPreviewController.argumentData['name'],
             overflow: TextOverflow.clip,
-            style: TextStore.textTheme.headline3!
+            style: TextStore.textTheme.displaySmall!
                 .copyWith(fontWeight: FontWeight.bold, color: Colors.black)));
   }
 
@@ -199,7 +199,7 @@ class _RewardsProductPreviewScreenState
     return GetBuilder<RewardsProductController>(builder: (_) {
       return Text(
           '${rewardsProductPreviewController.priceCalculation1(rewardsProductPreviewController.productQuality.toInt(), rewardsProductPreviewController.totalPrice)} pts',
-          style: TextStore.textTheme.headline3?.copyWith(color: mainColor));
+          style: TextStore.textTheme.displaySmall?.copyWith(color: mainColor));
     });
   }
 
@@ -223,7 +223,7 @@ class _RewardsProductPreviewScreenState
               },
               label: Text(
                 rewardsProductPreviewController.productQuality.toString(),
-                style: TextStore.textTheme.headline3
+                style: TextStore.textTheme.displaySmall
                     ?.copyWith(color: color, fontWeight: FontWeight.bold),
               )));
     });
@@ -265,7 +265,7 @@ class _RewardsProductPreviewScreenState
       return rewardsProductPreviewController.productDescription!.isEmpty
           ? const SizedBox()
           : Text(rewardsProductPreviewController.productDescription!,
-          style: TextStore.textTheme.headline6!
+          style: TextStore.textTheme.headlineSmall!
               .copyWith(color: Get.isDarkMode ? Colors.white : borderColor))
 
       /*ExpandableText(
@@ -300,7 +300,7 @@ class _RewardsProductPreviewScreenState
                   .customMenu[
               rewardsProductPreviewController.productIndex.toInt()]
                   .name!,
-              style: TextStore.textTheme.subtitle1!.copyWith(
+              style: TextStore.textTheme.titleLarge!.copyWith(
                   color: Colors.transparent, fontWeight: FontWeight.bold)),
           rewardsProductPreviewController.isWeightCheck != '1' &&
               rewardsProductPreviewController.hybridProduct != 1
@@ -314,10 +314,10 @@ class _RewardsProductPreviewScreenState
               header:
               '${(rewardsProductPreviewController.valuesChanges(rewardsProductPreviewController.productIndex.toInt(), 'productValues') * 100).toStringAsFixed(2)} %',
               footer: '',
-              footerStyle: TextStore.textTheme.headline6?.copyWith(
+              footerStyle: TextStore.textTheme.headlineSmall?.copyWith(
                   fontSize: 9.sp,
                   color: Get.isDarkMode ? Colors.white : Colors.black),
-              headerStyle: TextStore.textTheme.headline6?.copyWith(
+              headerStyle: TextStore.textTheme.headlineSmall?.copyWith(
                   fontSize: 9.sp,
                   color: Get.isDarkMode ? Colors.white : Colors.black),
               width: 40.w)
@@ -331,11 +331,11 @@ class _RewardsProductPreviewScreenState
               color: const [Colors.limeAccent, Colors.green],
               header:
               '${(rewardsProductPreviewController.valuesChanges(rewardsProductPreviewController.productIndex.toInt(), 'productValues') * 100).toStringAsFixed(2)} %',
-              footerStyle: TextStore.textTheme.headline6?.copyWith(
+              footerStyle: TextStore.textTheme.headlineSmall?.copyWith(
                 fontSize: 9.sp,
                 color: Get.isDarkMode ? Colors.white : Colors.black,
               ),
-              headerStyle: TextStore.textTheme.headline6?.copyWith(
+              headerStyle: TextStore.textTheme.headlineSmall?.copyWith(
                 fontSize: 9.sp,
                 color: Get.isDarkMode ? Colors.white : Colors.black,
               ),
@@ -347,10 +347,10 @@ class _RewardsProductPreviewScreenState
               color: const [Colors.limeAccent, Colors.green],
               header:
               '${(rewardsProductPreviewController.lineGraphValues * 100).toStringAsFixed(2)} %',
-              footerStyle: TextStore.textTheme.headline6?.copyWith(
+              footerStyle: TextStore.textTheme.headlineSmall?.copyWith(
                   fontSize: 9.sp,
                   color: Get.isDarkMode ? Colors.white : Colors.black),
-              headerStyle: TextStore.textTheme.headline6?.copyWith(
+              headerStyle: TextStore.textTheme.headlineSmall?.copyWith(
                   fontSize: 9.sp,
                   color: Get.isDarkMode ? Colors.white : Colors.black),
               width: 53.w))
@@ -369,9 +369,9 @@ class _RewardsProductPreviewScreenState
           padding: EdgeInsets.symmetric(horizontal: 4.w),
           child: Text(rewardsProductPreviewController.customMenu[index].name!,
               style: !active
-                  ? TextStore.textTheme.headline4?.copyWith(
+                  ? TextStore.textTheme.headlineLarge?.copyWith(
                   color: descriptionColor, fontWeight: FontWeight.bold)
-                  : TextStore.textTheme.headline4?.copyWith(
+                  : TextStore.textTheme.headlineLarge?.copyWith(
                   color: mainColor, fontWeight: FontWeight.bold))),
       itemCount: rewardsProductPreviewController.customMenu.length,
       addingWidget: verticalBar(),

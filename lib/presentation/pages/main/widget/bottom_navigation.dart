@@ -1,5 +1,5 @@
 // import 'package:circular_bottom_navigation/circular_bottom_navigation.dart';
-// import 'package:dip_menu/presentation/logic/controller/main_controller.dart';
+// import 'package:dipmenu_ios/presentation/logic/controller/main_controller.dart';
 // import 'package:flutter/material.dart';
 //
 //

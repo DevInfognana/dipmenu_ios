@@ -1,15 +1,15 @@
-import 'package:dip_menu/domain/entities/handling_data_view.dart';
-import 'package:dip_menu/domain/local_handler/Local_handler.dart';
-import 'package:dip_menu/extra/common_widgets/image_view.dart';
-import 'package:dip_menu/extra/common_widgets/text_form_field_2.dart';
-import 'package:dip_menu/extra/common_widgets/text_scalar_factor.dart';
-import 'package:dip_menu/extra/packages/linear_progress_bar.dart';
-import 'package:dip_menu/presentation/logic/controller/authentication_controller.dart';
-import 'package:dip_menu/presentation/logic/controller/customize_edit_controller.dart';
-import 'package:dip_menu/presentation/pages/product_preview/cutomize_edit_screen/widget/customize_dropdown.dart';
-import 'package:dip_menu/presentation/pages/product_preview/cutomize_edit_screen/widget/customize_edit_view.dart';
-import 'package:dip_menu/presentation/pages/product_preview/cutomize_edit_screen/widget/merch_category.dart';
-import 'package:dip_menu/presentation/routes/routes.dart';
+import 'package:dipmenu_ios/domain/entities/handling_data_view.dart';
+import 'package:dipmenu_ios/domain/local_handler/Local_handler.dart';
+import 'package:dipmenu_ios/extra/common_widgets/image_view.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_form_field_2.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_scalar_factor.dart';
+import 'package:dipmenu_ios/extra/packages/linear_progress_bar.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/authentication_controller.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/customize_edit_controller.dart';
+import 'package:dipmenu_ios/presentation/pages/product_preview/cutomize_edit_screen/widget/customize_dropdown.dart';
+import 'package:dipmenu_ios/presentation/pages/product_preview/cutomize_edit_screen/widget/customize_edit_view.dart';
+import 'package:dipmenu_ios/presentation/pages/product_preview/cutomize_edit_screen/widget/merch_category.dart';
+import 'package:dipmenu_ios/presentation/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
@@ -233,7 +233,7 @@ class _CustomizeProductPreviewScreenState
                                                       .customMenu[index].name!,
                                                   style: !active
                                                       ? TextStore
-                                                          .textTheme.headline4
+                                                          .textTheme.headlineLarge
                                                           ?.copyWith(
                                                               color:
                                                                   descriptionColor,
@@ -241,7 +241,7 @@ class _CustomizeProductPreviewScreenState
                                                                   FontWeight
                                                                       .bold)
                                                       : TextStore
-                                                          .textTheme.headline4
+                                                          .textTheme.headlineLarge
                                                           ?.copyWith(
                                                               color: mainColor,
                                                               fontWeight:
@@ -468,7 +468,7 @@ class _CustomizeProductPreviewScreenState
                                     borderRadius: BorderRadius.circular(3.w)),
                                 extendedPadding: EdgeInsets.all(5.w),
                                 label: Text(NameValues.productupdate,
-                                    style: TextStore.textTheme.headline4!
+                                    style: TextStore.textTheme.headlineLarge!
                                         .copyWith(color: Colors.white)),
                                 backgroundColor: mainColor)),
                   ));
@@ -494,7 +494,7 @@ class _CustomizeProductPreviewScreenState
                       : 0.h),
               child: Text(
                   '\$ ${numberFormat.format(customizeProductPreviewController.slashedPrice)}',
-                  style: TextStore.textTheme.headline3?.copyWith(
+                  style: TextStore.textTheme.displaySmall?.copyWith(
                       decoration: TextDecoration.lineThrough,
                       fontWeight: FontWeight.w300,
                       color: mainColor)),
@@ -515,11 +515,11 @@ class _CustomizeProductPreviewScreenState
         child: customizeProductPreviewController.defaultPrice == 0.0
             ? Text(
                 '\$ ${numberFormat.format(customizeProductPreviewController.priceCalculation1(1, double.parse(customizeProductPreviewController.defaultPrice.toStringAsFixed(2))))}',
-                style: TextStore.textTheme.headline3?.copyWith(
+                style: TextStore.textTheme.displaySmall?.copyWith(
                     fontWeight: FontWeight.w900, color: Colors.green))
             : Text(
                 '\$ ${numberFormat.format(double.parse(customizeProductPreviewController.defaultPrice.toStringAsFixed(2)))}',
-                style: TextStore.textTheme.headline3?.copyWith(
+                style: TextStore.textTheme.displaySmall?.copyWith(
                     fontWeight: FontWeight.w900, color: Colors.green)),
       );
     });
@@ -537,7 +537,7 @@ class _CustomizeProductPreviewScreenState
               .toStringAsFixed(2);
 
           return Text('\$ ${numberFormat.format(double.parse(values))}',
-              style: TextStore.textTheme.headline3
+              style: TextStore.textTheme.displaySmall
                   ?.copyWith(fontWeight: FontWeight.w900, color: Colors.green));
         })
       ],
@@ -559,7 +559,7 @@ class _CustomizeProductPreviewScreenState
               },
               label: Text(
                 customizeProductPreviewController.custProductQuanity.toString(),
-                style: TextStore.textTheme.headline3
+                style: TextStore.textTheme.displaySmall
                     ?.copyWith(color: color, fontWeight: FontWeight.bold),
               )));
     });
@@ -624,11 +624,11 @@ class _CustomizeProductPreviewScreenState
       return customizeProductPreviewController.productDescription!.isEmpty
           ? Container()
           : (  Text(customizeProductPreviewController.productDescription!,
-          style: TextStore.textTheme.headline6!
+          style: TextStore.textTheme.headlineSmall!
               .copyWith(color: Get.isDarkMode ? Colors.white : borderColor))
           // customizeProductPreviewController.productDescription!.length < 64
           //     ? Text(customizeProductPreviewController.productDescription!,
-          //         style: TextStore.textTheme.headline6!.copyWith(color: color))
+          //         style: TextStore.textTheme.headlineSmall!.copyWith(color: color))
           //     : ExpandableText(
           //         customizeProductPreviewController.productDescription == null
           //             ? ''
@@ -678,7 +678,7 @@ class _CustomizeProductPreviewScreenState
                         children: [
                           Text(NameValues.singIn.tr,
                               textAlign: TextAlign.center,
-                              style: TextStore.textTheme.headline2!.copyWith(
+                              style: TextStore.textTheme.displayMedium!.copyWith(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold)),
                           SizedBox(height: 1.5.h),
@@ -823,14 +823,14 @@ class _CustomizeProductPreviewScreenState
           //         .customMenu[
           //             customizeProductPreviewController.productIndex.toInt()]
           //         .name!,
-          //     style: TextStore.textTheme.headline5!.copyWith(
+          //     style: TextStore.textTheme.headlineMedium!.copyWith(
           //         color: Get.isDarkMode ? Colors.white : Colors.black,
           //         fontWeight: FontWeight.bold)),
           Text(
               customizeProductPreviewController
                   .customMenu[customizeProductPreviewController.productIndex.toInt()]
                   .name!,
-              style: TextStore.textTheme.subtitle1!.copyWith(
+              style: TextStore.textTheme.titleLarge!.copyWith(
                 // color: Get.isDarkMode ? Colors.white : Colors.black,
                   color: Colors.transparent,
                   fontWeight: FontWeight.bold)),
@@ -846,9 +846,9 @@ class _CustomizeProductPreviewScreenState
                   header:
                       '${(customizeProductPreviewController.valuesChanges(customizeProductPreviewController.productIndex.toInt(), 'productValues') * 100).toStringAsFixed(2)} %',
                   footer: '',
-                  footerStyle: TextStore.textTheme.headline6
+                  footerStyle: TextStore.textTheme.headlineSmall
                       ?.copyWith(fontSize: 9.sp, color: Get.isDarkMode ? Colors.white : Colors.black),
-                  headerStyle: TextStore.textTheme.headline6
+                  headerStyle: TextStore.textTheme.headlineSmall
                       ?.copyWith(fontSize: 9.sp, color: Get.isDarkMode ? Colors.white : Colors.black),
                   width: 40.w)
               : (customizeProductPreviewController.hybridProduct == 1
@@ -862,9 +862,9 @@ class _CustomizeProductPreviewScreenState
                       color: const [Colors.limeAccent, Colors.green],
                       header:
                           '${(customizeProductPreviewController.valuesChanges(customizeProductPreviewController.productIndex.toInt(), 'productValues') * 100).toStringAsFixed(2)} %',
-                      footerStyle: TextStore.textTheme.headline6
+                      footerStyle: TextStore.textTheme.headlineSmall
                           ?.copyWith(fontSize: 9.sp, color: Get.isDarkMode ? Colors.white : Colors.black),
-                      headerStyle: TextStore.textTheme.headline6
+                      headerStyle: TextStore.textTheme.headlineSmall
                           ?.copyWith(fontSize: 9.sp, color: Get.isDarkMode ? Colors.white : Colors.black),
                       width: 53.w)
                   : VerticalBarIndicator(
@@ -875,9 +875,9 @@ class _CustomizeProductPreviewScreenState
                       color: const [Colors.limeAccent, Colors.green],
                       header:
                           '${(customizeProductPreviewController.lineGraphValues * 100).toStringAsFixed(2)} %',
-                      footerStyle: TextStore.textTheme.headline6
+                      footerStyle: TextStore.textTheme.headlineSmall
                           ?.copyWith(fontSize: 9.sp, color: Get.isDarkMode ? Colors.white : Colors.black),
-                      headerStyle: TextStore.textTheme.headline6
+                      headerStyle: TextStore.textTheme.headlineSmall
                           ?.copyWith(fontSize: 9.sp, color: Get.isDarkMode ? Colors.white : Colors.black),
                       width: 53.w))
         ])));

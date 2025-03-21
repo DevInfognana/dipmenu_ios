@@ -1,4 +1,4 @@
-import 'package:dip_menu/data/model/product_preview/product_preview_data.dart';
+import 'package:dipmenu_ios/data/model/product_preview/product_preview_data.dart';
 
 class ProductPreviewModel {
   List<ProductPreviewData>? data;

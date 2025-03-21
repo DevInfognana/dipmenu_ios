@@ -24,6 +24,158 @@ const Color pickuporder = Color(0xffFFCD00);
 const Color scheduledpickuporder = Color(0xffFF7A00);
 const darkSeafoamGreen1 = Color(0xff45b080);
 
+// class ThemesApp {
+//   static final light = ThemeData.light().copyWith(
+//     scaffoldBackgroundColor: Colors.white,
+//     primaryColor: mainColor,
+//     secondaryHeaderColor: Colors.grey.shade100,
+//     cardColor: const Color(0xffFFFFFF),
+//     textTheme: TextTheme(
+//       headline1: GoogleFonts.poppins(
+//           fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 22.sp : 44),
+//       headline2:  GoogleFonts.poppins(fontSize:  DeviceTypeValues.getDeviceType()=='phone'? 18.sp:28, color: Colors.black),
+//
+//       headline3: GoogleFonts.poppins(
+//           fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 16.sp : 25,
+//           color: Colors.black),
+//       headline4: GoogleFonts.poppins(
+//           fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 14.sp : 20,
+//           color: Colors.black),
+//       headline5: GoogleFonts.poppins(
+//           fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 12.sp : 17,
+//           color: Colors.black),
+//       headline6: GoogleFonts.poppins(
+//           fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 10.sp : 14,color: Colors.black),
+//       bodyText1: GoogleFonts.poppins(fontSize: DeviceTypeValues.getDeviceType()=='phone'? 8.sp:12, color: Colors.black),
+//     ),
+//     appBarTheme: const AppBarTheme(
+//       backgroundColor: Colors.transparent,
+//       elevation: 0,
+//       iconTheme: IconThemeData(color: Colors.black45),
+//       centerTitle: true,
+//     ),
+//
+//     elevatedButtonTheme: ElevatedButtonThemeData(
+//         style: ButtonStyle(
+//             backgroundColor: MaterialStateProperty.all<Color>(mainColor))),
+//     bottomNavigationBarTheme: BottomNavigationBarThemeData(
+//       elevation: 0,
+//         backgroundColor: Colors.white,
+//         selectedIconTheme: IconThemeData(color: mainColor, size: 3.h),
+//         selectedItemColor: mainColor,
+//         unselectedItemColor: Colors.grey,
+//         type: BottomNavigationBarType.fixed,
+//         unselectedIconTheme: IconThemeData(color: Colors.grey, size: 3.h)),
+//     iconTheme: const IconThemeData(color: Colors.black),
+//   );
+//
+//   // static final dark = ThemeData.dark().copyWith(
+//   //   scaffoldBackgroundColor: Color(0xFF18172B),
+//   //   primaryColor: darkGreyClr,
+//   //   secondaryHeaderColor:Color(0xFF27273c),
+//   //
+//   //   textTheme: TextTheme(
+//   //     headline1: TextStyle(
+//   //       color: Colors.white,
+//   //     ),
+//   //     headline2: TextStyle(
+//   //       color: Color(0xFF18172B).withOpacity(.8),
+//   //     ),
+//   //     headline3: TextStyle(
+//   //       color: Colors.black,
+//   //     ),
+//   //     headline4: TextStyle(
+//   //       color: Color(0xFF27273c),
+//   //     ),
+//   //     headline5: TextStyle(
+//   //       color: Color.fromRGBO(144, 152, 177, 1),
+//   //     ),
+//   //   ),
+//   //   appBarTheme: const AppBarTheme(
+//   //     backgroundColor: Colors.transparent,
+//   //     elevation: 0,
+//   //     toolbarTextStyle: TextStyle(color: Colors.white),
+//   //     centerTitle: true,
+//   //     iconTheme: IconThemeData(color: Colors.white),
+//   //   ),
+//   //
+//   //   cardColor: Color(0xFF27273c),
+//   //   elevatedButtonTheme: ElevatedButtonThemeData(
+//   //       style: ButtonStyle(
+//   //           backgroundColor: MaterialStateProperty.all<Color>(mainColor))),
+//   //   bottomNavigationBarTheme:
+//   //   BottomNavigationBarThemeData(backgroundColor: Color(0xFF1F1F30)),
+//   //   iconTheme: IconThemeData(color: Colors.white),
+//   //
+//   //   hintColor: Colors.white,
+//   // );
+//
+//   static final dark = ThemeData.dark().copyWith(
+//       scaffoldBackgroundColor: const Color(0xFF18172B),
+//       primaryColor: Colors.deepPurple,
+//       secondaryHeaderColor: const Color(0xFF27273c),
+//       hoverColor: Colors.red,
+//       //This is how to use find another way for him to incorporate this
+//       // textTheme: TextTheme(
+//       //     headlineMedium: TextStore.textTheme.headlineMedium!,
+//       //     headlineSmall: TextStore.textTheme.headlineSmall!,
+//       //     bodyLarge: TextStore.textTheme.bodyLarge!,
+//       //     bodyMedium: TextStore.textTheme.bodyMedium,
+//       //     titleMedium: TextStore.textTheme.titleMedium!,
+//       //     titleSmall: TextStore.textTheme.titleSmall!,
+//       //     labelLarge: TextStore.textTheme.labelLarge!,
+//       //     bodySmall: TextStore.textTheme.bodySmall!,
+//       //     labelSmall: TextStore.textTheme.labelSmall!),
+//       textTheme: TextTheme(
+//         headline1: const TextStyle(color: Colors.black),
+//         headline2:  GoogleFonts.poppins(fontSize:  DeviceTypeValues.getDeviceType()=='phone'? 18.sp:28, color: Colors.white),
+//         headline3: GoogleFonts.poppins(
+//             fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 16.sp : 25,
+//             color: Colors.white),
+//         headline4: GoogleFonts.poppins(
+//             fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 14.sp : 20,
+//             color: Colors.white),
+//         headline5: GoogleFonts.poppins(
+//             fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 12.sp : 17,
+//             color: Colors.white),
+//         headline6: GoogleFonts.poppins(
+//             fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 10.sp : 14,color: Colors.white),
+//         bodyText1: GoogleFonts.poppins(fontSize: DeviceTypeValues.getDeviceType()=='phone'? 8.sp:12, color: Colors.white),
+//
+//
+//       ),
+//       appBarTheme: const AppBarTheme(
+//           backgroundColor: Colors.transparent,
+//           elevation: 0,
+//           toolbarTextStyle: TextStyle(color: Colors.white),
+//           centerTitle: true,
+//           iconTheme: IconThemeData(color: Colors.white)),
+//       cardColor: const Color(0xFF27273c),
+//       bottomNavigationBarTheme: BottomNavigationBarThemeData(
+//         elevation: 0,
+//           backgroundColor: const Color(0xFF18172B),
+//           selectedIconTheme: IconThemeData(color: mainColor, size: 3.h),
+//           selectedItemColor: mainColor,
+//           unselectedItemColor: Colors.white,
+//           type: BottomNavigationBarType.fixed,
+//           unselectedIconTheme: IconThemeData(color: Colors.white, size: 3.h)),
+//       elevatedButtonTheme: ElevatedButtonThemeData(
+//           style: ButtonStyle(
+//               backgroundColor: MaterialStateProperty.all<Color>(mainColor))),
+//       // bottomNavigationBarTheme: BottomNavigationBarThemeData(
+//       //     backgroundColor: const Color(0xFF18172B),
+//       //     selectedIconTheme: IconThemeData(color: mainColor, size: 3.h),
+//       //     selectedItemColor: mainColor,
+//       //     unselectedItemColor: Colors.white,
+//       //     unselectedIconTheme: IconThemeData(color: Colors.white, size: 3.h)),
+//       iconTheme: const IconThemeData(color: Colors.white),
+//       hintColor: Colors.white);
+// }
+
+
+
+//after flutter upgrade changes..
+
 class ThemesApp {
   static final light = ThemeData.light().copyWith(
     scaffoldBackgroundColor: Colors.white,
@@ -31,23 +183,22 @@ class ThemesApp {
     secondaryHeaderColor: Colors.grey.shade100,
     cardColor: const Color(0xffFFFFFF),
     textTheme: TextTheme(
-      headline1: GoogleFonts.poppins(
+      displayLarge: GoogleFonts.poppins(                                                             // headline1
           fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 22.sp : 44),
-      headline2:  GoogleFonts.poppins(fontSize:  DeviceTypeValues.getDeviceType()=='phone'? 18.sp:28, color: Colors.black),
-
-      headline3: GoogleFonts.poppins(
-          fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 16.sp : 25,
-          color: Colors.black),
-      headline4: GoogleFonts.poppins(
-          fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 14.sp : 20,
-          color: Colors.black),
-      headline5: GoogleFonts.poppins(
-          fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 12.sp : 17,
-          color: Colors.black),
-      headline6: GoogleFonts.poppins(
-          fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 10.sp : 14,color: Colors.black),
-      bodyText1: GoogleFonts.poppins(fontSize: DeviceTypeValues.getDeviceType()=='phone'? 8.sp:12, color: Colors.black),
+      displayMedium: GoogleFonts.poppins(                                                             // headline2
+          fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 18.sp : 28, color: Colors.black),
+      displaySmall: GoogleFonts.poppins(                                                              // headline3
+          fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 16.sp : 25, color: Colors.black),
+      headlineLarge: GoogleFonts.poppins(                                                             // headline4
+          fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 14.sp : 20, color: Colors.black),
+      headlineMedium: GoogleFonts.poppins(                                                            // headline5
+          fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 12.sp : 17, color: Colors.black),
+      headlineSmall: GoogleFonts.poppins(                                                             // headline6
+          fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 10.sp : 14, color: Colors.black),
+      bodyLarge: GoogleFonts.poppins(                                                                 // bodyText1
+          fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 8.sp : 12, color: Colors.black),
     ),
+
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.transparent,
       elevation: 0,
@@ -57,9 +208,10 @@ class ThemesApp {
 
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(mainColor))),
+            backgroundColor: WidgetStateProperty.all<Color>(mainColor))),
+    // backgroundColor: MaterialStateProperty.all<Color>(mainColor))),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      elevation: 0,
+        elevation: 0,
         backgroundColor: Colors.white,
         selectedIconTheme: IconThemeData(color: mainColor, size: 3.h),
         selectedItemColor: mainColor,
@@ -69,81 +221,28 @@ class ThemesApp {
     iconTheme: const IconThemeData(color: Colors.black),
   );
 
-  // static final dark = ThemeData.dark().copyWith(
-  //   scaffoldBackgroundColor: Color(0xFF18172B),
-  //   primaryColor: darkGreyClr,
-  //   secondaryHeaderColor:Color(0xFF27273c),
-  //
-  //   textTheme: TextTheme(
-  //     headline1: TextStyle(
-  //       color: Colors.white,
-  //     ),
-  //     headline2: TextStyle(
-  //       color: Color(0xFF18172B).withOpacity(.8),
-  //     ),
-  //     headline3: TextStyle(
-  //       color: Colors.black,
-  //     ),
-  //     headline4: TextStyle(
-  //       color: Color(0xFF27273c),
-  //     ),
-  //     headline5: TextStyle(
-  //       color: Color.fromRGBO(144, 152, 177, 1),
-  //     ),
-  //   ),
-  //   appBarTheme: const AppBarTheme(
-  //     backgroundColor: Colors.transparent,
-  //     elevation: 0,
-  //     toolbarTextStyle: TextStyle(color: Colors.white),
-  //     centerTitle: true,
-  //     iconTheme: IconThemeData(color: Colors.white),
-  //   ),
-  //
-  //   cardColor: Color(0xFF27273c),
-  //   elevatedButtonTheme: ElevatedButtonThemeData(
-  //       style: ButtonStyle(
-  //           backgroundColor: MaterialStateProperty.all<Color>(mainColor))),
-  //   bottomNavigationBarTheme:
-  //   BottomNavigationBarThemeData(backgroundColor: Color(0xFF1F1F30)),
-  //   iconTheme: IconThemeData(color: Colors.white),
-  //
-  //   hintColor: Colors.white,
-  // );
-
   static final dark = ThemeData.dark().copyWith(
       scaffoldBackgroundColor: const Color(0xFF18172B),
       primaryColor: Colors.deepPurple,
       secondaryHeaderColor: const Color(0xFF27273c),
       hoverColor: Colors.red,
-      //This is how to use find another way for him to incorporate this
-      // textTheme: TextTheme(
-      //     headlineMedium: TextStore.textTheme.headlineMedium!,
-      //     headlineSmall: TextStore.textTheme.headlineSmall!,
-      //     bodyLarge: TextStore.textTheme.bodyLarge!,
-      //     bodyMedium: TextStore.textTheme.bodyMedium,
-      //     titleMedium: TextStore.textTheme.titleMedium!,
-      //     titleSmall: TextStore.textTheme.titleSmall!,
-      //     labelLarge: TextStore.textTheme.labelLarge!,
-      //     bodySmall: TextStore.textTheme.bodySmall!,
-      //     labelSmall: TextStore.textTheme.labelSmall!),
+
       textTheme: TextTheme(
-        headline1: const TextStyle(color: Colors.black),
-        headline2:  GoogleFonts.poppins(fontSize:  DeviceTypeValues.getDeviceType()=='phone'? 18.sp:28, color: Colors.white),
-        headline3: GoogleFonts.poppins(
-            fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 16.sp : 25,
-            color: Colors.white),
-        headline4: GoogleFonts.poppins(
-            fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 14.sp : 20,
-            color: Colors.white),
-        headline5: GoogleFonts.poppins(
-            fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 12.sp : 17,
-            color: Colors.white),
-        headline6: GoogleFonts.poppins(
-            fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 10.sp : 14,color: Colors.white),
-        bodyText1: GoogleFonts.poppins(fontSize: DeviceTypeValues.getDeviceType()=='phone'? 8.sp:12, color: Colors.white),
-
-
+        displayLarge: const TextStyle(color: Colors.black),                                                 // headline1
+        displayMedium: GoogleFonts.poppins(                                                                 // headline2
+            fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 18.sp : 28, color: Colors.white),
+        displaySmall: GoogleFonts.poppins(                                                                  // headline3
+            fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 16.sp : 25, color: Colors.white),
+        headlineLarge: GoogleFonts.poppins(                                                                 // headline4
+            fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 14.sp : 20, color: Colors.white),
+        headlineMedium: GoogleFonts.poppins(                                                                // headline5
+            fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 12.sp : 17, color: Colors.white),
+        headlineSmall: GoogleFonts.poppins(                                                                 // headline6
+            fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 10.sp : 14, color: Colors.white),
+        bodyLarge: GoogleFonts.poppins(                                                                     // bodyText1
+            fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 8.sp : 12, color: Colors.white),
       ),
+
       appBarTheme: const AppBarTheme(
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -152,7 +251,7 @@ class ThemesApp {
           iconTheme: IconThemeData(color: Colors.white)),
       cardColor: const Color(0xFF27273c),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        elevation: 0,
+          elevation: 0,
           backgroundColor: const Color(0xFF18172B),
           selectedIconTheme: IconThemeData(color: mainColor, size: 3.h),
           selectedItemColor: mainColor,
@@ -161,13 +260,8 @@ class ThemesApp {
           unselectedIconTheme: IconThemeData(color: Colors.white, size: 3.h)),
       elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all<Color>(mainColor))),
-      // bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      //     backgroundColor: const Color(0xFF18172B),
-      //     selectedIconTheme: IconThemeData(color: mainColor, size: 3.h),
-      //     selectedItemColor: mainColor,
-      //     unselectedItemColor: Colors.white,
-      //     unselectedIconTheme: IconThemeData(color: Colors.white, size: 3.h)),
+            // backgroundColor: MaterialStateProperty.all<Color>(mainColor))),
+              backgroundColor: WidgetStateProperty.all<Color>(mainColor))),
       iconTheme: const IconThemeData(color: Colors.white),
       hintColor: Colors.white);
 }

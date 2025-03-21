@@ -63,7 +63,7 @@ class _PaymentListViewState extends State<PaymentListView> {
                   ),
                   title: Text(
                     '${paymentController?.cardList[index].product!.name}',
-                    style: TextStore.textTheme.headline6!.copyWith(
+                    style: TextStore.textTheme.headlineSmall!.copyWith(
                         color: Colors.black,
                         fontWeight: FontWeight.bold),
                   ),
@@ -72,18 +72,18 @@ class _PaymentListViewState extends State<PaymentListView> {
                     children: [
                       Text(
                         'Qty : ${paymentController?.cardList[index].quantity}',
-                        style: TextStore.textTheme.headline6!.copyWith(
+                        style: TextStore.textTheme.headlineSmall!.copyWith(
                           color: Colors.black,
                         ),
                       ),
                       Text(
                         '${paymentController?.cardList[index].defaultSizeName}',
-                        style: TextStore.textTheme.headline6!
+                        style: TextStore.textTheme.headlineSmall!
                             .copyWith(color: Colors.grey),
                       ),
                       Text(
                         '\$ ${numberFormat.format((double.parse(paymentController!.cardList[index].totalCost!) * paymentController!.cardList[index].quantity!))}',
-                        style: TextStore.textTheme.headline5!.copyWith(
+                        style: TextStore.textTheme.headlineMedium!.copyWith(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                         ),

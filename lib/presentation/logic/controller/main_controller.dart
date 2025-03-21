@@ -1,12 +1,12 @@
 import 'package:dio/dio.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
-import 'package:dip_menu/presentation/logic/controller/profile_controller.dart';
-import 'package:dip_menu/presentation/pages/favourite/favourite_screen.dart';
-import 'package:dip_menu/presentation/pages/main/main_screen.dart';
-import 'package:dip_menu/presentation/pages/profile/profile_screen.dart';
-import 'package:dip_menu/presentation/pages/rewards/rewards_page_view.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/profile_controller.dart';
+import 'package:dipmenu_ios/presentation/pages/favourite/favourite_screen.dart';
+import 'package:dipmenu_ios/presentation/pages/main/main_screen.dart';
+import 'package:dipmenu_ios/presentation/pages/profile/profile_screen.dart';
+import 'package:dipmenu_ios/presentation/pages/rewards/rewards_page_view.dart';
 import 'package:flutter_background_service/flutter_background_service.dart';
-// import 'package:dip_menu/presentation/pages/search/search_screen.dart';
+// import 'package:dipmenu_ios/presentation/pages/search/search_screen.dart';
 import 'package:get/get.dart';
 
 import '../../../core/enum/permission_handling.dart';

@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-// import 'package:dip_menu/data/model/about_us_model.dart';
+// import 'package:dipmenu_ios/data/model/about_us_model.dart';
 
 import '../entities/crud_operation.dart';
 import '../local_handler/Local_handler.dart';

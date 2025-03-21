@@ -1,5 +1,5 @@
-import 'package:dip_menu/extra/common_widgets/empty_widget.dart';
-import 'package:dip_menu/presentation/pages/cart/widget/cart_screen_widget.dart';
+import 'package:dipmenu_ios/extra/common_widgets/empty_widget.dart';
+import 'package:dipmenu_ios/presentation/pages/cart/widget/cart_screen_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -7,7 +7,7 @@ import 'package:lottie/lottie.dart';
 import 'package:super_tooltip/super_tooltip.dart';
 import '../../../extra/common_widgets/snack_bar.dart';
 import '../../logic/controller/cart_controller.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 class CartScreen extends StatelessWidget {
   CartScreen({Key? key}) : super(key: key);
@@ -213,7 +213,7 @@ class CartScreen extends StatelessWidget {
                                     vertical: 2.h, horizontal: 24.w)),
                             child: Text(
                               NameValues.browseProduct,
-                              style: context.theme.textTheme.headline4!
+                              style: context.theme.textTheme.headlineLarge!
                                   .copyWith(color: Colors.white),
                             )))
                     : (controller.posValues == true
@@ -248,7 +248,7 @@ class CartScreen extends StatelessWidget {
                                     padding: EdgeInsets.symmetric(
                                         vertical: 2.h, horizontal: 24.w)),
                                 child: Text(NameValues.checkout,
-                                    style: context.theme.textTheme.headline4!
+                                    style: context.theme.textTheme.headlineLarge!
                                         .copyWith(color: Colors.white))))
                         : Padding(
                             padding: EdgeInsets.all(0.8.h),
@@ -308,10 +308,10 @@ class CartScreen extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(values1!,
-            style: TextStore.textTheme.headline4!
+            style: TextStore.textTheme.headlineLarge!
                 .copyWith(color: color, fontWeight: FontWeight.w600)),
         Text(values2!,
-            style: TextStore.textTheme.headline4!
+            style: TextStore.textTheme.headlineLarge!
                 .copyWith(color: color, fontWeight: FontWeight.w600)),
       ],
     );
@@ -342,14 +342,14 @@ class CartScreen extends StatelessWidget {
           popupDirection: TooltipDirection.up,
           barrierColor: Colors.transparent,
           child: Text(values1!,
-              style: TextStore.textTheme.headline4!
+              style: TextStore.textTheme.headlineLarge!
                   .copyWith(color: colorValues, fontWeight: FontWeight.bold)),
         ),
         // Text(values1!,
-        //     style: TextStore.textTheme.headline4!
+        //     style: TextStore.textTheme.headlineLarge!
         //         .copyWith(color: colorValues, fontWeight: FontWeight.bold)),
         Text(values2!,
-            style: TextStore.textTheme.headline4!
+            style: TextStore.textTheme.headlineLarge!
                 .copyWith(color: colorValues, fontWeight: FontWeight.bold)),
       ],
     );
@@ -386,12 +386,12 @@ class CartScreen extends StatelessWidget {
           popupDirection: TooltipDirection.up,
           barrierColor: Colors.transparent,
           child: Text(values1!,
-              style: TextStore.textTheme.headline4!
+              style: TextStore.textTheme.headlineLarge!
                   .copyWith(color: colorValues, fontWeight: FontWeight.bold)),
         ),
         const Spacer(),
         Text(values2!,
-            style: TextStore.textTheme.headline4!
+            style: TextStore.textTheme.headlineLarge!
                 .copyWith(color: colorValues, fontWeight: FontWeight.bold)),
       ],
     );

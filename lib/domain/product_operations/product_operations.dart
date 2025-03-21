@@ -1,7 +1,7 @@
-import 'package:dip_menu/core/config/app_textstyle.dart';
-import 'package:dip_menu/data/model/product_preview/product_preview_data.dart';
-// import 'package:dip_menu/extra/common_widgets/discount_operations.dart';
-import 'package:dip_menu/extra/packages/linear_progress_bar.dart';
+import 'package:dipmenu_ios/core/config/app_textstyle.dart';
+import 'package:dipmenu_ios/data/model/product_preview/product_preview_data.dart';
+// import 'package:dipmenu_ios/extra/common_widgets/discount_operations.dart';
+import 'package:dipmenu_ios/extra/packages/linear_progress_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
@@ -62,9 +62,9 @@ class ProductOperations {
         color: const [Colors.limeAccent, Colors.green],
         header: header,
         footer: '',
-        footerStyle: TextStore.textTheme.headline6
+        footerStyle: TextStore.textTheme.headlineSmall
             ?.copyWith(fontSize: 9.sp, color: Colors.black),
-        headerStyle: TextStore.textTheme.headline6
+        headerStyle: TextStore.textTheme.headlineSmall
             ?.copyWith(fontSize: 9.sp, color: Colors.black),
         width: width,
       );
@@ -74,7 +74,7 @@ class ProductOperations {
       width: double.infinity,
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text(name!,
-            style: TextStore.textTheme.headline5!.copyWith(
+            style: TextStore.textTheme.headlineMedium!.copyWith(
                 color: Get.isDarkMode ? Colors.white : Colors.black,
                 fontWeight: FontWeight.bold)),
         if (isWeightCheck != '1' && subCategoryIdValues != 189)

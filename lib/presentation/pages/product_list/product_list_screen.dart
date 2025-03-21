@@ -7,7 +7,7 @@ import '../../logic/controller/main_controller.dart';
 import '../../logic/controller/sub_category_controller.dart';
 import '../sub_category/widget/sub_category_list.dart';
 import '../sub_category/widget/sub_category_topcard.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 class ProductListScreen extends StatefulWidget {

@@ -1,12 +1,12 @@
-import 'package:dip_menu/data/model/price.dart';
-import 'package:dip_menu/extra/common_widgets/common_product_page_widgets.dart';
+import 'package:dipmenu_ios/data/model/price.dart';
+import 'package:dipmenu_ios/extra/common_widgets/common_product_page_widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import '../../../data/model/product_preview/custom_menu_data.dart';
 import '../../../data/model/product_preview/item_size_data.dart';
 import '../../../data/model/product_preview/product_preview_data.dart';
 import '../../../data/model/product_preview/product_preview_model.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 import '../../../domain/reporties/product_preview.dart';
 
 class RewardsProductController extends GetxController with StateMixin {

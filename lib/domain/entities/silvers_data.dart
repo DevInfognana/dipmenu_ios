@@ -1,4 +1,4 @@
-import 'package:dip_menu/domain/entities/status_reques.dart';
+import 'package:dipmenu_ios/domain/entities/status_reques.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/config/theme.dart';
@@ -28,9 +28,7 @@ class SliverDataView extends StatelessWidget {
           child: Text(
             "Offline Failure",
             style: TextStyle(
-              color: Theme.of(context)
-                  .textTheme
-                  .headline1!
+              color: Theme.of(context).textTheme.displayLarge!
                   .color!
                   .withOpacity(.5),
             ),
@@ -45,7 +43,7 @@ class SliverDataView extends StatelessWidget {
             style: TextStyle(
               color: Theme.of(context)
                   .textTheme
-                  .headline1!
+                  .displayLarge!
                   .color!
                   .withOpacity(.5),
             ),
@@ -60,7 +58,7 @@ class SliverDataView extends StatelessWidget {
             style: TextStyle(
               color: Theme.of(context)
                   .textTheme
-                  .headline1!
+                  .displayLarge!
                   .color!
                   .withOpacity(.5),
             ),

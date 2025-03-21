@@ -1,4 +1,4 @@
-import 'package:dip_menu/core/config/theme.dart';
+import 'package:dipmenu_ios/core/config/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sizer/sizer.dart';
@@ -40,7 +40,7 @@ class TextFormFieldUnderlineBorder extends StatelessWidget {
       readOnly:readOnly! ,
       keyboardType: keyboardType,
       validator: (value) => validator(value),
-      style: TextStore.textTheme.headline3?.copyWith(color: Colors.black),
+      style: TextStore.textTheme.displaySmall?.copyWith(color: Colors.black),
       textInputAction: textInputAction,
       inputFormatters: inputFormatters,
       decoration: InputDecoration(

@@ -1,10 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:dip_menu/core/config/app_extension.dart';
+import 'package:dipmenu_ios/core/config/app_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../../logic/controller/edit_profile_controller.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 // ignore: must_be_immutable
@@ -186,10 +186,10 @@ class _ProfilePictureViewState extends State<ProfilePictureView> {
           direction: Axis.vertical,
           children: [
             Text(widget.name!.toCapital,
-                style: context.theme.textTheme.headline3!
+                style: context.theme.textTheme.displaySmall!
                     .copyWith(color: color, fontWeight: FontWeight.w700)),
             Text(widget.mobileNumber!,
-                style: context.theme.textTheme.headline3!
+                style: context.theme.textTheme.displaySmall!
                     .copyWith(color: color, fontWeight: FontWeight.w500)),
           ],
         ),
@@ -199,7 +199,7 @@ class _ProfilePictureViewState extends State<ProfilePictureView> {
             widget.onChanged1!();
           },
           child: Text('Edit Profile',
-              style: context.theme.textTheme.headline5!
+              style: context.theme.textTheme.headlineMedium!
                   .copyWith(color: mainColor, fontWeight: FontWeight.bold)),
         ),
         const Spacer(),
@@ -241,7 +241,7 @@ Future<void> _showSimpleDialog(String imageView) async {
           shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(10.0))),
           // title: Text(SharedPrefs.instance.getString('first_name')!),
-          // titleTextStyle: TextStore.textTheme.headline4!
+          // titleTextStyle: TextStore.textTheme.headlineLarge!
           //     .copyWith(color: Colors.black, fontWeight: FontWeight.w400),
           alignment: Alignment.center,
           children: <Widget>[
@@ -266,7 +266,7 @@ Future<void> _showSimpleDialog(String imageView) async {
                     child: Padding(
                       padding: EdgeInsets.only( left: 5.w, top: 1.h),
                       child: Text(SharedPrefs.instance.getString('first_name')!,
-                          style: context.theme.textTheme.headline4!.copyWith(
+                          style: context.theme.textTheme.headlineLarge!.copyWith(
                               color: Colors.white,
                               fontWeight: FontWeight.w400)),
                     ),
@@ -296,7 +296,7 @@ class ListTileShow1 extends StatelessWidget {
       leading: FittedBox(
           fit: BoxFit.fill, child: Icon(icon1, color: color, size: 16.sp)),
       title: Text(title!,
-          style: context.theme.textTheme.headline4!
+          style: context.theme.textTheme.headlineLarge!
               .copyWith(color: color, fontWeight: FontWeight.w400)),
       trailing: Container(
           padding: EdgeInsets.all(0.4.h),
@@ -310,7 +310,7 @@ class ListTileShow1 extends StatelessWidget {
             children: [
               Icon(icon2, color: Colors.black, size: 5.w),
               Text(values!,
-                  style: context.theme.textTheme.headline5!.copyWith(
+                  style: context.theme.textTheme.headlineMedium!.copyWith(
                       color: Colors.black, fontWeight: FontWeight.w400)),
             ],
           )),
@@ -333,7 +333,7 @@ class ListTileShow2 extends StatelessWidget {
       leading: FittedBox(
           fit: BoxFit.fill, child: Icon(icon1, color: color, size: 16.sp)),
       title: Text(title!,
-          style: context.theme.textTheme.headline4!
+          style: context.theme.textTheme.headlineLarge!
               .copyWith(color: color, fontWeight: FontWeight.w400)),
       trailing: Container(
           padding: EdgeInsets.all(0.4.h),
@@ -351,7 +351,7 @@ class ListTileShow2 extends StatelessWidget {
                 size: 5.w,
               ),
               Text(values!,
-                  style: context.theme.textTheme.headline5!.copyWith(
+                  style: context.theme.textTheme.headlineMedium!.copyWith(
                       color: Colors.black, fontWeight: FontWeight.w400)),
             ],
           )),

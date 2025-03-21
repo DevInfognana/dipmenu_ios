@@ -64,7 +64,7 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
                 alignment: Alignment.lerp(
                     Alignment.bottomLeft, Alignment.bottomCenter, progress),
                 child: Text(title!,
-                    style: TextStore.textTheme.headline3!.copyWith(
+                    style: TextStore.textTheme.displaySmall!.copyWith(
                         color: ThemesApp.light.scaffoldBackgroundColor,
                         fontWeight: FontWeight.bold)))
             : const SizedBox(height: 0),

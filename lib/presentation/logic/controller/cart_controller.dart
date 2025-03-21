@@ -2,9 +2,9 @@ import 'dart:async';
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
-import 'package:dip_menu/data/model/cartlist_model.dart';
-import 'package:dip_menu/domain/reporties/pos_message_api.dart';
-import 'package:dip_menu/extra/common_widgets/alert_dialog.dart';
+import 'package:dipmenu_ios/data/model/cartlist_model.dart';
+import 'package:dipmenu_ios/domain/reporties/pos_message_api.dart';
+import 'package:dipmenu_ios/extra/common_widgets/alert_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -12,7 +12,7 @@ import 'package:super_tooltip/super_tooltip.dart';
 import 'package:timezone/timezone.dart' as tz;
 import '../../../data/model/sub_category/pos_message_modal.dart';
 import '../../../data/model/tax_value_model.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 
 class CartController extends GetxController with StateMixin {
   CartListData? user;

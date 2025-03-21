@@ -1,4 +1,4 @@
-import 'package:dip_menu/extra/common_widgets/text_scalar_factor.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_scalar_factor.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -80,40 +80,77 @@ class _DropdownMethodState extends State<DropdownMethod> {
                 widget.onViewbuttonpressed(value);
               });
             },
-            icon: const Icon(Icons.expand_more),
-            iconSize: 15.sp,
-            iconEnabledColor: titleColor,
-            iconDisabledColor: Colors.grey,
-            buttonHeight: 5.h,
-            //50,
-            buttonWidth: 40.w,
-            //160,
-            buttonPadding: EdgeInsets.only(left: 2.w, right: 2.w),
-            //(left: 14, right: 14),
-            buttonDecoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(
-                color: Colors.black26,
+
+            //after flutter upgrade for dropdown
+
+            buttonStyleData: ButtonStyleData(
+              height: 5.h,
+              width: 40.w,
+              padding: EdgeInsets.symmetric(horizontal: 2.w),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: Colors.black26),
+                color: Colors.white,
               ),
-              color: Colors.white,
+              elevation: 2,
             ),
-            buttonElevation: 2,
-            itemHeight: 4.h,
-            //40,
-            // itemPadding: const EdgeInsets.only(left: 14, right: 14),
-            dropdownMaxHeight:widget.controller?.itemSize.length.isLowerThan(5) ==true? 20.h:40.h,
-            dropdownWidth: 40.w,
-            //150,
-            dropdownPadding: null,
-            dropdownDecoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: Colors.white,
+            /// New way to set dropdown styles
+            dropdownStyleData: DropdownStyleData(
+              maxHeight: widget.controller?.itemSize.length.isLowerThan(5) == true ? 20.h : 40.h,
+              width: 40.w,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.white,
+              ),
+              elevation: 8,
+              offset: const Offset(0, 0),
             ),
-            dropdownElevation: 8,
-            scrollbarRadius: const Radius.circular(10),
-            scrollbarThickness: 6,
-            scrollbarAlwaysShow: true,
-            offset: const Offset(0, 0),
+            /// Updated way to set icons
+            iconStyleData: IconStyleData(
+              icon: const Icon(Icons.expand_more),
+              iconSize: 15.sp,
+              iconEnabledColor: titleColor,
+              iconDisabledColor: Colors.grey,
+            ),
+            /// New menu item style
+            menuItemStyleData: MenuItemStyleData(
+              height: 4.h,
+            ),
+
+            // icon: const Icon(Icons.expand_more),
+            // iconSize: 15.sp,
+            // iconEnabledColor: titleColor,
+            // iconDisabledColor: Colors.grey,
+            // buttonHeight: 5.h,
+            // //50,
+            // buttonWidth: 40.w,
+            // //160,
+            // buttonPadding: EdgeInsets.only(left: 2.w, right: 2.w),
+            // //(left: 14, right: 14),
+            // buttonDecoration: BoxDecoration(
+            //   borderRadius: BorderRadius.circular(10),
+            //   border: Border.all(
+            //     color: Colors.black26,
+            //   ),
+            //   color: Colors.white,
+            // ),
+            // buttonElevation: 2,
+            // itemHeight: 4.h,
+            // //40,
+            // // itemPadding: const EdgeInsets.only(left: 14, right: 14),
+            // dropdownMaxHeight:widget.controller?.itemSize.length.isLowerThan(5) ==true? 20.h:40.h,
+            // dropdownWidth: 40.w,
+            // //150,
+            // dropdownPadding: null,
+            // dropdownDecoration: BoxDecoration(
+            //   borderRadius: BorderRadius.circular(10),
+            //   color: Colors.white,
+            // ),
+            // dropdownElevation: 8,
+            // scrollbarRadius: const Radius.circular(10),
+            // scrollbarThickness: 6,
+            // scrollbarAlwaysShow: true,
+            // offset: const Offset(0, 0),
           ),
         ),
       ),

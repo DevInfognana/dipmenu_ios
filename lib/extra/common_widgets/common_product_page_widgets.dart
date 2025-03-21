@@ -1,5 +1,5 @@
-import 'package:dip_menu/domain/reporties/product_preview.dart';
-import 'package:dip_menu/extra/packages/linear_progress_bar.dart';
+import 'package:dipmenu_ios/domain/reporties/product_preview.dart';
+import 'package:dipmenu_ios/extra/packages/linear_progress_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
@@ -57,9 +57,9 @@ class CommonWidget {
       child: Text(
         data,
         overflow: TextOverflow.clip,
-        style: context.theme.textTheme.headline3
+        style: context.theme.textTheme.displaySmall
             ?.copyWith(fontWeight: FontWeight.bold),
-        // style: TextStore.textTheme.headline3!
+        // style: TextStore.textTheme.displaySmall!
         //     .copyWith(fontWeight: FontWeight.bold, color: Colors.black)
       ),
     );
@@ -213,7 +213,7 @@ class CommonWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(3.w)),
                 label: Text(name,
-                    style: TextStore.textTheme.headline3!
+                    style: TextStore.textTheme.displaySmall!
                         .copyWith(color: Colors.white)),
                 backgroundColor:
                     endPointValues == true ? mainColor : Colors.grey)
@@ -224,7 +224,7 @@ class CommonWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(3.w)),
                 label: Text(name,
-                    style: TextStore.textTheme.headline3!
+                    style: TextStore.textTheme.displaySmall!
                         .copyWith(color: Colors.white)),
                 backgroundColor: mainColor))
         : (totalLength! > 15
@@ -235,7 +235,7 @@ class CommonWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(3.w)),
                 label: Text(name,
-                    style: TextStore.textTheme.headline3!
+                    style: TextStore.textTheme.displaySmall!
                         .copyWith(color: Colors.white)),
                 backgroundColor:
                     endPointValues == true ? mainColor : Colors.grey)
@@ -246,7 +246,7 @@ class CommonWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(3.w)),
                 label: Text(name,
-                    style: TextStore.textTheme.headline3!
+                    style: TextStore.textTheme.displaySmall!
                         .copyWith(color: Colors.white)),
                 backgroundColor: mainColor));
   }
@@ -438,7 +438,7 @@ class HorziontalBargraph extends StatelessWidget {
         width: double.infinity,
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(title!,
-              style: TextStore.textTheme.headline5!.copyWith(
+              style: TextStore.textTheme.headlineMedium!.copyWith(
                   color: Get.isDarkMode ? Colors.white : Colors.black,
                   fontWeight: FontWeight.bold)),
           isWeightCheck != '1' && subCategoryIdValues != 189
@@ -449,10 +449,10 @@ class HorziontalBargraph extends StatelessWidget {
                   color: const [Colors.limeAccent, Colors.green],
                   header: '${(percent! * 100).toStringAsFixed(2)} %',
                   footer: '',
-                  footerStyle: TextStore.textTheme.headline6?.copyWith(
+                  footerStyle: TextStore.textTheme.headlineSmall?.copyWith(
                       fontSize: 9.sp,
                       color: Get.isDarkMode ? Colors.white : Colors.black),
-                  headerStyle: TextStore.textTheme.headline6?.copyWith(
+                  headerStyle: TextStore.textTheme.headlineSmall?.copyWith(
                       fontSize: 9.sp,
                       color: Get.isDarkMode ? Colors.white : Colors.black),
                   width: 40.w)
@@ -463,10 +463,10 @@ class HorziontalBargraph extends StatelessWidget {
                       animationDuration: const Duration(seconds: 3),
                       color: const [Colors.limeAccent, Colors.green],
                       header: '${(percent! * 100).toStringAsFixed(2)} %',
-                      footerStyle: TextStore.textTheme.headline6?.copyWith(
+                      footerStyle: TextStore.textTheme.headlineSmall?.copyWith(
                           fontSize: 9.sp,
                           color: Get.isDarkMode ? Colors.white : Colors.black),
-                      headerStyle: TextStore.textTheme.headline6?.copyWith(
+                      headerStyle: TextStore.textTheme.headlineSmall?.copyWith(
                           fontSize: 9.sp,
                           color: Get.isDarkMode ? Colors.white : Colors.black),
                       width: 53.w)
@@ -477,10 +477,10 @@ class HorziontalBargraph extends StatelessWidget {
                       color: const [Colors.limeAccent, Colors.green],
                       header:
                           '${(lineGraphValues! * 100).toStringAsFixed(2)} %',
-                      footerStyle: TextStore.textTheme.headline6?.copyWith(
+                      footerStyle: TextStore.textTheme.headlineSmall?.copyWith(
                           fontSize: 9.sp,
                           color: Get.isDarkMode ? Colors.white : Colors.black),
-                      headerStyle: TextStore.textTheme.headline6?.copyWith(
+                      headerStyle: TextStore.textTheme.headlineSmall?.copyWith(
                           fontSize: 9.sp,
                           color: Get.isDarkMode ? Colors.white : Colors.black),
                       width: 53.w))

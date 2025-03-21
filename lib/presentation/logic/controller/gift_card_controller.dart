@@ -1,4 +1,4 @@
-import 'package:dip_menu/extra/common_widgets/alert_dialog.dart';
+import 'package:dipmenu_ios/extra/common_widgets/alert_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -10,7 +10,7 @@ import '../../../core/config/theme.dart';
 import '../../../data/model/getGiftcard.dart';
 import '../../../data/model/giftValues.dart';
 import '../../../data/model/gift_card_coupon_model.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 import '../../../domain/reporties/gift_card_api.dart';
 // import 'package:timezone/timezone.dart' as tz;
 
@@ -125,14 +125,14 @@ class GiftCardController extends GetxController with StateMixin {
                     child: Text(
                         "The amount added to the Dip Wallet Successfully.",
                         textAlign: TextAlign.center,
-                        style: TextStore.textTheme.headline5!
+                        style: TextStore.textTheme.headlineMedium!
                             .copyWith(color: descriptionColor))),
                 SizedBox(height: 1.h),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       backgroundColor: mainColor,
                       fixedSize: Size(60.w, 2.h),
-                      textStyle: TextStore.textTheme.headline5!
+                      textStyle: TextStore.textTheme.headlineMedium!
                           .copyWith(color: Colors.white),
                       elevation: 6),
                   onPressed: () {
@@ -183,7 +183,7 @@ class GiftCardController extends GetxController with StateMixin {
                   Text(
                     'The amount has been added successfully to the Dip wallet.',
                     textAlign: TextAlign.center,
-                    style: TextStore.textTheme.headline5!
+                    style: TextStore.textTheme.headlineMedium!
                         .copyWith(color: Colors.black),
                   ),
                   SizedBox(height: 1.h),
@@ -311,7 +311,7 @@ class GiftCardController extends GetxController with StateMixin {
 //         child: AlertDialog(
 //           shape: RoundedRectangleBorder(
 //               borderRadius: BorderRadius.circular(5.w)),
-//           title:  Text('Gift-card Purchased Successfully',style: TextStore.textTheme.headline5!
+//           title:  Text('Gift-card Purchased Successfully',style: TextStore.textTheme.headlineMedium!
 //               .copyWith(color: mainColor,fontWeight: FontWeight.bold)),
 //           content: SizedBox(
 //             width: 85.w,
@@ -337,7 +337,7 @@ class GiftCardController extends GetxController with StateMixin {
 //                         children: [
 //                           TextSpan(
 //                             text: "Copy and share this code to your loved ones ",
-//                               style: TextStore.textTheme.headline5!
+//                               style: TextStore.textTheme.headlineMedium!
 //                                        .copyWith(color: Colors.black)
 //                           ),
 //                           WidgetSpan(
@@ -395,7 +395,7 @@ class GiftCardController extends GetxController with StateMixin {
 //                     //
 //                     //   },
 //                     // ),
-//                     // Text('Share',style: TextStore.textTheme.headline6!
+//                     // Text('Share',style: TextStore.textTheme.headlineSmall!
 //                     //     .copyWith(color: Colors.black)),
 //                   ],
 //                 ),

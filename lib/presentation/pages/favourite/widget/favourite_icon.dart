@@ -1,5 +1,5 @@
 
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 import 'package:flutter/material.dart';
 
 // Widget favouriteIcon(){
@@ -16,7 +16,7 @@ import 'package:flutter/material.dart';
 //       //   children: [
 //       //     Icon(icon2, color: Colors.black, size: 5.w),
 //       //     Text(values!,
-//       //         style: context.theme.textTheme.headline5!.copyWith(
+//       //         style: context.theme.textTheme.headlineMedium!.copyWith(
 //       //             color: Colors.black, fontWeight: FontWeight.w400)),
 //       //   ],
 //       // )

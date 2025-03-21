@@ -1,11 +1,11 @@
-import 'package:dip_menu/core/config/app_textstyle.dart';
-import 'package:dip_menu/core/config/theme.dart';
-import 'package:dip_menu/domain/entities/handling_data_view.dart';
-import 'package:dip_menu/extra/common_widgets/counter_increment.dart';
-import 'package:dip_menu/extra/common_widgets/description_text.dart';
-import 'package:dip_menu/extra/common_widgets/fav_login_alert_dialog.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
-import 'package:dip_menu/presentation/logic/controller/product_preview_controller.dart';
+import 'package:dipmenu_ios/core/config/app_textstyle.dart';
+import 'package:dipmenu_ios/core/config/theme.dart';
+import 'package:dipmenu_ios/domain/entities/handling_data_view.dart';
+import 'package:dipmenu_ios/extra/common_widgets/counter_increment.dart';
+import 'package:dipmenu_ios/extra/common_widgets/description_text.dart';
+import 'package:dipmenu_ios/extra/common_widgets/fav_login_alert_dialog.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/product_preview_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -77,7 +77,7 @@ class _MerchCategoryState extends State<MerchCategory> {
     return Flexible(
       child: Text(widget.productPreviewController?.argumentData['name'],
           overflow: TextOverflow.clip,
-          style: TextStore.textTheme.headline3!.copyWith(
+          style: TextStore.textTheme.displaySmall!.copyWith(
               fontWeight: FontWeight.bold,
               color: Get.isDarkMode ? Colors.white : Colors.black)),
     );
@@ -97,7 +97,7 @@ class _MerchCategoryState extends State<MerchCategory> {
                             : 0.h),
                 child: Text(
                     '\$ ${numberFormat.format(widget.productPreviewController?.slashedPrice)}',
-                    style: TextStore.textTheme.headline3?.copyWith(
+                    style: TextStore.textTheme.displaySmall?.copyWith(
                         decoration: TextDecoration.lineThrough,
                         fontWeight: FontWeight.w300,
                         color: mainColor)));
@@ -116,11 +116,11 @@ class _MerchCategoryState extends State<MerchCategory> {
         child: widget.productPreviewController!.totalPrice == 0.0
             ? Text(
                 '\$ ${numberFormat.format(widget.productPreviewController!.priceCalculation1(1, double.parse(widget.productPreviewController!.totalPrice.toStringAsFixed(2))))}',
-                style: TextStore.textTheme.headline3?.copyWith(
+                style: TextStore.textTheme.displaySmall?.copyWith(
                     fontWeight: FontWeight.w900, color: Colors.green))
             : Text(
                 '\$ ${numberFormat.format(double.parse(widget.productPreviewController!.totalPrice.toStringAsFixed(2)))}',
-                style: TextStore.textTheme.headline3?.copyWith(
+                style: TextStore.textTheme.displaySmall?.copyWith(
                     fontWeight: FontWeight.w900, color: Colors.green)),
       );
     });
@@ -190,7 +190,7 @@ class _MerchCategoryState extends State<MerchCategory> {
                 widget.productPreviewController!.decreaseCount();
               },
               label: Text(widget.productPreviewController!.productQuality.toString(),
-                  style: TextStore.textTheme.headline3?.copyWith(
+                  style: TextStore.textTheme.displaySmall?.copyWith(
                       color: Get.isDarkMode ? Colors.white : borderColor,
                       fontWeight: FontWeight.bold))));
     });
@@ -204,7 +204,7 @@ class _MerchCategoryState extends State<MerchCategory> {
               ? (widget.productPreviewController!.productDescription!.length < 64
                   ? Text(widget.productPreviewController!.productDescription!,
                       textAlign: TextAlign.left,
-                      style: TextStore.textTheme.headline5!.copyWith(
+                      style: TextStore.textTheme.headlineMedium!.copyWith(
                           fontSize: 11.sp,
                           color: Get.isDarkMode ? Colors.white : borderColor))
                   : ExpandableText(
@@ -212,7 +212,7 @@ class _MerchCategoryState extends State<MerchCategory> {
                       trimLines: 2))
               : Text(widget.productPreviewController!.productDescription!,
                   textAlign: TextAlign.left,
-                  style: TextStore.textTheme.headline5!.copyWith(
+                  style: TextStore.textTheme.headlineMedium!.copyWith(
                       fontSize: 11.sp,
                       color: Get.isDarkMode ? Colors.white : borderColor)));
     });
@@ -224,7 +224,7 @@ class _MerchCategoryState extends State<MerchCategory> {
         crossAxisAlignment: WrapCrossAlignment.center,
         children: [
           // Text('Total Price',
-          //     style: TextStore.textTheme.headline4?.copyWith(
+          //     style: TextStore.textTheme.headlineLarge?.copyWith(
           //         color: Get.isDarkMode ? Colors.white : Colors.black,
           //         fontWeight: FontWeight.bold)),
           GetBuilder<ProductPreviewController>(builder: (_) {
@@ -234,7 +234,7 @@ class _MerchCategoryState extends State<MerchCategory> {
                     widget.productPreviewController!.totalPrice)
                 .toStringAsFixed(2);
             return Text('\$ ${numberFormat.format(double.parse(values))}',
-                style: TextStore.textTheme.headline3?.copyWith(
+                style: TextStore.textTheme.displaySmall?.copyWith(
                     fontWeight: FontWeight.w900, color: Colors.green));
           })
         ]);

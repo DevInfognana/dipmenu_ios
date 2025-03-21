@@ -1,5 +1,5 @@
-import 'package:dip_menu/core/config/theme.dart';
-import 'package:dip_menu/presentation/logic/controller/home_controller.dart';
+import 'package:dipmenu_ios/core/config/theme.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';

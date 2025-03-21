@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:dio/dio.dart';
-import 'package:dip_menu/data/model/user_model.dart';
-import 'package:dip_menu/domain/entities/encryption_file.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
-import 'package:dip_menu/domain/reporties/auth_api.dart';
+import 'package:dipmenu_ios/data/model/user_model.dart';
+import 'package:dipmenu_ios/domain/entities/encryption_file.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/domain/reporties/auth_api.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 

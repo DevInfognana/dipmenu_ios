@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:dip_menu/core/config/icon_config.dart';
-import 'package:dip_menu/data/model/product_preview/custom_menu_data.dart';
+import 'package:dipmenu_ios/core/config/icon_config.dart';
+import 'package:dipmenu_ios/data/model/product_preview/custom_menu_data.dart';
 
-import 'package:dip_menu/presentation/logic/controller/product_preview_controller.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/product_preview_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:sizer/sizer.dart';
@@ -51,7 +51,7 @@ class _TabbarViewState extends State<TabbarView> {
                 iconColor: mainColor,
                 title: Text(customMenu.name!,
                     style:
-                    TextStore.textTheme.headline4?.copyWith(color: titleColor)),
+                    TextStore.textTheme.headlineLarge?.copyWith(color: titleColor)),
 
                 onExpansionChanged: (bool value) {
                   setState(() {
@@ -130,12 +130,12 @@ class ListViewCard extends StatelessWidget {
             SizedBox(height: 0.2.h),
             Flexible(
                 child: Text('Burger',
-                    style: TextStore.textTheme.bodyText1!
+                    style: TextStore.textTheme.bodyLarge!
                         .copyWith(color: Colors.black))),
 
             Text(
                 'Price : \$ ${numberFormat.format(double.parse('3.00'))}',
-                style: TextStore.textTheme.bodyText1!
+                style: TextStore.textTheme.bodyLarge!
                     .copyWith(color: Colors.black))
 
           ],
@@ -290,7 +290,7 @@ class ListViewCard extends StatelessWidget {
 //                   ),
 //                   Text(
 //                     '0.00',
-//                     style: TextStore.textTheme.headline6!.copyWith(
+//                     style: TextStore.textTheme.headlineSmall!.copyWith(
 //                         color: Colors.black,
 //                         height: 1.1,
 //                         fontWeight: FontWeight.w900),

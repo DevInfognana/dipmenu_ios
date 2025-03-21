@@ -1,6 +1,6 @@
-import 'package:dip_menu/extra/common_widgets/text_scalar_factor.dart';
-import 'package:dip_menu/presentation/pages/preview_details/widget/onBoarding_button.dart';
-import 'package:dip_menu/presentation/pages/preview_details/widget/pageViewOnBoarding.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_scalar_factor.dart';
+import 'package:dipmenu_ios/presentation/pages/preview_details/widget/onBoarding_button.dart';
+import 'package:dipmenu_ios/presentation/pages/preview_details/widget/pageViewOnBoarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';

@@ -33,7 +33,7 @@ floatingIcon({String? values, void Function()? onButtonTapped,String? devicetype
                   backgroundColor: Colors.white,
                   child: Text(
                     values!,
-                    style: TextStore.textTheme.headline5!
+                    style: TextStore.textTheme.headlineMedium!
                         .copyWith(color: mainColor),
                   ),
                 ),
@@ -54,7 +54,7 @@ floatingIcon({String? values, void Function()? onButtonTapped,String? devicetype
                   backgroundColor: Colors.white,
                   child: Text(
                     values!,
-                    style: TextStore.textTheme.headline5!
+                    style: TextStore.textTheme.headlineMedium!
                         .copyWith(color: mainColor),
                   ),
                 ),

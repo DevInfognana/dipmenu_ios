@@ -72,7 +72,7 @@
 //                                 children: [
 //                                 Icon(Icons.workspace_premium,color: mainColor,size: 25,),
 //                                 Text('Best Seller of the Week',
-//                                     style: TextStore.textTheme.headline6!
+//                                     style: TextStore.textTheme.headlineSmall!
 //                                         .copyWith(
 //                                         color: mainColor,
 //                                         fontWeight: FontWeight.bold)),
@@ -85,7 +85,7 @@
 //                                     child: Column(
 //                                         children: [
 //                                           Text('Chicken Fried Hamburger',
-//                                               style: TextStore.textTheme.headline4!
+//                                               style: TextStore.textTheme.headlineLarge!
 //                                                   .copyWith(
 //                                                   color: Colors.black,
 //                                                   fontWeight: FontWeight.bold)),

@@ -1,4 +1,4 @@
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 

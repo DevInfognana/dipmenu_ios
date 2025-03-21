@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:dip_menu/core/static/stactic_values.dart';
+import 'package:dipmenu_ios/core/static/stactic_values.dart';
 import 'package:encrypt/encrypt.dart';
 
 class Encrypt{

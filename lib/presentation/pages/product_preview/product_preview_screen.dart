@@ -1,18 +1,18 @@
-// import 'package:dip_menu/core/config/icon_config.dart';
-import 'package:dip_menu/domain/entities/handling_data_view.dart';
-import 'package:dip_menu/domain/local_handler/Local_handler.dart';
+// import 'package:dipmenu_ios/core/config/icon_config.dart';
+import 'package:dipmenu_ios/domain/entities/handling_data_view.dart';
+import 'package:dipmenu_ios/domain/local_handler/Local_handler.dart';
 
-// import 'package:dip_menu/extra/common_widgets/back_button.dart';
-import 'package:dip_menu/extra/common_widgets/bottom_navigation.dart';
-import 'package:dip_menu/extra/common_widgets/text_form_field_2.dart';
-import 'package:dip_menu/extra/common_widgets/text_scalar_factor.dart';
-import 'package:dip_menu/extra/packages/linear_progress_bar.dart';
-import 'package:dip_menu/extra/packages/scrollable_list_tab_scroller.dart';
-import 'package:dip_menu/presentation/logic/controller/authentication_controller.dart';
-import 'package:dip_menu/presentation/pages/product_preview/widget/custom_menu.dart';
-import 'package:dip_menu/presentation/pages/product_preview/widget/dropdown_button.dart';
-import 'package:dip_menu/presentation/pages/product_preview/widget/merch_category.dart';
-import 'package:dip_menu/presentation/pages/product_preview/widget/top_card.dart';
+// import 'package:dipmenu_ios/extra/common_widgets/back_button.dart';
+import 'package:dipmenu_ios/extra/common_widgets/bottom_navigation.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_form_field_2.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_scalar_factor.dart';
+import 'package:dipmenu_ios/extra/packages/linear_progress_bar.dart';
+import 'package:dipmenu_ios/extra/packages/scrollable_list_tab_scroller.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/authentication_controller.dart';
+import 'package:dipmenu_ios/presentation/pages/product_preview/widget/custom_menu.dart';
+import 'package:dipmenu_ios/presentation/pages/product_preview/widget/dropdown_button.dart';
+import 'package:dipmenu_ios/presentation/pages/product_preview/widget/merch_category.dart';
+import 'package:dipmenu_ios/presentation/pages/product_preview/widget/top_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
@@ -238,7 +238,7 @@ class _ProductPreviewScreenState extends State<ProductPreviewScreen>
                                                       .customMenu[index].name!,
                                                   style: !active
                                                       ? TextStore
-                                                          .textTheme.headline4
+                                                          .textTheme.headlineLarge
                                                           ?.copyWith(
                                                               color:
                                                                   descriptionColor,
@@ -246,7 +246,7 @@ class _ProductPreviewScreenState extends State<ProductPreviewScreen>
                                                                   FontWeight
                                                                       .bold)
                                                       : TextStore
-                                                          .textTheme.headline4
+                                                          .textTheme.headlineLarge
                                                           ?.copyWith(
                                                               color: mainColor,
                                                               fontWeight:
@@ -380,7 +380,7 @@ class _ProductPreviewScreenState extends State<ProductPreviewScreen>
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(3.w)),
                         label: Text(NameValues.add,
-                            style: TextStore.textTheme.headline4!
+                            style: TextStore.textTheme.headlineLarge!
                                 .copyWith(color: Colors.white)),
                         backgroundColor: mainColor),
               )));
@@ -404,7 +404,7 @@ class _ProductPreviewScreenState extends State<ProductPreviewScreen>
             Flexible(
               child: Text(productPreviewController.argumentData['name'],
                   overflow: TextOverflow.clip,
-                  style: TextStore.textTheme.headline4!
+                  style: TextStore.textTheme.headlineLarge!
                       .copyWith(fontWeight: FontWeight.bold,color: Colors.black)),
             ),
           ]),
@@ -422,10 +422,10 @@ class _ProductPreviewScreenState extends State<ProductPreviewScreen>
                         : 0.h),
                 child: Text(
                     '\$ ${numberFormat.format(productPreviewController.priceCalculation(productPreviewController.productQuality.toInt(), productPreviewController.totalPrice))}',
-                    style: TextStore.textTheme.headline3
+                    style: TextStore.textTheme.displaySmall
                         ?.copyWith(fontWeight: FontWeight.bold,color: mainColor)),
                     '\$ ${numberFormat.format(productPreviewController.priceCalculation1(productPreviewController.productQuality.toInt(), productPreviewController.totalPrice))}',
-                    style: TextStore.boldTheme.headline2
+                    style: TextStore.boldTheme.displayMedium
                         ?.copyWith(color: mainColor)),
               );
             }),
@@ -473,7 +473,7 @@ class _ProductPreviewScreenState extends State<ProductPreviewScreen>
                       : 0.h),
               child: Text(
                   '\$ ${numberFormat.format(productPreviewController.slashedPrice)}',
-                  style: TextStore.textTheme.headline3?.copyWith(
+                  style: TextStore.textTheme.displaySmall?.copyWith(
                       decoration: TextDecoration.lineThrough,
                       fontWeight: FontWeight.w300,
                       color: mainColor)),
@@ -492,11 +492,11 @@ class _ProductPreviewScreenState extends State<ProductPreviewScreen>
         child: productPreviewController.totalPrice == 0.0
             ? Text(
                 '\$ ${numberFormat.format(productPreviewController.priceCalculation1(1, double.parse(productPreviewController.totalPrice.toStringAsFixed(2))))}',
-                style: TextStore.textTheme.headline3?.copyWith(
+                style: TextStore.textTheme.displaySmall?.copyWith(
                     fontWeight: FontWeight.w900, color: Colors.green))
             : Text(
                 '\$ ${numberFormat.format(double.parse(productPreviewController.totalPrice.toStringAsFixed(2)))}',
-                style: TextStore.textTheme.headline3?.copyWith(
+                style: TextStore.textTheme.displaySmall?.copyWith(
                     fontWeight: FontWeight.w900, color: Colors.green)),
       );
     });
@@ -523,12 +523,12 @@ class _ProductPreviewScreenState extends State<ProductPreviewScreen>
               //         borderRadius: BorderRadius.circular(3), color: Colors.transparent),
               //     child: Center(
               //       child: Text('145',
-              //           style: TextStore.textTheme.headline3!.copyWith(
+              //           style: TextStore.textTheme.displaySmall!.copyWith(
               //               color:  color, fontWeight: FontWeight.bold)),
               //     )),
               Text(
                 productPreviewController.productQuality.toString(),
-                style: TextStore.textTheme.headline3
+                style: TextStore.textTheme.displaySmall
                     ?.copyWith(color: color, fontWeight: FontWeight.bold),
               )
 
@@ -593,7 +593,7 @@ class _ProductPreviewScreenState extends State<ProductPreviewScreen>
       return productPreviewController.productDescription!.isEmpty
           ? const SizedBox()
           : ( Text(productPreviewController.productDescription!,
-          style: TextStore.textTheme.headline6!
+          style: TextStore.textTheme.headlineSmall!
               .copyWith(color: Get.isDarkMode ? Colors.white : borderColor))
           // productPreviewController.productDescription!.length < 64
           //     ?
@@ -613,7 +613,7 @@ class _ProductPreviewScreenState extends State<ProductPreviewScreen>
       crossAxisAlignment: WrapCrossAlignment.center,
       children: [
         // Text('Total Price',
-        //     style: TextStore.textTheme.headline4
+        //     style: TextStore.textTheme.headlineLarge
         //         ?.copyWith(color: borderColor, fontWeight: FontWeight.bold)),
         GetBuilder<ProductPreviewController>(builder: (_) {
           String values = productPreviewController
@@ -622,7 +622,7 @@ class _ProductPreviewScreenState extends State<ProductPreviewScreen>
                   productPreviewController.totalPrice)
               .toStringAsFixed(2);
           return Text('\$ ${numberFormat.format(double.parse(values))}',
-              style: TextStore.textTheme.headline3
+              style: TextStore.textTheme.displaySmall
                   ?.copyWith(fontWeight: FontWeight.w900, color: Colors.green));
         })
       ],
@@ -642,7 +642,7 @@ class _ProductPreviewScreenState extends State<ProductPreviewScreen>
   //             alignment: WrapAlignment.spaceEvenly,
   //             children: [
   //               Text(NameValues.chooseSize,
-  //                   style: TextStore.textTheme.headline4?.copyWith(
+  //                   style: TextStore.textTheme.headlineLarge?.copyWith(
   //                       color: borderColor, fontWeight: FontWeight.bold)),
   //               SizedBox(width: 2.w),
   //               GetBuilder<ProductPreviewController>(builder: (_) {
@@ -706,7 +706,7 @@ class _ProductPreviewScreenState extends State<ProductPreviewScreen>
                         children: [
                           Text(NameValues.singIn.tr,
                               textAlign: TextAlign.center,
-                              style: TextStore.textTheme.headline2!.copyWith(
+                              style: TextStore.textTheme.displayMedium!.copyWith(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold)),
                           SizedBox(height: 1.5.h),
@@ -850,7 +850,7 @@ class _ProductPreviewScreenState extends State<ProductPreviewScreen>
               productPreviewController
                   .customMenu[productPreviewController.productIndex.toInt()]
                   .name!,
-              style: TextStore.textTheme.subtitle1!.copyWith(
+              style: TextStore.textTheme.titleLarge!.copyWith(
                   // color: Get.isDarkMode ? Colors.white : Colors.black,
                   color: Colors.transparent,
                   fontWeight: FontWeight.bold)),
@@ -866,10 +866,10 @@ class _ProductPreviewScreenState extends State<ProductPreviewScreen>
                   header:
                       '${(productPreviewController.valuesChanges(productPreviewController.productIndex.toInt(), 'productValues') * 100).toStringAsFixed(2)} %',
                   footer: '',
-                  footerStyle: TextStore.textTheme.headline6?.copyWith(
+                  footerStyle: TextStore.textTheme.headlineSmall?.copyWith(
                       fontSize: 9.sp,
                       color: Get.isDarkMode ? Colors.white : Colors.black),
-                  headerStyle: TextStore.textTheme.headline6?.copyWith(
+                  headerStyle: TextStore.textTheme.headlineSmall?.copyWith(
                       fontSize: 9.sp,
                       color: Get.isDarkMode ? Colors.white : Colors.black),
                   width: 40.w)
@@ -883,10 +883,10 @@ class _ProductPreviewScreenState extends State<ProductPreviewScreen>
                       color: const [Colors.limeAccent, Colors.green],
                       header:
                           '${(productPreviewController.valuesChanges(productPreviewController.productIndex.toInt(), 'productValues') * 100).toStringAsFixed(2)} %',
-                      footerStyle: TextStore.textTheme.headline6?.copyWith(
+                      footerStyle: TextStore.textTheme.headlineSmall?.copyWith(
                           fontSize: 9.sp,
                           color: Get.isDarkMode ? Colors.white : Colors.black),
-                      headerStyle: TextStore.textTheme.headline6?.copyWith(
+                      headerStyle: TextStore.textTheme.headlineSmall?.copyWith(
                           fontSize: 9.sp,
                           color: Get.isDarkMode ? Colors.white : Colors.black),
                       width: 53.w)
@@ -897,10 +897,10 @@ class _ProductPreviewScreenState extends State<ProductPreviewScreen>
                       color: const [Colors.limeAccent, Colors.green],
                       header:
                           '${(productPreviewController.lineGraphValues * 100).toStringAsFixed(2)} %',
-                      footerStyle: TextStore.textTheme.headline6?.copyWith(
+                      footerStyle: TextStore.textTheme.headlineSmall?.copyWith(
                           fontSize: 9.sp,
                           color: Get.isDarkMode ? Colors.white : Colors.black),
-                      headerStyle: TextStore.textTheme.headline6?.copyWith(
+                      headerStyle: TextStore.textTheme.headlineSmall?.copyWith(
                           fontSize: 9.sp,
                           color: Get.isDarkMode ? Colors.white : Colors.black),
                       width: 53.w))

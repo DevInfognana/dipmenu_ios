@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:dip_menu/data/model/forgot_password_screen.dart';
-import 'package:dip_menu/domain/local_handler/Local_handler.dart';
+import 'package:dipmenu_ios/data/model/forgot_password_screen.dart';
+import 'package:dipmenu_ios/domain/local_handler/Local_handler.dart';
 
 import '../../data/model/sign_up_user_model.dart';
 import '../../data/model/user_model.dart';

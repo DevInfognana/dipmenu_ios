@@ -1,10 +1,10 @@
-import 'package:dip_menu/domain/reporties/auth_api.dart';
+import 'package:dipmenu_ios/domain/reporties/auth_api.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import '../../../data/model/profile_model.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 
 
 class EditProfileController extends GetxController {

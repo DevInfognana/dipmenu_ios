@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
-import 'package:dip_menu/data/model/profile_model.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/data/model/profile_model.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../domain/entities/dio_exception.dart';

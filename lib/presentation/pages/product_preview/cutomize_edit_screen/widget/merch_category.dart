@@ -1,13 +1,13 @@
-import 'package:dip_menu/core/config/app_textstyle.dart';
-import 'package:dip_menu/core/config/theme.dart';
-import 'package:dip_menu/domain/entities/handling_data_view.dart';
-import 'package:dip_menu/domain/local_handler/Local_handler.dart';
-import 'package:dip_menu/extra/common_widgets/counter_increment.dart';
-import 'package:dip_menu/extra/common_widgets/description_text.dart';
-import 'package:dip_menu/extra/common_widgets/fav_login_alert_dialog.dart';
-import 'package:dip_menu/extra/common_widgets/image_view.dart';
-import 'package:dip_menu/presentation/logic/controller/customize_edit_controller.dart';
-import 'package:dip_menu/presentation/pages/product_preview/cutomize_edit_screen/widget/customize_dropdown.dart';
+import 'package:dipmenu_ios/core/config/app_textstyle.dart';
+import 'package:dipmenu_ios/core/config/theme.dart';
+import 'package:dipmenu_ios/domain/entities/handling_data_view.dart';
+import 'package:dipmenu_ios/domain/local_handler/Local_handler.dart';
+import 'package:dipmenu_ios/extra/common_widgets/counter_increment.dart';
+import 'package:dipmenu_ios/extra/common_widgets/description_text.dart';
+import 'package:dipmenu_ios/extra/common_widgets/fav_login_alert_dialog.dart';
+import 'package:dipmenu_ios/extra/common_widgets/image_view.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/customize_edit_controller.dart';
+import 'package:dipmenu_ios/presentation/pages/product_preview/cutomize_edit_screen/widget/customize_dropdown.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -79,7 +79,7 @@ class _CustomMerchCategoryState extends State<CustomMerchCategory> {
     return Flexible(
       child: Text(widget.customizeEditController?.argumentData['name'],
           overflow: TextOverflow.clip,
-          style: TextStore.textTheme.headline4!
+          style: TextStore.textTheme.headlineLarge!
               .copyWith(fontWeight: FontWeight.bold, color: Get.isDarkMode ? Colors.white : Colors.black)),
     );
   }
@@ -98,7 +98,7 @@ class _CustomMerchCategoryState extends State<CustomMerchCategory> {
                 : 0.h),
         child: Text(
             '\$ ${numberFormat.format(widget.customizeEditController?.slashedPrice)}',
-            style: TextStore.textTheme.headline3?.copyWith(
+            style: TextStore.textTheme.displaySmall?.copyWith(
                 decoration: TextDecoration.lineThrough,
                 fontWeight: FontWeight.w300,
                 color: mainColor)),
@@ -118,7 +118,7 @@ class _CustomMerchCategoryState extends State<CustomMerchCategory> {
                 widget.customizeEditController!.decreaseCount();
               },
               label: Text(widget.customizeEditController!.custProductQuanity.toString(),
-                  style: TextStore.textTheme.headline3?.copyWith(
+                  style: TextStore.textTheme.displaySmall?.copyWith(
                       color: Get.isDarkMode ? Colors.white : borderColor,
                       fontWeight: FontWeight.bold))));
     });
@@ -132,7 +132,7 @@ class _CustomMerchCategoryState extends State<CustomMerchCategory> {
           ? (widget.customizeEditController!.productDescription!.length < 64
           ? Text(widget.customizeEditController!.productDescription!,
           textAlign: TextAlign.left,
-          style: TextStore.textTheme.headline5!.copyWith(
+          style: TextStore.textTheme.headlineMedium!.copyWith(
               fontSize: 11.sp,
               color: Get.isDarkMode ? Colors.white : borderColor))
           : ExpandableText(
@@ -140,7 +140,7 @@ class _CustomMerchCategoryState extends State<CustomMerchCategory> {
           trimLines: 2))
           : Text(widget.customizeEditController!.productDescription!,
           textAlign: TextAlign.left,
-          style: TextStore.textTheme.headline5!.copyWith(
+          style: TextStore.textTheme.headlineMedium!.copyWith(
               fontSize: 11.sp,
               color: Get.isDarkMode ? Colors.white : borderColor)));
     });
@@ -211,7 +211,7 @@ class _CustomMerchCategoryState extends State<CustomMerchCategory> {
                 widget.customizeEditController!.defaultPrice)
                 .toStringAsFixed(2);
             return Text('\$ ${numberFormat.format(double.parse(values))}',
-                style: TextStore.textTheme.headline3?.copyWith(
+                style: TextStore.textTheme.displaySmall?.copyWith(
                     fontWeight: FontWeight.w900, color: Colors.green));
           })
         ]);

@@ -8,11 +8,11 @@ Widget rowValues({String? value1, String? value2}) {
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
       Text(value1!,
-          style: Get.context?.theme.textTheme.headline5
+          style: Get.context?.theme.textTheme.headlineMedium
               ?.copyWith(fontWeight: FontWeight.bold)),
       Text(
         value2!,
-        style: Get.context?.theme.textTheme.headline5
+        style: Get.context?.theme.textTheme.headlineMedium
             ?.copyWith(fontWeight: FontWeight.bold),
       ),
     ],

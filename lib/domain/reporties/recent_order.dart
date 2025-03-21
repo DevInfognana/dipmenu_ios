@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:dip_menu/domain/entities/crud_operation.dart';
-import 'package:dip_menu/domain/local_handler/Local_handler.dart';
-import 'package:dip_menu/domain/provider/http_request.dart';
+import 'package:dipmenu_ios/domain/entities/crud_operation.dart';
+import 'package:dipmenu_ios/domain/local_handler/Local_handler.dart';
+import 'package:dipmenu_ios/domain/provider/http_request.dart';
 
 class RecentOrder {
   static recentOrderApi({required String values}) async {

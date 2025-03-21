@@ -3,7 +3,7 @@
 // import 'package:get/get.dart';
 // import 'package:intl/intl.dart';
 // import '../../../logic/controller/sub_category_controller.dart';
-// import 'package:dip_menu/presentation/pages/index.dart';
+// import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 // class productList extends StatelessWidget {
@@ -50,7 +50,7 @@
 //                                       children: [
 //                                         Expanded(
 //                                           child: Text(controller.subCategoryProductList[index].name!,
-//                                               style: context.theme.textTheme.headline4!.copyWith(
+//                                               style: context.theme.textTheme.headlineLarge!.copyWith(
 //                                                   color: Colors.black, overflow: TextOverflow.clip,
 //                                                   fontWeight: FontWeight.bold)),
 //                                         ),
@@ -61,7 +61,7 @@
 //                                       children: [
 //                                         Text('\$ ${numberFormat.format(
 //                                             double.parse(productprice.toString()))}',
-//                                             style: TextStore.textTheme.headline4!.copyWith(
+//                                             style: TextStore.textTheme.headlineLarge!.copyWith(
 //                                                 color: mainColor,
 //
 //                                                 fontWeight: FontWeight.bold)),
@@ -72,7 +72,7 @@
 //                                       children: [
 //                                         Expanded(
 //                                           child: Text(controller.subCategoryProductList[index].description!, //controller.subCategoryProductList[index].name!,
-//                                               style: TextStore.textTheme.headline4!.copyWith(
+//                                               style: TextStore.textTheme.headlineLarge!.copyWith(
 //                                                   color: Colors.black),
 //                                           overflow: TextOverflow.ellipsis),
 //                                         ),
@@ -179,7 +179,7 @@
 //                         padding: EdgeInsets.all(0.8.h),
 //                         child: Text(
 //                           controller.subCategoryProductList[index].name!,
-//                           style: TextStore.textTheme.headline6!.copyWith(
+//                           style: TextStore.textTheme.headlineSmall!.copyWith(
 //                               color: Colors.black,
 //                               height: 1.1,
 //                               fontWeight: FontWeight.w900),
@@ -192,7 +192,7 @@
 //                       children: [
 //                         const Spacer(flex: 1),
 //                         Text('\$ ${numberFormat.format(double.parse(productprice))}',
-//                           style: TextStore.textTheme.headline6!.copyWith(
+//                           style: TextStore.textTheme.headlineSmall!.copyWith(
 //                               color: Colors.black,
 //                               height: 1.1,
 //                               fontWeight: FontWeight.w900)),

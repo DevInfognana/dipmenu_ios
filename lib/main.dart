@@ -1,11 +1,11 @@
 import 'dart:async';
 import 'dart:ui';
 
-import 'package:dip_menu/presentation/logic/bindings/controller_binding.dart';
-import 'package:dip_menu/presentation/logic/controller/connection_manager_controller.dart';
-import 'package:dip_menu/presentation/logic/controller/intial_controller.dart';
-import 'package:dip_menu/presentation/logic/controller/splash_controller.dart';
-import 'package:dip_menu/presentation/routes/routes.dart';
+import 'package:dipmenu_ios/presentation/logic/bindings/controller_binding.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/connection_manager_controller.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/intial_controller.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/splash_controller.dart';
+import 'package:dipmenu_ios/presentation/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_background_service/flutter_background_service.dart';

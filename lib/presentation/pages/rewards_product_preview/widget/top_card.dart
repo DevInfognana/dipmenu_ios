@@ -1,5 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-// import 'package:dip_menu/extra/common_widgets/snack_bar.dart';
+// import 'package:dipmenu_ios/extra/common_widgets/snack_bar.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -58,7 +58,7 @@ class _MenuCategoryItemState extends State<MenuCategoryItem1> {
         Padding(
             padding: const EdgeInsets.symmetric(vertical: 5),
             child: Text(widget.title,
-                style: TextStore.textTheme.subtitle2!.copyWith(
+                style: TextStore.textTheme.titleMedium!.copyWith(
                     color: Colors.transparent, fontWeight: FontWeight.bold)
             )),
         // widget.controller.categoryIdValues == 4
@@ -243,7 +243,7 @@ class _MenuCategoryItemState extends State<MenuCategoryItem1> {
                                                       textAlign:
                                                           TextAlign.center,
                                                       style: TextStore
-                                                          .textTheme1.headline6!
+                                                          .textTheme1.headlineSmall!
                                                           .copyWith(
                                                               color:
                                                                   Colors.black,
@@ -272,7 +272,7 @@ class _MenuCategoryItemState extends State<MenuCategoryItem1> {
                                                       textAlign:
                                                           TextAlign.center,
                                                       style: TextStore
-                                                          .textTheme1.headline6!
+                                                          .textTheme1.headlineSmall!
                                                           .copyWith(
                                                               color:
                                                                   Colors.black,
@@ -295,7 +295,7 @@ class _MenuCategoryItemState extends State<MenuCategoryItem1> {
                                   //                       .customizeMenuItems[index].name!,
                                   //                   textAlign: TextAlign.center,
                                   //                   style: TextStore.textTheme
-                                  //                       .headline6!
+                                  //                       .headlineSmall!
                                   //                       .copyWith(
                                   //                       color: Colors.black,
                                   //                       fontWeight:
@@ -315,7 +315,7 @@ class _MenuCategoryItemState extends State<MenuCategoryItem1> {
                                               '${widget.controller.pointsValues(widget.customProductsValues, widget.customizeMenuItems[index].id!)} pts',
                                               // '${numberFormat.format(double.parse(widget.controller.pointsValues(widget.customProductsValues, widget.customizeMenuItems[index].id!)))} pts',
                                               style: TextStore
-                                                  .textTheme1.headline5!
+                                                  .textTheme1.headlineMedium!
                                                   .copyWith(
                                                       color: mainColor,
                                                       fontWeight:
@@ -330,7 +330,7 @@ class _MenuCategoryItemState extends State<MenuCategoryItem1> {
                                   //     child: Text(
                                   //       'Weight ${widget.customizeMenuItems[index].weight}',
                                   //       style: TextStore
-                                  //           .textTheme1.headline6!
+                                  //           .textTheme1.headlineSmall!
                                   //           .copyWith(color: mainColor),
                                   //     ),
                                   //   ),

@@ -1,4 +1,4 @@
-// import 'package:dip_menu/presentation/pages/product_preview/widget/menu.dart';
+// import 'package:dipmenu_ios/presentation/pages/product_preview/widget/menu.dart';
 // import 'package:flutter/material.dart';
 //
 //
@@ -287,7 +287,7 @@ Widget floatingbtn(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(3.w)),
               label: Text(name,
-                  style: TextStore.textTheme.headline3!
+                  style: TextStore.textTheme.displaySmall!
                       .copyWith(color: Colors.white)),
               backgroundColor: endPointValues == true ? mainColor : Colors.grey)
           : FloatingActionButton.extended(
@@ -297,7 +297,7 @@ Widget floatingbtn(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(3.w)),
               label: Text(name,
-                  style: TextStore.textTheme.headline3!
+                  style: TextStore.textTheme.displaySmall!
                       .copyWith(color: Colors.white)),
               backgroundColor: mainColor))
       : (totalLength! > 15
@@ -308,7 +308,7 @@ Widget floatingbtn(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(3.w)),
               label: Text(name,
-                  style: TextStore.textTheme.headline3!
+                  style: TextStore.textTheme.displaySmall!
                       .copyWith(color: Colors.white)),
               backgroundColor: endPointValues == true ? mainColor : Colors.grey)
           : FloatingActionButton.extended(
@@ -318,7 +318,7 @@ Widget floatingbtn(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(3.w)),
               label: Text(name,
-                  style: TextStore.textTheme.headline3!
+                  style: TextStore.textTheme.displaySmall!
                       .copyWith(color: Colors.white)),
               backgroundColor: mainColor));
 }

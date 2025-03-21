@@ -1,9 +1,9 @@
 // import 'package:cached_network_image/cached_network_image.dart';
-import 'package:dip_menu/presentation/logic/controller/sub_category_controller.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/sub_category_controller.dart';
 
 import 'package:flutter/material.dart';
 
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 import 'package:get/get.dart';
 import 'package:octo_image/octo_image.dart';
 
@@ -82,14 +82,14 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
               ),
               child: Stack(children: <Widget>[
                 Text(title!,
-                    style: context.theme.textTheme.headline3!.copyWith(
+                    style: context.theme.textTheme.displaySmall!.copyWith(
                         foreground: Paint()
                           ..style = PaintingStyle.stroke
                           ..strokeWidth = 5
                           ..color = Colors.black,
                         fontWeight: FontWeight.bold)),
                 Text(title!,
-                    style: context.theme.textTheme.headline3!.copyWith(
+                    style: context.theme.textTheme.displaySmall!.copyWith(
                         color: ThemesApp.light.scaffoldBackgroundColor,
                         fontWeight: FontWeight.bold)),
               ]))

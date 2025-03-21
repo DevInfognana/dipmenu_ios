@@ -1,4 +1,4 @@
-import 'package:dip_menu/presentation/logic/controller/rewards_controller.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/rewards_controller.dart';
 import 'package:get/get.dart';
 
 

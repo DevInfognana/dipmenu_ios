@@ -1,7 +1,7 @@
-import 'package:dip_menu/presentation/logic/controller/contact_us_controller.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/contact_us_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 class ContactUsScreen extends StatelessWidget {
@@ -48,7 +48,7 @@ class ContactUsScreen extends StatelessWidget {
                   child: Text(contactUsController.contactUsList[index].name!,
                       overflow: TextOverflow.clip,
                       softWrap: true,
-                      style: context.theme.textTheme.headline4!.copyWith(
+                      style: context.theme.textTheme.headlineLarge!.copyWith(
                           color: Get.isDarkMode ? Colors.white : Colors.black,
                           fontWeight: FontWeight.bold,
                           fontSize: getDeviceType() == 'phone' ? 20.0 : 23.0)),

@@ -1,6 +1,6 @@
-import 'package:dip_menu/data/model/product_preview/custom_menu_data.dart';
-import 'package:dip_menu/data/model/product_preview/item_size_data.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/data/model/product_preview/custom_menu_data.dart';
+import 'package:dipmenu_ios/data/model/product_preview/item_size_data.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../data/model/price.dart';

@@ -1,7 +1,7 @@
-import 'package:dip_menu/data/model/about_us_model.dart';
-import 'package:dip_menu/domain/reporties/about_us_api.dart';
+import 'package:dipmenu_ios/data/model/about_us_model.dart';
+import 'package:dipmenu_ios/domain/reporties/about_us_api.dart';
 import 'package:get/get.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 
 class AboutUsController extends GetxController with StateMixin {
   var aboutUsList = <Data>[];

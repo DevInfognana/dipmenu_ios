@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../logic/controller/authentication_controller.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 class NoAccountText extends StatelessWidget {
@@ -60,7 +60,7 @@ class ContinueAsGuest extends StatelessWidget {
         children: [
           Text('Continue As Guest',
           style:  context
-              .theme.textTheme.headline3
+              .theme.textTheme.displaySmall
               ?.copyWith(
               fontWeight: FontWeight.bold)
             // style:  Theme.of(context).textTheme.headline5?.copyWith(

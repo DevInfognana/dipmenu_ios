@@ -13,7 +13,7 @@ import '../../../data/model/card_image_model.dart';
 import '../../../data/model/gift_card_coupon_model.dart';
 import '../../../data/model/payment_response.dart';
 import '../../../domain/entities/dio_exception.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 import '../../../domain/reporties/gift_card_api.dart';
 import '../../../domain/reporties/payment_api.dart';
 
@@ -99,8 +99,8 @@ class GiftCardPaymentController extends GetxController with StateMixin {
             'Content-Type': 'application/json',
             'x-access-token': SharedPrefs.instance.getString('token'),
           },
-          sendTimeout: 120 * 1000,
-          receiveTimeout: 120 * 1000,
+          sendTimeout: Duration(seconds: 120), //sendTimeout: 120 * 1000,
+          receiveTimeout: Duration(seconds: 120), //receiveTimeout: 120 * 1000,
         ),
       );
       if (response.statusCode == 200 || response.statusCode == 201) {
@@ -276,7 +276,7 @@ confirmOrderAlertDialog(
                   //   mainAxisAlignment: MainAxisAlignment.center,
                   //   children:  [
                   //     Text("Thanks for Order",
-                  //         style: TextStore.textTheme.headline4!
+                  //         style: TextStore.textTheme.headlineLarge!
                   //             .copyWith(color: Colors.green,fontWeight: FontWeight.bold)),
                   //   ],
                   // ),
@@ -285,12 +285,12 @@ confirmOrderAlertDialog(
                   Text(
                     'Payment Successful. Email has been sent successfully.',
                     textAlign: TextAlign.center,
-                    style: TextStore.textTheme.headline6!
+                    style: TextStore.textTheme.headlineSmall!
                         .copyWith(color: Colors.black),
                   ):Text(
                     'The amount has been added successfully to the Dip wallet.',
                     textAlign: TextAlign.center,
-                    style: TextStore.textTheme.headline6!
+                    style: TextStore.textTheme.headlineSmall!
                         .copyWith(color: Colors.black),
                   ),
                   // SizedBox(height: 0.9.h),
@@ -298,22 +298,22 @@ confirmOrderAlertDialog(
                   //   crossAxisAlignment: WrapCrossAlignment.center,
                   //   children: [
                   //     Text('Order Id',
-                  //         style: TextStore.textTheme.headline5!.copyWith(
+                  //         style: TextStore.textTheme.headlineMedium!.copyWith(
                   //             color: Colors.black, fontWeight: FontWeight.bold)),
                   //     Text("  #$orderId",
-                  //         style: TextStore.textTheme.headline5!.copyWith(
+                  //         style: TextStore.textTheme.headlineMedium!.copyWith(
                   //             color: Colors.black, fontWeight: FontWeight.bold))
                   //   ],
                   // ),
                   SizedBox(height: 1.h),
                   // Text("Please make ensure your order",
-                  //     style: TextStore.textTheme.headline6!
+                  //     style: TextStore.textTheme.headlineSmall!
                   //         .copyWith(color: Colors.black)),
                   // ElevatedButton(
                   //   style: ElevatedButton.styleFrom(
                   //       backgroundColor: darkSeafoamGreen1,
                   //       fixedSize:  Size(30.w, 4.h),
-                  //       textStyle: TextStore.textTheme.headline5!
+                  //       textStyle: TextStore.textTheme.headlineMedium!
                   //           .copyWith(color: Colors.white),
                   //       elevation: 6),
                   //   onPressed: () {
@@ -322,7 +322,7 @@ confirmOrderAlertDialog(
                   //   child: const Text('Check-in'),
                   // ),
                   // Text("Once your order arrive",
-                  //     style: TextStore.textTheme.headline6!
+                  //     style: TextStore.textTheme.headlineSmall!
                   //         .copyWith(color: Colors.black)),
                   //
                   // SizedBox(height: 2.5.h),
@@ -464,7 +464,7 @@ failedPayment(BuildContext context, String? errormessage, int values) {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(errormessage!,
-                              style: TextStore.textTheme.headline6!.copyWith(
+                              style: TextStore.textTheme.headlineSmall!.copyWith(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold)),
                         ],
@@ -474,7 +474,7 @@ failedPayment(BuildContext context, String? errormessage, int values) {
                           Expanded(
                               child: Text(
                                   '${errormessage!} \n${'Mobile Number : (662) 429-6540'} \n${'Email ID : velvetcream@gmail.com'}',
-                                  style: TextStore.textTheme.headline6!.copyWith(
+                                  style: TextStore.textTheme.headlineSmall!.copyWith(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold)))
                         ],

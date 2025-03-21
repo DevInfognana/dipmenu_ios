@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
-import 'package:dip_menu/data/model/home/banner_data.dart';
-import 'package:dip_menu/data/model/sub_category/pos_message_modal.dart';
-import 'package:dip_menu/domain/reporties/pos_message_api.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/data/model/home/banner_data.dart';
+import 'package:dipmenu_ios/data/model/sub_category/pos_message_modal.dart';
+import 'package:dipmenu_ios/domain/reporties/pos_message_api.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_background_service/flutter_background_service.dart';
@@ -547,7 +547,7 @@ class HomeController extends GetxController with StateMixin {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text("Please wait",
-                                    style: TextStore.textTheme.headline4!
+                                    style: TextStore.textTheme.headlineLarge!
                                         .copyWith(
                                             color: Colors.grey,
                                             fontWeight: FontWeight.bold)),
@@ -568,7 +568,7 @@ class HomeController extends GetxController with StateMixin {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(" Order ID :  $currentOrder",
-                                    style: TextStore.textTheme.headline3!
+                                    style: TextStore.textTheme.displaySmall!
                                         .copyWith(
                                             color: titleColor,
                                             fontWeight: FontWeight.w800)),
@@ -587,7 +587,7 @@ class HomeController extends GetxController with StateMixin {
                                           width: 12.w),
                                       const SizedBox(width: 20),
                                       Text("Drive-Thru",
-                                          style: TextStore.textTheme.headline3!
+                                          style: TextStore.textTheme.displaySmall!
                                               .copyWith(
                                                   color: drivethru,
                                                   fontWeight: FontWeight.w600)),
@@ -609,7 +609,7 @@ class HomeController extends GetxController with StateMixin {
                                           width: 12.w),
                                       const SizedBox(width: 20),
                                       Text("Front Window", //"Pick Up Order",
-                                          style: TextStore.textTheme.headline3!
+                                          style: TextStore.textTheme.displaySmall!
                                               .copyWith(
                                                   color: darkSeafoamGreen1,
                                                   fontWeight: FontWeight.w600)),
@@ -634,7 +634,7 @@ class HomeController extends GetxController with StateMixin {
                                       Center(
                                           child: Text(NameValues.activeOrder,
                                               style: TextStore
-                                                  .textTheme.headline3!
+                                                  .textTheme.displaySmall!
                                                   .copyWith(
                                                       color: titleColor,
                                                       fontWeight:
@@ -658,13 +658,13 @@ class HomeController extends GetxController with StateMixin {
                                               Text(
                                                   "ID :${currentOrderData!.data![index].orderNumber}",
                                                   style: TextStore
-                                                      .textTheme.headline5!
+                                                      .textTheme.headlineMedium!
                                                       .copyWith(
                                                           color: Colors.black)),
                                               Text(
                                                   "Price: \$ ${currentOrderData!.data![index].orderTotal}",
                                                   style: TextStore
-                                                      .textTheme.headline5!
+                                                      .textTheme.headlineMedium!
                                                       .copyWith(
                                                           color: Colors.black))
                                             ],
@@ -690,10 +690,10 @@ class HomeController extends GetxController with StateMixin {
                                           style: DeviceTypeValues
                                                       .getDeviceType() ==
                                                   'phone'
-                                              ? TextStore.textTheme.headline5!
+                                              ? TextStore.textTheme.headlineMedium!
                                                   .copyWith(
                                                       color: descriptionColor)
-                                              : TextStore.textTheme.headline4!
+                                              : TextStore.textTheme.headlineLarge!
                                                   .copyWith(
                                                       color: descriptionColor)),
                                       Center(
@@ -706,7 +706,7 @@ class HomeController extends GetxController with StateMixin {
                                                 backgroundColor: mainColor,
                                                 fixedSize: Size(50.w, 2.h),
                                                 textStyle: TextStore
-                                                    .textTheme.headline5!
+                                                    .textTheme.headlineMedium!
                                                     .copyWith(
                                                         color: Colors.white),
                                                 elevation: 6),
@@ -734,9 +734,9 @@ class HomeController extends GetxController with StateMixin {
             content: Text(
                 "There are currently no active orders. Please place an order to proceed with the check-in process.",
                 style: DeviceTypeValues.getDeviceType() == 'phone'
-                    ? TextStore.textTheme.headline5!
+                    ? TextStore.textTheme.headlineMedium!
                         .copyWith(color: descriptionColor)
-                    : TextStore.textTheme.headline4!
+                    : TextStore.textTheme.headlineLarge!
                         .copyWith(color: descriptionColor)),
             actions: [
               Center(
@@ -748,7 +748,7 @@ class HomeController extends GetxController with StateMixin {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: mainColor,
                         fixedSize: Size(50.w, 2.h),
-                        textStyle: TextStore.textTheme.headline5!
+                        textStyle: TextStore.textTheme.headlineMedium!
                             .copyWith(color: Colors.white),
                         elevation: 6),
                     child: const Text('Back')),

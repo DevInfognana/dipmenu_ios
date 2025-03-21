@@ -1,7 +1,7 @@
-// import 'package:dip_menu/core/config/icon_config.dart';
+// import 'package:dipmenu_ios/core/config/icon_config.dart';
 
-// import 'package:dip_menu/extra/common_widgets/bottom_navigation.dart';
-import 'package:dip_menu/presentation/pages/rewards/widget/cart_view.dart';
+// import 'package:dipmenu_ios/extra/common_widgets/bottom_navigation.dart';
+import 'package:dipmenu_ios/presentation/pages/rewards/widget/cart_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -13,7 +13,7 @@ import '../../logic/controller/main_controller.dart';
 
 // import '../../logic/controller/profile_controller.dart';
 import '../../logic/controller/rewards_controller.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 // import '../../logic/controller/dim_menu_search_controller.dart';
 // import '../../routes/routes.dart';
@@ -116,7 +116,7 @@ class _RewardsScreenState extends State<RewardsScreen> {
     } else {
       values = SharedPrefs.instance.getInt('rewards')?? 0;
     }
-    return Text( '   Your Reward points : $values', style: context.theme.textTheme.headline4
+    return Text( '   Your Reward points : $values', style: context.theme.textTheme.headlineLarge
           ?.copyWith(fontWeight: FontWeight.bold));
     // return  Card(
     //   // semanticContainer: true,
@@ -132,9 +132,9 @@ class _RewardsScreenState extends State<RewardsScreen> {
     //     Wrap(
     //       direction: Axis.vertical,
     //       children: [
-    //         Text('     $values',style: context.theme.textTheme.headline4
+    //         Text('     $values',style: context.theme.textTheme.headlineLarge
     //           ?.copyWith(fontWeight: FontWeight.bold)),
-    // Text( '      rewards points ', style: context.theme.textTheme.headline4
+    // Text( '      rewards points ', style: context.theme.textTheme.headlineLarge
     //         ?.copyWith(fontWeight: FontWeight.bold))
     //
     //       ],
@@ -149,7 +149,7 @@ class _RewardsScreenState extends State<RewardsScreen> {
     //   //   // direction: Axis.horizontal,
     //   //   children: [
     //   //
-    //   // Text( '   Your are earned rewards points : $values', style: context.theme.textTheme.headline4
+    //   // Text( '   Your are earned rewards points : $values', style: context.theme.textTheme.headlineLarge
     //   //       ?.copyWith(fontWeight: FontWeight.bold))
     //   //
     //   //   ],
@@ -170,14 +170,14 @@ class _RewardsScreenState extends State<RewardsScreen> {
                 //You have not logged in. Please click here to log in. It will display your reward products.
 
                 Text('You have not logged in. ',
-                    style: context.theme.textTheme.headline4
+                    style: context.theme.textTheme.headlineLarge
                         ?.copyWith(fontWeight: FontWeight.bold)),
                 RichText(
                   text: TextSpan(
                     children: [
                       TextSpan(
                           text: "Please ",
-                          style: context.theme.textTheme.headline4!
+                          style: context.theme.textTheme.headlineLarge!
                               .copyWith(fontWeight: FontWeight.bold)),
                       WidgetSpan(
                           child: GestureDetector(
@@ -185,7 +185,7 @@ class _RewardsScreenState extends State<RewardsScreen> {
                           Get.offNamed(Routes.loginScreen);
                         },
                         child: Text('Click here to login.',
-                            style: context.theme.textTheme.headline4?.copyWith(
+                            style: context.theme.textTheme.headlineLarge?.copyWith(
                                 decoration: TextDecoration.underline,
                                 decorationStyle: TextDecorationStyle.dashed,
                                 fontWeight: FontWeight.bold)),
@@ -194,7 +194,7 @@ class _RewardsScreenState extends State<RewardsScreen> {
                   ),
                 ),
                 Text('It will display your reward products',
-                    style: context.theme.textTheme.headline4
+                    style: context.theme.textTheme.headlineLarge
                         ?.copyWith(fontWeight: FontWeight.bold)),
                 // Text('welcome'),
 
@@ -219,7 +219,7 @@ class _RewardsScreenState extends State<RewardsScreen> {
                 //   style: ElevatedButton.styleFrom(
                 //     primary: mainColor,
                 //     padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 7),
-                //     textStyle: TextStore.textTheme.headline4!.copyWith(
+                //     textStyle: TextStore.textTheme.headlineLarge!.copyWith(
                 //         color: Colors.black),
                 //   ),
                 //   child: Text(NameValues.tryAgain),

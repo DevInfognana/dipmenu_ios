@@ -1,5 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-// import 'package:dip_menu/extra/common_widgets/snack_bar.dart';
+// import 'package:dipmenu_ios/extra/common_widgets/snack_bar.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -59,7 +59,7 @@ class _MenuCategoryItemState extends State<ResMenuCategoryItem> {
         Padding(
             padding: const EdgeInsets.symmetric(vertical: 5),
             child: Text(widget.title,
-                style: TextStore.textTheme.subtitle2!.copyWith(
+                style: TextStore.textTheme.titleMedium!.copyWith(
                   fontSize: 4,
                     color: Colors.transparent, fontWeight: FontWeight.bold)
             )
@@ -75,7 +75,7 @@ class _MenuCategoryItemState extends State<ResMenuCategoryItem> {
         //     padding: EdgeInsets.only(top: 1.h, bottom: 1.h),
         //     child: Text(
         //         'Min: ${widget.minMaxValues['min']} Max: ${widget.minMaxValues['max']}',
-        //         style: TextStore.textTheme.headline6!
+        //         style: TextStore.textTheme.headlineSmall!
         //             .copyWith(color: Colors.grey))),
         GridView.builder(
             gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
@@ -241,7 +241,7 @@ class _MenuCategoryItemState extends State<ResMenuCategoryItem> {
                                                         .name!,
                                                     textAlign: TextAlign.center,
                                                     style: TextStore.textTheme1
-                                                        .headline6!
+                                                        .headlineSmall!
                                                         .copyWith(
                                                         color: Colors.black,
                                                         fontWeight:
@@ -265,7 +265,7 @@ class _MenuCategoryItemState extends State<ResMenuCategoryItem> {
                                                         .name!,
                                                     textAlign: TextAlign.center,
                                                     style: TextStore.textTheme1
-                                                        .headline6!
+                                                        .headlineSmall!
                                                         .copyWith(
                                                         color: Colors.black,
                                                         fontWeight:
@@ -285,7 +285,7 @@ class _MenuCategoryItemState extends State<ResMenuCategoryItem> {
                                               '${widget.controller.pointsValues(widget.customProductsValues, widget.customizeMenuItems[index].id!)} pts',
                                               // '\$ ${numberFormat.format(double.parse(widget.controller.pointsValues(widget.customProductsValues, widget.customizeMenuItems[index].id!)))}',
                                               style: TextStore
-                                                  .textTheme1.headline5!
+                                                  .textTheme1.headlineMedium!
                                                   .copyWith(
                                                   color: mainColor,
                                                   fontWeight:

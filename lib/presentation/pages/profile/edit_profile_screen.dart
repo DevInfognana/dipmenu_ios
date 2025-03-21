@@ -1,10 +1,10 @@
 import 'dart:convert';
-import 'package:dip_menu/presentation/pages/profile/widget/profile_picture.dart';
+import 'package:dipmenu_ios/presentation/pages/profile/widget/profile_picture.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import '../../logic/controller/edit_profile_controller.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 class EditProfileScreen extends StatefulWidget {
@@ -69,7 +69,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                               imageUrl: profileImageUrl)),
                       AuthTextFromField(
                           controller: firstNameController,
-                          labelStyle: context.theme.textTheme.headline4!
+                          labelStyle: context.theme.textTheme.headlineLarge!
                               .copyWith(
                                   color: hintColor,
                                   fontWeight: FontWeight.w500),
@@ -91,7 +91,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                       AuthTextFromField(
                           controller: lastNameController,
                           readOnly: false,
-                          labelStyle: context.theme.textTheme.headline4!
+                          labelStyle: context.theme.textTheme.headlineLarge!
                               .copyWith(
                                   color: hintColor,
                                   fontWeight: FontWeight.w500),
@@ -112,7 +112,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                       AuthTextFromField(
                           controller: mobileController,
                           readOnly: false,
-                          labelStyle: context.theme.textTheme.headline4!
+                          labelStyle: context.theme.textTheme.headlineLarge!
                               .copyWith(
                                   color: hintColor,
                                   fontWeight: FontWeight.w500),
@@ -138,7 +138,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                       AuthTextFromField(
                           controller: emailController,
                           readOnly: true,
-                          labelStyle: context.theme.textTheme.headline4!
+                          labelStyle: context.theme.textTheme.headlineLarge!
                               .copyWith(
                                   color: hintColor,
                                   fontWeight: FontWeight.w500),

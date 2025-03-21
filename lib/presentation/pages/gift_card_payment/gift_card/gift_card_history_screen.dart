@@ -1,9 +1,9 @@
-import 'package:dip_menu/core/config/theme.dart';
-import 'package:dip_menu/core/static/stactic_values.dart';
-import 'package:dip_menu/extra/common_widgets/back_button.dart';
-import 'package:dip_menu/extra/common_widgets/snack_bar.dart';
-import 'package:dip_menu/extra/common_widgets/text_scalar_factor.dart';
-import 'package:dip_menu/presentation/logic/controller/gift_card_controller.dart';
+import 'package:dipmenu_ios/core/config/theme.dart';
+import 'package:dipmenu_ios/core/static/stactic_values.dart';
+import 'package:dipmenu_ios/extra/common_widgets/back_button.dart';
+import 'package:dipmenu_ios/extra/common_widgets/snack_bar.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_scalar_factor.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/gift_card_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -276,12 +276,12 @@ changetext({String? value1, String? value2, Color? colorvalues}) {
       Text(
         value1!,
         textAlign: TextAlign.left,
-        style: Get.context?.theme.textTheme.headline5
+        style: Get.context?.theme.textTheme.headlineMedium
             ?.copyWith(color: textColor, fontWeight: FontWeight.w900),
       ),
       Text(value2!,
           textAlign: TextAlign.justify,
-          style: Get.context?.theme.textTheme.headline5
+          style: Get.context?.theme.textTheme.headlineMedium
               ?.copyWith(color: colorvalues, fontWeight: FontWeight.bold)),
     ],
   );

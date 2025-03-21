@@ -1,4 +1,4 @@
-import 'package:dip_menu/domain/entities/status_reques.dart';
+import 'package:dipmenu_ios/domain/entities/status_reques.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -39,7 +39,7 @@ class HandlingDataView extends StatelessWidget {
                 ? CircularProgressIndicator(color: mainColor)
                 : Text(
                     errorValues!,
-                    style: Get.context?.theme.textTheme.headline4
+                    style: Get.context?.theme.textTheme.headlineLarge
                         ?.copyWith(fontWeight: FontWeight.bold),
                     // style: TextStyle(color: mainColor)
                   )));

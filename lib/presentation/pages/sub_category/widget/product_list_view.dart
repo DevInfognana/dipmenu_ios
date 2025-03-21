@@ -4,7 +4,7 @@
 // import 'package:intl/intl.dart';
 //
 // import '../../../logic/controller/sub_category_controller.dart';
-// import 'package:dip_menu/presentation/pages/index.dart';
+// import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 // ignore: camel_case_types
@@ -117,7 +117,7 @@
 //                           padding: EdgeInsets.all(0.8.h),
 //                           child: Text(
 //                             controller.subCategoryProductList[index].name!,
-//                             style: TextStore.textTheme.headline6!.copyWith(
+//                             style: TextStore.textTheme.headlineSmall!.copyWith(
 //                                 color: Colors.black,
 //                                 height: 1.1,
 //                                 fontWeight: FontWeight.w900),
@@ -130,7 +130,7 @@
 //                         children: [
 //                           const Spacer(flex: 1),
 //                           Text('\$ ${numberFormat.format(double.parse(productprice))}',
-//                             style: TextStore.textTheme.headline6!.copyWith(
+//                             style: TextStore.textTheme.headlineSmall!.copyWith(
 //                                 color: Colors.black,
 //                                 height: 1.1,
 //                                 fontWeight: FontWeight.w900)),

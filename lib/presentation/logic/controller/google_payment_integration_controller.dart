@@ -5,7 +5,7 @@ import 'dart:ui';
 
 import 'package:crypto/crypto.dart';
 import 'package:dio/dio.dart';
-import 'package:dip_menu/presentation/logic/controller/payment_detail_controller.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/payment_detail_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
@@ -30,7 +30,7 @@ import '../../../domain/reporties/payment_api.dart';
 import '../../../extra/common_widgets/text_form_field_2.dart';
 import 'gift_card_payment_controller.dart';
 import 'dart:io' show Platform;
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 
 import 'home_controller.dart';
 
@@ -620,7 +620,7 @@ class GooglePaymentIntegrationController extends GetxController
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5.w)),
             title: Text('Gift-card Purchased Successfully',
-                style: TextStore.textTheme.headline5!
+                style: TextStore.textTheme.headlineMedium!
                     .copyWith(color: mainColor, fontWeight: FontWeight.bold)),
             content: SizedBox(
               width: 85.w,
@@ -635,7 +635,7 @@ class GooglePaymentIntegrationController extends GetxController
                           TextSpan(
                               text:
                                   "Copy and share this code to your loved ones ",
-                              style: TextStore.textTheme.headline5!
+                              style: TextStore.textTheme.headlineMedium!
                                   .copyWith(color: Colors.black)),
                           const WidgetSpan(
                             child:
@@ -756,13 +756,13 @@ class GooglePaymentIntegrationController extends GetxController
                         ? Text(
                             'Payment Successful. Email has been sent successfully.',
                             textAlign: TextAlign.center,
-                            style: TextStore.textTheme.headline6!
+                            style: TextStore.textTheme.headlineSmall!
                                 .copyWith(color: Colors.black),
                           )
                         : Text(
                             'The amount has been added successfully to the Dip wallet.',
                             textAlign: TextAlign.center,
-                            style: TextStore.textTheme.headline5!
+                            style: TextStore.textTheme.headlineMedium!
                                 .copyWith(color: Colors.black),
                           ),
                     SizedBox(height: 1.h),
@@ -830,7 +830,7 @@ class GooglePaymentIntegrationController extends GetxController
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text("Thanks for Order",
-                                style: TextStore.textTheme.headline4!.copyWith(
+                                style: TextStore.textTheme.headlineLarge!.copyWith(
                                     color: Colors.green,
                                     fontWeight: FontWeight.bold)),
                           ],
@@ -841,7 +841,7 @@ class GooglePaymentIntegrationController extends GetxController
                         child: Text(
                           'Your payment has been confirmed.\n You can check the details.',
                           textAlign: TextAlign.center,
-                          style: TextStore.textTheme.headline6!
+                          style: TextStore.textTheme.headlineSmall!
                               .copyWith(color: Colors.black),
                         ),
                       ),
@@ -851,11 +851,11 @@ class GooglePaymentIntegrationController extends GetxController
                           crossAxisAlignment: WrapCrossAlignment.center,
                           children: [
                             Text('Order Id',
-                                style: TextStore.textTheme.headline5!.copyWith(
+                                style: TextStore.textTheme.headlineMedium!.copyWith(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold)),
                             Text("  #$orderId",
-                                style: TextStore.textTheme.headline5!.copyWith(
+                                style: TextStore.textTheme.headlineMedium!.copyWith(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold))
                           ],
@@ -864,7 +864,7 @@ class GooglePaymentIntegrationController extends GetxController
                       SizedBox(height: 0.9.h),
                       TextScaleFactorClamper(
                         child: Text("Please make ensure your order",
-                            style: TextStore.textTheme.headline5!
+                            style: TextStore.textTheme.headlineMedium!
                                 .copyWith(color: Colors.black)),
                       ),
                       TextScaleFactorClamper(
@@ -872,7 +872,7 @@ class GooglePaymentIntegrationController extends GetxController
                           style: ElevatedButton.styleFrom(
                               backgroundColor: darkSeafoamGreen1,
                               fixedSize: Size(30.w, 4.h),
-                              textStyle: TextStore.textTheme.headline5!
+                              textStyle: TextStore.textTheme.headlineMedium!
                                   .copyWith(color: Colors.white),
                               elevation: 6),
                           onPressed: () {
@@ -890,7 +890,7 @@ class GooglePaymentIntegrationController extends GetxController
                       ),
                       // TextScaleFactorClamper(
                       //   child: Text("Once your order arrive",
-                      //       style: TextStore.textTheme.headline6!
+                      //       style: TextStore.textTheme.headlineSmall!
                       //           .copyWith(color: Colors.black)),
                       // ),
                       SizedBox(height: 1.h),
@@ -916,7 +916,7 @@ class GooglePaymentIntegrationController extends GetxController
                                         vertical: 2.h, horizontal: 10.w)),
                                 child: TextScaleFactorClamper(
                                   child: Text('Back to Home',
-                                      style: TextStore.textTheme.headline5!
+                                      style: TextStore.textTheme.headlineMedium!
                                           .copyWith(color: Colors.white)
                                       // style: TextStyle(fontSize: 18, color: Colors.white),
                                       ),

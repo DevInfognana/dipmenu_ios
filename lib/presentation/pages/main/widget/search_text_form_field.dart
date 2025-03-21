@@ -1,4 +1,4 @@
-import 'package:dip_menu/core/config/theme.dart';
+import 'package:dipmenu_ios/core/config/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -35,7 +35,7 @@ class SearchTextFromField extends StatelessWidget {
       cursorColor: mainColor,
       keyboardType: TextInputType.text,
       validator: (value) => validator!(value),
-      style:  context.theme.textTheme.headline5,
+      style:  context.theme.textTheme.headlineMedium,
       textInputAction: textInputAction,
       onEditingComplete: onEditingCompleted,
       onChanged:onChanged ,
@@ -45,7 +45,7 @@ class SearchTextFromField extends StatelessWidget {
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
         hintText: hintText,
-        hintStyle:  context.theme.textTheme.headline4!.copyWith(
+        hintStyle:  context.theme.textTheme.headlineLarge!.copyWith(
             color: hintColor,
             fontWeight: FontWeight.w500),
         filled: true,

@@ -122,30 +122,60 @@ class NotificationService {
   final BehaviorSubject<String> behaviorSubject = BehaviorSubject();
 
   final _localNotifications = FlutterLocalNotificationsPlugin();
+
   Future<void> initializePlatformNotifications() async {
     const AndroidInitializationSettings initializationSettingsAndroid =
     AndroidInitializationSettings('ic_launcher');
 
-    const IOSInitializationSettings initializationSettingsIOS =
-    IOSInitializationSettings(
-        requestSoundPermission: true,
-        requestBadgePermission: true,
-        requestAlertPermission: true);
+    const DarwinInitializationSettings initializationSettingsIOS =
+    DarwinInitializationSettings(
+      requestSoundPermission: true,
+      requestBadgePermission: true,
+      requestAlertPermission: true,
+    );
 
-    const InitializationSettings initializationSettings =
-    InitializationSettings(
+    const InitializationSettings initializationSettings = InitializationSettings(
       android: initializationSettingsAndroid,
       iOS: initializationSettingsIOS,
     );
 
-
-
-
     await _localNotifications.initialize(
       initializationSettings,
-      onSelectNotification: selectNotification,
+      onDidReceiveNotificationResponse: (NotificationResponse response) {
+        handleNotificationTap(response);
+      },
     );
   }
+
+  void handleNotificationTap(NotificationResponse response) {
+    // Handle the notification tap logic here
+    print("Notification tapped: ${response.payload}");
+  }
+
+  // Future<void> initializePlatformNotifications() async {
+  //   const AndroidInitializationSettings initializationSettingsAndroid =
+  //   AndroidInitializationSettings('ic_launcher');
+  //
+  //   const IOSInitializationSettings initializationSettingsIOS =
+  //   IOSInitializationSettings(
+  //       requestSoundPermission: true,
+  //       requestBadgePermission: true,
+  //       requestAlertPermission: true);
+  //
+  //   const InitializationSettings initializationSettings =
+  //   InitializationSettings(
+  //     android: initializationSettingsAndroid,
+  //     iOS: initializationSettingsIOS,
+  //   );
+  //
+  //
+  //
+  //
+  //   await _localNotifications.initialize(
+  //     initializationSettings,
+  //     onSelectNotification: selectNotification,
+  //   );
+  // }
   //
   // @pragma('vm:entry-point')
   // void notificationTapBackground() {
@@ -153,8 +183,8 @@ class NotificationService {
   // }
 
   Future<NotificationDetails> _notificationDetails() async {
-    AndroidNotificationDetails androidPlatformChannelSpecifics =
-    const AndroidNotificationDetails(
+    const AndroidNotificationDetails androidPlatformChannelSpecifics =
+    AndroidNotificationDetails(
       'DIP MENU id',
       'DIP Menu name',
       groupKey: 'com.example.dip_menu',
@@ -164,26 +194,60 @@ class NotificationService {
       playSound: true,
       ticker: 'ticker',
       audioAttributesUsage: AudioAttributesUsage.notification,
-      // sound: RawResourceAndroidNotificationSound('notification_sound'),
       enableVibration: true,
       color: Color(0xff2196f3),
     );
 
-    IOSNotificationDetails iosNotificationDetails = const IOSNotificationDetails(
-        threadIdentifier: "thread1",
-        attachments: <IOSNotificationAttachment>[]);
+    const DarwinNotificationDetails iosNotificationDetails =
+    DarwinNotificationDetails(
+      threadIdentifier: "thread1",
+      attachments: <DarwinNotificationAttachment>[],
+    );
 
     final details = await _localNotifications.getNotificationAppLaunchDetails();
     if (details != null && details.didNotificationLaunchApp) {
-      behaviorSubject.add(details.payload!);
+      behaviorSubject.add(details.notificationResponse?.payload ?? "");
     }
 
     NotificationDetails platformChannelSpecifics = NotificationDetails(
-        android: androidPlatformChannelSpecifics, iOS: iosNotificationDetails);
+      android: androidPlatformChannelSpecifics,
+      iOS: iosNotificationDetails,
+    );
 
     return platformChannelSpecifics;
   }
 
+  // Future<NotificationDetails> _notificationDetails() async {
+  //   AndroidNotificationDetails androidPlatformChannelSpecifics =
+  //   const AndroidNotificationDetails(
+  //     'DIP MENU id',
+  //     'DIP Menu name',
+  //     groupKey: 'com.example.dip_menu',
+  //     channelDescription: 'channel description',
+  //     importance: Importance.max,
+  //     priority: Priority.max,
+  //     playSound: true,
+  //     ticker: 'ticker',
+  //     audioAttributesUsage: AudioAttributesUsage.notification,
+  //     // sound: RawResourceAndroidNotificationSound('notification_sound'),
+  //     enableVibration: true,
+  //     color: Color(0xff2196f3),
+  //   );
+  //
+  //   IOSNotificationDetails iosNotificationDetails = const IOSNotificationDetails(
+  //       threadIdentifier: "thread1",
+  //       attachments: <IOSNotificationAttachment>[]);
+  //
+  //   final details = await _localNotifications.getNotificationAppLaunchDetails();
+  //   if (details != null && details.didNotificationLaunchApp) {
+  //     behaviorSubject.add(details.payload!);
+  //   }
+  //
+  //   NotificationDetails platformChannelSpecifics = NotificationDetails(
+  //       android: androidPlatformChannelSpecifics, iOS: iosNotificationDetails);
+  //
+  //   return platformChannelSpecifics;
+  // }
 
   Future<void> showScheduledLocalNotification({
     required int id,
@@ -192,6 +256,7 @@ class NotificationService {
     required int seconds,
   }) async {
     final platformChannelSpecifics = await _notificationDetails();
+
     await _localNotifications.zonedSchedule(
       id,
       title,
@@ -201,9 +266,30 @@ class NotificationService {
 
       uiLocalNotificationDateInterpretation:
       UILocalNotificationDateInterpretation.absoluteTime,
-      androidAllowWhileIdle: true,
+
+      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
     );
   }
+
+  // Future<void> showScheduledLocalNotification({
+  //   required int id,
+  //   required String title,
+  //   required String body,
+  //   required int seconds,
+  // }) async {
+  //   final platformChannelSpecifics = await _notificationDetails();
+  //   await _localNotifications.zonedSchedule(
+  //     id,
+  //     title,
+  //     body,
+  //     tz.TZDateTime.now(tz.local).add(Duration(seconds: seconds)),
+  //     platformChannelSpecifics,
+  //
+  //     uiLocalNotificationDateInterpretation:
+  //     UILocalNotificationDateInterpretation.absoluteTime,
+  //     androidAllowWhileIdle: true,
+  //   );
+  // }
 
   Future<void> showdLocalNotification({
     required int id,
@@ -212,11 +298,11 @@ class NotificationService {
   }) async {
     final platformChannelSpecifics = await _notificationDetails();
     await _localNotifications.show(
-      id,
-      title,
-      body,
-      platformChannelSpecifics,
-      payload: 'welcome'
+        id,
+        title,
+        body,
+        platformChannelSpecifics,
+        payload: 'welcome'
     );
   }
 

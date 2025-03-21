@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import '../../../data/model/sub_category/category_product.dart';
 import '../../../data/model/sub_category/sub_category_product_data.dart';
 import '../../../domain/reporties/sub_category_service.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 
 class SubCategoryController extends GetxController {
   dynamic argumentData = Get.arguments;

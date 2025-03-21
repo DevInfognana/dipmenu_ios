@@ -34,7 +34,7 @@ class OnBoardingButton extends StatelessWidget {
               child: Align(
                 alignment: Alignment.center,
                 child: Text( controller.currentIndex.value==2?'Get Started':'Next',
-                    style: TextStore.textTheme.headline4!.copyWith(
+                    style: TextStore.textTheme.headlineLarge!.copyWith(
                         color: Colors.white,
 
                         fontWeight: FontWeight.w500)),

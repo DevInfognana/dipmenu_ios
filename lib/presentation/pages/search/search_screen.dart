@@ -1,9 +1,9 @@
-import 'package:dip_menu/presentation/pages/search/widget/search_card.dart';
+import 'package:dipmenu_ios/presentation/pages/search/widget/search_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../logic/controller/dim_menu_search_controller.dart';
 import '../main/widget/search_text_form_field.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 class SearchViewScreen extends StatefulWidget {

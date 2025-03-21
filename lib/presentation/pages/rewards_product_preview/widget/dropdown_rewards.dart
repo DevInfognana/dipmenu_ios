@@ -1,4 +1,4 @@
-import 'package:dip_menu/extra/common_widgets/text_scalar_factor.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_scalar_factor.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -32,7 +32,7 @@ class _RewardsDropdownMethodState extends State<RewardsDropdownMethod> {
           hint: Row(children: [
             Expanded(
               child: Text(NameValues.selectSize,
-                  style: TextStore.textTheme.headline6
+                  style: TextStore.textTheme.headlineSmall
                       ?.copyWith(color: titleColor)),
             ),
           ]),
@@ -62,7 +62,7 @@ class _RewardsDropdownMethodState extends State<RewardsDropdownMethod> {
                     // },
                     child: TextScaleFactorClamper(
                       child: Text(item.description!,
-                          style: TextStore.textTheme.headline6
+                          style: TextStore.textTheme.headlineSmall
                               ?.copyWith(color: titleColor)),
                     ),
                   ))
@@ -73,30 +73,67 @@ class _RewardsDropdownMethodState extends State<RewardsDropdownMethod> {
               widget.onViewbuttonpressed(value);
             });
           },
-          icon: const Icon(Icons.expand_more),
-          iconSize: 15.sp,
-          iconEnabledColor: titleColor,
-          iconDisabledColor: Colors.grey,
-          buttonHeight: 5.h,
-          buttonWidth: 40.w,
-          buttonPadding: EdgeInsets.only(left: 2.w, right: 2.w),
-          buttonDecoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Colors.black26),
-              color: Colors.white),
-          buttonElevation: 2,
-          itemHeight: 4.h,
-          // dropdownMaxHeight: 20.h,
-          dropdownMaxHeight:widget.controller?.itemSize.length.isLowerThan(5) ==true? 20.h:40.h,
-          dropdownWidth: 40.w,
-          dropdownPadding: null,
-          dropdownDecoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10), color: Colors.white),
-          dropdownElevation: 8,
-          scrollbarRadius: const Radius.circular(10),
-          scrollbarThickness: 6,
-          scrollbarAlwaysShow: true,
-          offset: const Offset(0, 0),
+
+          //after flutter upgrade for dropdown
+
+            iconStyleData: IconStyleData(
+              icon: const Icon(Icons.expand_more),
+              iconSize: 15.sp,
+              iconEnabledColor: titleColor,
+              iconDisabledColor: Colors.grey,
+            ),
+
+            buttonStyleData: ButtonStyleData(
+              height: 5.h,
+              width: 40.w,
+              padding: EdgeInsets.symmetric(horizontal: 2.w),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: Colors.black26),
+                color: Colors.white,
+              ),
+              elevation: 2,
+            ),
+
+            dropdownStyleData: DropdownStyleData(
+              maxHeight: widget.controller?.itemSize.length.isLowerThan(5) == true ? 20.h : 40.h,
+              width: 40.w,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.white,
+              ),
+              elevation: 8,
+              offset: const Offset(0, 0),
+            ),
+
+            menuItemStyleData: MenuItemStyleData(
+              height: 4.h,
+            )
+
+          // icon: const Icon(Icons.expand_more),
+          // iconSize: 15.sp,
+          // iconEnabledColor: titleColor,
+          // iconDisabledColor: Colors.grey,
+          // buttonHeight: 5.h,
+          // buttonWidth: 40.w,
+          // buttonPadding: EdgeInsets.only(left: 2.w, right: 2.w),
+          // buttonDecoration: BoxDecoration(
+          //     borderRadius: BorderRadius.circular(10),
+          //     border: Border.all(color: Colors.black26),
+          //     color: Colors.white),
+          // buttonElevation: 2,
+          // itemHeight: 4.h,
+          // // dropdownMaxHeight: 20.h,
+          // dropdownMaxHeight:widget.controller?.itemSize.length.isLowerThan(5) ==true? 20.h:40.h,
+          // dropdownWidth: 40.w,
+          // dropdownPadding: null,
+          // dropdownDecoration: BoxDecoration(
+          //     borderRadius: BorderRadius.circular(10), color: Colors.white),
+          // dropdownElevation: 8,
+          // scrollbarRadius: const Radius.circular(10),
+          // scrollbarThickness: 6,
+          // scrollbarAlwaysShow: true,
+          // offset: const Offset(0, 0),
         ),
       ),
     );

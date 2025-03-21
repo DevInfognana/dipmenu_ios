@@ -1,8 +1,8 @@
-import 'package:dip_menu/presentation/pages/auth/widget/signin_card.dart';
+import 'package:dipmenu_ios/presentation/pages/auth/widget/signin_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../logic/controller/authentication_controller.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 class AuthenticationScreen extends StatelessWidget {

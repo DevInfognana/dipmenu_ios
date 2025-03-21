@@ -1,7 +1,7 @@
-import 'package:dip_menu/core/config/app_textstyle.dart';
-import 'package:dip_menu/data/model/product_preview/custom_menu_data.dart';
-import 'package:dip_menu/extra/packages/linear_progress_bar.dart';
-import 'package:dip_menu/presentation/logic/controller/product_preview_controller.dart';
+import 'package:dipmenu_ios/core/config/app_textstyle.dart';
+import 'package:dipmenu_ios/data/model/product_preview/custom_menu_data.dart';
+import 'package:dipmenu_ios/extra/packages/linear_progress_bar.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/product_preview_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
@@ -50,9 +50,9 @@ class LinearProgressBarValues extends StatelessWidget {
                         color: const [Colors.limeAccent, Colors.green],
                         header: '${headersValues.toStringAsFixed(2)} %',
                         footer: customMenu[index].name!,
-                        footerStyle: TextStore.textTheme.headline6
+                        footerStyle: TextStore.textTheme.headlineSmall
                             ?.copyWith(fontSize: 9.sp, color: Colors.white),
-                        headerStyle: TextStore.textTheme.headline6
+                        headerStyle: TextStore.textTheme.headlineSmall
                             ?.copyWith(fontSize: 9.sp, color: Colors.white),
                         width: 53.w);
                   });
@@ -69,9 +69,9 @@ class LinearProgressBarValues extends StatelessWidget {
                   header:
                   '${(controller.lineGraphValues * 100).toStringAsFixed(2)} %',
                   footer: "Total",
-                  footerStyle: TextStore.textTheme.headline6
+                  footerStyle: TextStore.textTheme.headlineSmall
                       ?.copyWith(fontSize: 9.sp, color: Colors.white),
-                  headerStyle: TextStore.textTheme.headline6
+                  headerStyle: TextStore.textTheme.headlineSmall
                       ?.copyWith(fontSize: 9.sp, color: Colors.white),
                   width: 53.w);
             })

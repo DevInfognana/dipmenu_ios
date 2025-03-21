@@ -1,4 +1,4 @@
-import 'package:dip_menu/extra/common_widgets/text_scalar_factor.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_scalar_factor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:get/get.dart';
@@ -48,9 +48,9 @@ class AuthTitleText extends StatelessWidget {
       text!.tr,
       style: Theme.of(context)
           .textTheme
-          .headline3
+          .displaySmall
           ?.copyWith(fontWeight: FontWeight.bold),
-      // style: TextStore.textTheme.headline3!
+      // style: TextStore.textTheme.displaySmall!
       //     .copyWith(color: Colors.black, fontWeight: FontWeight.bold),
     );
   }

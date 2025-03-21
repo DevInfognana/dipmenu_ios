@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import '../../../logic/controller/favourite_controller.dart';
 import '../../../routes/routes.dart';
 import '../../sub_category/widget/sub_category_list.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 // ignore: camel_case_types

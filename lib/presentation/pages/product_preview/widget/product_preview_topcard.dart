@@ -1,8 +1,8 @@
 
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:dip_menu/core/config/icon_config.dart';
-import 'package:dip_menu/presentation/logic/controller/product_preview_controller.dart';
-import 'package:dip_menu/extra/common_widgets/back_button.dart';
+import 'package:dipmenu_ios/core/config/icon_config.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/product_preview_controller.dart';
+import 'package:dipmenu_ios/extra/common_widgets/back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -71,7 +71,7 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
               progress,
             ),
             child: Text(title!,
-                style: TextStore.textTheme.headline3!.copyWith(
+                style: TextStore.textTheme.displaySmall!.copyWith(
                     color: ThemesApp.light.scaffoldBackgroundColor,
                     fontWeight: FontWeight.bold))
 

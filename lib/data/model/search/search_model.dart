@@ -1,4 +1,4 @@
-import 'package:dip_menu/data/model/search/search_data_model.dart';
+import 'package:dipmenu_ios/data/model/search/search_data_model.dart';
 
 class SearchModel {
   int? count;

@@ -94,7 +94,8 @@ class _GooglePaymentScreenState extends State<GooglePaymentScreen> {
                           width: MediaQuery.of(context).size.width,
                           child: InAppWebView(
                             initialUrlRequest: URLRequest(
-                                url: Uri.parse(
+                                url: WebUri(
+                                // url: Uri.parse(
                                     googlePaymentController.paymentUrl!)),
                             contextMenu: contextMenu,
                             initialOptions: InAppWebViewGroupOptions(

@@ -1,11 +1,11 @@
 
-import 'package:dip_menu/presentation/pages/favourite/widget/favourite_icon.dart';
+import 'package:dipmenu_ios/presentation/pages/favourite/widget/favourite_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 // import '../../../../core/config/app_textstyle.dart';
 
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 Widget cardView(
@@ -34,12 +34,12 @@ Widget cardView(
                       rewardIcon==0?
                       Text(name,
                           textAlign: TextAlign.left,
-                          style: Get.context!.theme.textTheme.headline4
+                          style: Get.context!.theme.textTheme.headlineLarge
                               ?.copyWith(fontWeight: FontWeight.bold)):Wrap(
                         children:[
                           Text(name,
                               textAlign: TextAlign.left,
-                              style: Get.context!.theme.textTheme.headline4
+                              style: Get.context!.theme.textTheme.headlineLarge
                                   ?.copyWith(fontWeight: FontWeight.bold)),
                           ImageIcon(AssetImage(ImageAsset.rewardIcon)),
                         ]
@@ -49,13 +49,13 @@ Widget cardView(
                         description.replaceAll("\n", " ").toString(),
                         textAlign: TextAlign.justify,
                         maxLines: 3,
-                        style: Get.context!.theme.textTheme.headline6?.copyWith(
+                        style: Get.context!.theme.textTheme.headlineSmall?.copyWith(
                             color: Get.isDarkMode
                                 ? Colors.white70
                                 : descriptionColor),
                       ) : Text(
                           ' $description pts',
-                          style: Get.context!.theme.textTheme.headline4
+                          style: Get.context!.theme.textTheme.headlineLarge
                               ?.copyWith(color: mainColor)),
                     ],
                   ),
@@ -104,7 +104,7 @@ Widget cardView(
     //                         children: [
     //                           Expanded(
     //                               child: Text(name,
-    //                                   style: TextStore.textTheme.headline4!
+    //                                   style: TextStore.textTheme.headlineLarge!
     //                                       .copyWith(
     //                                           color: Colors.black,
     //                                           fontWeight: FontWeight.bold)
@@ -115,7 +115,7 @@ Widget cardView(
     //                         children: [
     //                           Expanded(
     //                               child: Text(describtion,
-    //                                   style: TextStore.textTheme.headline6!
+    //                                   style: TextStore.textTheme.headlineSmall!
     //                                       .copyWith(color: descriptionColor)))
     //                         ],
     //                       ),

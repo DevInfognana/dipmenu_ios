@@ -1,8 +1,8 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:dip_menu/core/config/app_textstyle.dart';
-import 'package:dip_menu/core/config/theme.dart';
+import 'package:dipmenu_ios/core/config/app_textstyle.dart';
+import 'package:dipmenu_ios/core/config/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -85,7 +85,7 @@ class ImageView extends StatelessWidget {
                     ]),
                 child: Center(
                     child: Text(name!,
-                        style: TextStore.textTheme.headline6!.copyWith(
+                        style: TextStore.textTheme.headlineSmall!.copyWith(
                             color: Colors.white,
                             overflow: TextOverflow.ellipsis,
                             fontWeight: FontWeight.w900))),

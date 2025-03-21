@@ -5,32 +5,32 @@ import '../../extra/common_widgets/snack_bar.dart';
 class DioExceptions implements Exception {
   late String message;
 
-  DioExceptions.fromDioError(DioError dioError) {
+  DioExceptions.fromDioError(DioException dioError) {
     switch (dioError.type) {
-      case DioErrorType.cancel:
+      case DioExceptionType.cancel:
         message = "Request to API server was cancelled";
         break;
-      case DioErrorType.connectTimeout:
+      case DioExceptionType.connectionTimeout:
         message = "Connection timeout with API server";
         break;
-      case DioErrorType.receiveTimeout:
+      case DioExceptionType.receiveTimeout:
         message = "Receive timeout in connection with API server";
         break;
-      case DioErrorType.response:
+      case DioExceptionType.badResponse:
         message = _handleError(
           dioError.response?.statusCode,
           dioError.response?.data,
         );
         break;
-      case DioErrorType.sendTimeout:
+      case DioExceptionType.sendTimeout:
         message = "Send timeout in connection with API server";
         break;
-      case DioErrorType.other:
-        if (dioError.message.contains("SocketException")) {
+      case DioExceptionType.connectionError:
+        if (dioError.message?.contains("SocketException") ?? false) {
           message = 'No Internet';
-          break;
+        } else {
+          message = "Unexpected error occurred";
         }
-        message = "Unexpected error occurred";
         break;
       default:
         message = "Something went wrong";
@@ -48,7 +48,8 @@ class DioExceptions implements Exception {
       case 403:
         return error['message'];
       case 404:
-        return error['message'];
+        return error['message'] ?? 'Error occurred';
+        // return error['message'];
       case 500:
         errorSnackBar('Internal server error');
         return 'Internal server error';
@@ -62,3 +63,5 @@ class DioExceptions implements Exception {
   @override
   String toString() => message;
 }
+
+

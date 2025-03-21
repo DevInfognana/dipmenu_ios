@@ -1,4 +1,4 @@
-import 'package:dip_menu/data/model/sub_category/sub_category_product_data.dart';
+import 'package:dipmenu_ios/data/model/sub_category/sub_category_product_data.dart';
 
 class SubCatListModel {
   List<SubCategoryProductModelData>? data;

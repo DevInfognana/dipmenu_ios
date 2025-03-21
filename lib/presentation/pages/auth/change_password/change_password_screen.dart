@@ -1,8 +1,8 @@
-import 'package:dip_menu/extra/common_widgets/text_form_field_2.dart';
-import 'package:dip_menu/presentation/logic/controller/authentication_controller.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_form_field_2.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/authentication_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 class ChangePasswordScreen extends StatelessWidget {
@@ -67,20 +67,20 @@ class ChangePasswordScreen extends StatelessWidget {
                           controller.argumentData.toString().isNotEmpty
                               ? Text(NameValues.changePassword.tr,
                                   textAlign: TextAlign.center,
-                                  style: context.theme.textTheme.headline3!
+                                  style: context.theme.textTheme.displaySmall!
                                       .copyWith(
                                           color: mainColor,
                                           fontWeight: FontWeight.bold))
                               : Text(NameValues.forgotPassword.tr,
                                   textAlign: TextAlign.center,
-                                  style: context.theme.textTheme.headline3!
+                                  style: context.theme.textTheme.displaySmall!
                                       .copyWith(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold)),
                           // controller.argumentData.toString().isNotEmpty
                           //     ? Text(NameValues.changePasswordSubtitle.tr,
                           //         textAlign: TextAlign.center,
-                          //         style: TextStore.textTheme.headline5!
+                          //         style: TextStore.textTheme.headlineMedium!
                           //             .copyWith(
                           //                 color: descriptionColor,
                           //                 fontWeight: FontWeight.w300))

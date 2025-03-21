@@ -3,8 +3,8 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:dip_menu/domain/local_handler/Local_handler.dart';
-import 'package:dip_menu/domain/provider/http_request.dart';
+import 'package:dipmenu_ios/domain/local_handler/Local_handler.dart';
+import 'package:dipmenu_ios/domain/provider/http_request.dart';
 
 import '../../core/static/stactic_values.dart';
 import '../../data/model/payment_model.dart';

@@ -69,9 +69,9 @@ return Card(
               maintainState: true,
               title: Text(customMenu.name!,
                   style:
-                      TextStore.textTheme.headline4?.copyWith(color: titleColor)),
+                      TextStore.textTheme.headlineLarge?.copyWith(color: titleColor)),
               subtitle: Text('Min: ${size['min']}  Max: ${size['max']}',
-                  style: TextStore.textTheme.headline6
+                  style: TextStore.textTheme.headlineSmall
                       ?.copyWith(color: descriptionColor)),
               children: [
                 // SizedBox(
@@ -205,7 +205,7 @@ return Card(
                             //     padding: EdgeInsets.all(0.8.h),
                             //     child: Text(
                             //       controller.subCategoryProductList[index].name!,
-                            //       style: TextStore.textTheme.headline6!.copyWith(
+                            //       style: TextStore.textTheme.headlineSmall!.copyWith(
                             //           color: Colors.black,
                             //           height: 1.1,
                             //           fontWeight: FontWeight.w900),
@@ -218,7 +218,7 @@ return Card(
                             //   children: [
                             //     const Spacer(flex: 1),
                             //     Text('\$ ${numberFormat.format(double.parse(productprice))}',
-                            //         style: TextStore.textTheme.headline6!.copyWith(
+                            //         style: TextStore.textTheme.headlineSmall!.copyWith(
                             //             color: Colors.black,
                             //             height: 1.1,
                             //             fontWeight: FontWeight.w900)),
@@ -274,9 +274,9 @@ return Card(
             maintainState: true,
             title: Text(customMenu.name!,
                 style:
-                    TextStore.textTheme.headline4?.copyWith(color: titleColor)),
+                    TextStore.textTheme.headlineLarge?.copyWith(color: titleColor)),
             subtitle: Text('Min: ${size['min']}  Max: ${size['max']}',
-                style: TextStore.textTheme.headline6
+                style: TextStore.textTheme.headlineSmall
                     ?.copyWith(color: descriptionColor)),
             children: [
               SizedBox(

@@ -1,5 +1,5 @@
 
-import 'package:dip_menu/presentation/logic/controller/cart_controller.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/cart_controller.dart';
 import 'package:get/get.dart';
 
 

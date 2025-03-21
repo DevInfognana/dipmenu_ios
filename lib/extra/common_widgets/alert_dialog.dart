@@ -1,5 +1,5 @@
-import 'package:dip_menu/core/config/theme.dart';
-import 'package:dip_menu/extra/common_widgets/text_scalar_factor.dart';
+import 'package:dipmenu_ios/core/config/theme.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_scalar_factor.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,11 +27,11 @@ class ShowDialogBox {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5.w)),
                 title: Text(title!,
-                    style: TextStore.textTheme.headline4!
+                    style: TextStore.textTheme.headlineLarge!
                         .copyWith(color: borderColor,fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center),
                 content: Text(content!,
-                    style: TextStore.textTheme.headline5!
+                    style: TextStore.textTheme.headlineMedium!
                         .copyWith(color: borderColor),
                     textAlign: TextAlign.center),
                 actions: [
@@ -49,7 +49,7 @@ class ShowDialogBox {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(3.w)),
                               backgroundColor: Colors.grey),
-                          child: Text(textBackButton!,style: TextStore.textTheme.headline5!
+                          child: Text(textBackButton!,style: TextStore.textTheme.headlineMedium!
                               .copyWith(color: Colors.white))),
                       SizedBox(width: 2.w),
                       ElevatedButton(
@@ -63,7 +63,7 @@ class ShowDialogBox {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(3.w)),
                               backgroundColor: mainColor),
-                          child: Text(textOkButton!,style: TextStore.textTheme.headline5!
+                          child: Text(textOkButton!,style: TextStore.textTheme.headlineMedium!
                               .copyWith(color: Colors.white)))
                     ],
                   ),
@@ -77,18 +77,18 @@ class ShowDialogBox {
           builder: (context) {
                   return CupertinoAlertDialog(
                     title: Text(
-                        title!,style: TextStore.textTheme.headline3!.copyWith(fontWeight: FontWeight.bold)),
+                        title!,style: TextStore.textTheme.displaySmall!.copyWith(fontWeight: FontWeight.bold)),
                     content: Text(
-                        content!,style: TextStore.textTheme.headline5!),
+                        content!,style: TextStore.textTheme.headlineMedium!),
                     actions: <Widget>[
                       CupertinoDialogAction(
-                        child: Text(textBackButton!,style: TextStore.textTheme.headline5!),
+                        child: Text(textBackButton!,style: TextStore.textTheme.headlineMedium!),
                         onPressed: () {
                           Get.back();
                         },
                       ),
                       CupertinoDialogAction(
-                        child: Text(textOkButton!,style: TextStore.textTheme.headline5!),
+                        child: Text(textOkButton!,style: TextStore.textTheme.headlineMedium!),
                         onPressed: () {
                           onButtonTapped!();
                         },
@@ -97,11 +97,11 @@ class ShowDialogBox {
                   );
             // return CupertinoAlertDialog(
             //   title: Text(title!,
-            //       style: TextStore.textTheme.headline3!
+            //       style: TextStore.textTheme.displaySmall!
             //           .copyWith(color: borderColor,fontWeight: FontWeight.bold),
             //       textAlign: TextAlign.center),
             //   content: Text(content!,
-            //       style: TextStore.textTheme.headline5!
+            //       style: TextStore.textTheme.headlineMedium!
             //           .copyWith(color: borderColor),
             //       textAlign: TextAlign.center),
             //   actions: <Widget>[
@@ -109,13 +109,13 @@ class ShowDialogBox {
             //         onPressed: () {
             //           Get.back();
             //         },
-            //         child: Text(textBackButton!,style: TextStore.textTheme.headline5!
+            //         child: Text(textBackButton!,style: TextStore.textTheme.headlineMedium!
             //             .copyWith(color: Colors.black))),
             //     TextButton(
             //         onPressed: () {
             //           onButtonTapped!();
             //         },
-            //         child: Text(textOkButton!,style: TextStore.textTheme.headline5!
+            //         child: Text(textOkButton!,style: TextStore.textTheme.headlineMedium!
             //             .copyWith(color: mainColor)))
             //   ],
             // );
@@ -148,27 +148,27 @@ class ShowDialogBox {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5.w)),
               title: Text(title!,
-                  style: TextStore.textTheme.headline3!
+                  style: TextStore.textTheme.displaySmall!
                       .copyWith(color: borderColor,fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center),
               content: cartScreen==0?
               Text(
                   content!,
-                  style: TextStore.textTheme.headline5!
+                  style: TextStore.textTheme.headlineMedium!
                       .copyWith(color: borderColor),
                   textAlign: TextAlign.center
               ):Text.rich(
                   textAlign: TextAlign.center,
                 TextSpan(
                   children: [
-                    TextSpan(text: categoryId==4?'Please select custom menu items based on size limit for ':'Please Select  Items from ', style: TextStore.textTheme.headline5!
+                    TextSpan(text: categoryId==4?'Please select custom menu items based on size limit for ':'Please Select  Items from ', style: TextStore.textTheme.headlineMedium!
                         .copyWith(color: borderColor)),
                     TextSpan(
                       text: content,
-                        style: TextStore.textTheme.headline5!
+                        style: TextStore.textTheme.headlineMedium!
                             .copyWith(color: borderColor,fontWeight: FontWeight.bold)
                     ),
-                    TextSpan(text:categoryId!=4? 'Before adding item to cart':'', style: TextStore.textTheme.headline5!
+                    TextSpan(text:categoryId!=4? 'Before adding item to cart':'', style: TextStore.textTheme.headlineMedium!
                         .copyWith(color: borderColor)),
                   ],
                 ),
@@ -200,30 +200,30 @@ class ShowDialogBox {
         builder: (BuildContext context) {
           return CupertinoAlertDialog(
             title: Text(
-                title!,style: TextStore.textTheme.headline3!.copyWith(fontWeight: FontWeight.bold)),
+                title!,style: TextStore.textTheme.displaySmall!.copyWith(fontWeight: FontWeight.bold)),
             content: cartScreen==0?
             Text(
                 content!,
-                style: TextStore.textTheme.headline5!,
+                style: TextStore.textTheme.headlineMedium!,
                 textAlign: TextAlign.center
             ):Text.rich(
               textAlign: TextAlign.center,
               TextSpan(
                 children: [
-                  TextSpan(text: categoryId==4?'Please select custom menu items based on size limit for ':'Please Select  Items from ', style: TextStore.textTheme.headline5!
+                  TextSpan(text: categoryId==4?'Please select custom menu items based on size limit for ':'Please Select  Items from ', style: TextStore.textTheme.headlineMedium!
                       ),
                   TextSpan(
                       text: content,
-                      style: TextStore.textTheme.headline5!
+                      style: TextStore.textTheme.headlineMedium!
                           .copyWith(fontWeight: FontWeight.bold)
                   ),
-                  TextSpan(text:categoryId!=4? 'Before adding item to cart':'', style: TextStore.textTheme.headline5!),
+                  TextSpan(text:categoryId!=4? 'Before adding item to cart':'', style: TextStore.textTheme.headlineMedium!),
                 ],
               ),
             ),
             actions: <Widget>[
               CupertinoDialogAction(
-                child: Text(textOkButton!,style: TextStore.textTheme.headline5!),
+                child: Text(textOkButton!,style: TextStore.textTheme.headlineMedium!),
                 onPressed: () {
                   Get.back();
                 },
@@ -248,11 +248,11 @@ class ShowDialogBox {
             return AlertDialog(
               backgroundColor: Colors.white,
               title: Text(title!,
-                  style: TextStore.textTheme.headline4!
+                  style: TextStore.textTheme.headlineLarge!
                       .copyWith(color: borderColor),
                   textAlign: TextAlign.center),
               content: Text(content!,
-                  style: TextStore.textTheme.headline5!
+                  style: TextStore.textTheme.headlineMedium!
                       .copyWith(color: descriptionColor),
                   textAlign: TextAlign.center),
               actions: <Widget>[
@@ -315,7 +315,7 @@ class ShowDialogBox {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5.w)),
               title: Text(title!,
-                  style: TextStore.textTheme.headline3!
+                  style: TextStore.textTheme.displaySmall!
                       .copyWith(color: borderColor, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center),
               content:
@@ -325,11 +325,11 @@ class ShowDialogBox {
                   children: [
                     TextSpan(
                         text: values==0?'Maximum Selection Limit Reached for ':'Maximum Weight Limit Reached for product ',
-                        style: TextStore.textTheme.headline5!
+                        style: TextStore.textTheme.headlineMedium!
                             .copyWith(color: borderColor)),
                     TextSpan(
                         text:values==0? content :" ",
-                        style: TextStore.textTheme.headline5!.copyWith(
+                        style: TextStore.textTheme.headlineMedium!.copyWith(
                             color: borderColor, fontWeight: FontWeight.bold)),
                   ],
                 ),
@@ -350,7 +350,7 @@ class ShowDialogBox {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(3.w))),
                         child: Text(textOkButton!,
-                            style: TextStore.textTheme.headline5!
+                            style: TextStore.textTheme.headlineMedium!
                                 .copyWith(color: Colors.white))),
                   ],
                 ),
@@ -363,25 +363,25 @@ class ShowDialogBox {
           builder: (context) {
             return CupertinoAlertDialog(
               title: Text(
-                  title!,style: TextStore.textTheme.headline3!.copyWith(fontWeight: FontWeight.bold)),
+                  title!,style: TextStore.textTheme.displaySmall!.copyWith(fontWeight: FontWeight.bold)),
               content:    Text.rich(
                   textAlign: TextAlign.center,
                   TextSpan(
                     children: [
                       TextSpan(
                           text: values==0?'Maximum Selection Limit Reached for ':'Maximum Weight Limit Reached for product ',
-                          style: TextStore.textTheme.headline5!
+                          style: TextStore.textTheme.headlineMedium!
                               ),
                       TextSpan(
                           text:values==0? content :" ",
-                          style: TextStore.textTheme.headline5!.copyWith(
+                          style: TextStore.textTheme.headlineMedium!.copyWith(
                                fontWeight: FontWeight.bold)),
                     ],
                   ),
                 ),
               actions: <Widget>[
                 CupertinoDialogAction(
-                  child: Text(textOkButton!,style: TextStore.textTheme.headline5!),
+                  child: Text(textOkButton!,style: TextStore.textTheme.headlineMedium!),
                   onPressed: () {
                     Get.back();
                   },
@@ -391,7 +391,7 @@ class ShowDialogBox {
             // return CupertinoAlertDialog(
             //
             //   title: Text(title!,
-            //       style: TextStore.textTheme.headline3!
+            //       style: TextStore.textTheme.displaySmall!
             //           .copyWith(color: borderColor, fontWeight: FontWeight.bold),
             //       textAlign: TextAlign.center),
             //   content:
@@ -401,11 +401,11 @@ class ShowDialogBox {
             //       children: [
             //         TextSpan(
             //             text: values==0?'Maximum Selection Limit Reached for ':'Maximum Weight Limit Reached for product ',
-            //             style: TextStore.textTheme.headline5!
+            //             style: TextStore.textTheme.headlineMedium!
             //                 .copyWith(color: borderColor)),
             //         TextSpan(
             //             text:values==0? content :" ",
-            //             style: TextStore.textTheme.headline5!.copyWith(
+            //             style: TextStore.textTheme.headlineMedium!.copyWith(
             //                 color: borderColor, fontWeight: FontWeight.bold)),
             //       ],
             //     ),
@@ -426,7 +426,7 @@ class ShowDialogBox {
             //                 shape: RoundedRectangleBorder(
             //                     borderRadius: BorderRadius.circular(3.w))),
             //             child: Text(textOkButton!,
-            //                 style: TextStore.textTheme.headline5!
+            //                 style: TextStore.textTheme.headlineMedium!
             //                     .copyWith(color: Colors.white))),
             //       ],
             //     ),
@@ -457,7 +457,7 @@ class ShowDialogBox {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5.w)),
               title: Text(title!,
-                  style: TextStore.textTheme.headline3!
+                  style: TextStore.textTheme.displaySmall!
                       .copyWith(color: borderColor, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center),
               content:
@@ -467,20 +467,20 @@ class ShowDialogBox {
                   children: [
                     TextSpan(
                         text: 'Maximum item limit in Toppings for ',
-                        style: TextStore.textTheme.headline5!
+                        style: TextStore.textTheme.headlineMedium!
                             .copyWith(color: borderColor)),
                     TextSpan(
                         text: content,
-                        style: TextStore.textTheme.headline5!.copyWith(
+                        style: TextStore.textTheme.headlineMedium!.copyWith(
                             color: borderColor, fontWeight: FontWeight.bold)),
                     TextSpan(
                         text:
                         ' size has been exceeded. Please Deselect Items! ',
-                        style: TextStore.textTheme.headline5!
+                        style: TextStore.textTheme.headlineMedium!
                             .copyWith(color: borderColor)),
                     TextSpan(
                         text: ' ${content1?.replaceAll('}', '')}',
-                        style: TextStore.textTheme.headline5!.copyWith(
+                        style: TextStore.textTheme.headlineMedium!.copyWith(
                             color: borderColor, fontWeight: FontWeight.bold)),
                   ],
                 ),
@@ -501,7 +501,7 @@ class ShowDialogBox {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(3.w))),
                         child: Text(textOkButton!,
-                            style: TextStore.textTheme.headline5!
+                            style: TextStore.textTheme.headlineMedium!
                                 .copyWith(color: Colors.white))),
                   ],
                 ),
@@ -515,32 +515,32 @@ class ShowDialogBox {
 
             return CupertinoAlertDialog(
               title: Text(
-                  title!,style: TextStore.textTheme.headline3!.copyWith(fontWeight: FontWeight.bold)),
+                  title!,style: TextStore.textTheme.displaySmall!.copyWith(fontWeight: FontWeight.bold)),
                 content:Text.rich(
                   textAlign: TextAlign.center,
                   TextSpan(
                     children: [
                       TextSpan(
                           text: 'Maximum Selection Limit Reached for ',
-                          style: TextStore.textTheme.headline5!),
+                          style: TextStore.textTheme.headlineMedium!),
                       TextSpan(
                           text: content,
-                          style: TextStore.textTheme.headline5!.copyWith(fontWeight: FontWeight.bold)),
+                          style: TextStore.textTheme.headlineMedium!.copyWith(fontWeight: FontWeight.bold)),
                       TextSpan(
                           text:
                           ' size has been exceeded. Please Deselect Items! ',
-                          style: TextStore.textTheme.headline5!
+                          style: TextStore.textTheme.headlineMedium!
                               ),
                       TextSpan(
                           text: ' ${content1?.replaceAll('}', '')}',
-                          style: TextStore.textTheme.headline5!.copyWith(
+                          style: TextStore.textTheme.headlineMedium!.copyWith(
                                fontWeight: FontWeight.bold)),
                     ],
                   ),
                 ),
               actions: <Widget>[
                 CupertinoDialogAction(
-                  child: Text(textOkButton!,style: TextStore.textTheme.headline5!),
+                  child: Text(textOkButton!,style: TextStore.textTheme.headlineMedium!),
                   onPressed: () {
                     Get.back();
                   },
@@ -549,7 +549,7 @@ class ShowDialogBox {
             );
             // return CupertinoAlertDialog(
             //   title: Text(title!,
-            //       style: TextStore.textTheme.headline3!
+            //       style: TextStore.textTheme.displaySmall!
             //           .copyWith(color: borderColor, fontWeight: FontWeight.bold),
             //       textAlign: TextAlign.center),
             //   content:Text.rich(
@@ -558,20 +558,20 @@ class ShowDialogBox {
             //       children: [
             //         TextSpan(
             //             text: 'Maximum Selection Limit Reached for ',
-            //             style: TextStore.textTheme.headline5!
+            //             style: TextStore.textTheme.headlineMedium!
             //                 .copyWith(color: borderColor)),
             //         TextSpan(
             //             text: content,
-            //             style: TextStore.textTheme.headline5!.copyWith(
+            //             style: TextStore.textTheme.headlineMedium!.copyWith(
             //                 color: borderColor, fontWeight: FontWeight.bold)),
             //         TextSpan(
             //             text:
             //             ' size has been exceeded. Please Deselect Items! ',
-            //             style: TextStore.textTheme.headline5!
+            //             style: TextStore.textTheme.headlineMedium!
             //                 .copyWith(color: borderColor)),
             //         TextSpan(
             //             text: ' ${content1?.replaceAll('}', '')}',
-            //             style: TextStore.textTheme.headline5!.copyWith(
+            //             style: TextStore.textTheme.headlineMedium!.copyWith(
             //                 color: borderColor, fontWeight: FontWeight.bold)),
             //       ],
             //     ),
@@ -592,7 +592,7 @@ class ShowDialogBox {
             //                 shape: RoundedRectangleBorder(
             //                     borderRadius: BorderRadius.circular(3.w))),
             //             child: Text(textOkButton!,
-            //                 style: TextStore.textTheme.headline5!
+            //                 style: TextStore.textTheme.headlineMedium!
             //                     .copyWith(color: Colors.white))),
             //       ],
             //     ),

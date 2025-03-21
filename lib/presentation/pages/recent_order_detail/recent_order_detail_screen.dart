@@ -1,11 +1,11 @@
 //recent order detail
-import 'package:dip_menu/data/model/recent_order_model.dart';
+import 'package:dipmenu_ios/data/model/recent_order_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import '../../logic/controller/recent_order_detail_controller.dart';
 import 'package:timezone/timezone.dart' as tz;
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 class RecentOrderDetailScreen extends StatelessWidget {
@@ -63,7 +63,7 @@ class RecentOrderDetailScreen extends StatelessWidget {
                                 children: <Widget>[
                                   Text(
                                       ' Order ID  # ${recentOrderDetailController.recentOrderData!.data![0].id}',
-                                      style: context.theme.textTheme.headline3
+                                      style: context.theme.textTheme.displaySmall
                                           ?.copyWith(
                                               fontWeight: FontWeight.bold)),
                                   SizedBox(height: 1.h),
@@ -147,7 +147,7 @@ class RecentOrderDetailScreen extends StatelessWidget {
                     padding:
                         EdgeInsets.symmetric(vertical: 2.h, horizontal: 24.w)),
                 child: Text(NameValues.reOrder,
-                    style: context.theme.textTheme.headline4))),
+                    style: context.theme.textTheme.headlineLarge))),
       ),
     );
   }
@@ -166,10 +166,10 @@ class RecentOrderDetailScreen extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(title!,
-            style: context.theme.textTheme.headline5
+            style: context.theme.textTheme.headlineMedium
                 ?.copyWith(fontWeight: FontWeight.bold)),
         Text(values!,
-            style: context.theme.textTheme.headline5
+            style: context.theme.textTheme.headlineMedium
                 ?.copyWith(fontWeight: FontWeight.bold)),
       ],
     );
@@ -179,23 +179,23 @@ class RecentOrderDetailScreen extends StatelessWidget {
     return ListTile(
       contentPadding: EdgeInsets.all(0.5.h),
       title: Text('${orderDetails.productName}',
-          style: context.theme.textTheme.headline5
+          style: context.theme.textTheme.headlineMedium
               ?.copyWith(fontWeight: FontWeight.bold)),
       subtitle:
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Text('Qty : ${orderDetails.quantity}',
-            style: context.theme.textTheme.headline6),
+            style: context.theme.textTheme.headlineSmall),
         Text('${orderDetails.itemsizeName}',
-            style: context.theme.textTheme.headline6
+            style: context.theme.textTheme.headlineSmall
                 ?.copyWith(color: Colors.grey)),
         orderDetails.reward != 0
             ? Text(
                 '${numberFormat.format(double.parse(orderDetails.productPrice!))} pts',
-                style: context.theme.textTheme.headline5
+                style: context.theme.textTheme.headlineMedium
                     ?.copyWith(fontWeight: FontWeight.bold))
             : Text(
                 '\$ ${numberFormat.format(double.parse(orderDetails.productPrice!))}',
-                style: context.theme.textTheme.headline5
+                style: context.theme.textTheme.headlineMedium
                     ?.copyWith(fontWeight: FontWeight.bold)),
       ]),
     );

@@ -40,7 +40,7 @@ class paymentTextFromField extends StatelessWidget {
       keyboardType: keyboardType,
       obscureText: obscureText,
       validator: (value) => validator!(value),
-      style: TextStyle(color: Theme.of(context).textTheme.headline1!.color),
+      style: TextStyle(color: Theme.of(context).textTheme.displayLarge!.color),
       inputFormatters: inputFormatters,
       textInputAction: textInputAction,
       onChanged: onChanged,

@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../../../../extra/common_widgets/text_form_field_2.dart';
 import '../../../logic/controller/authentication_controller.dart';
 import 'have_an_account.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 class SignUpScreen extends StatelessWidget {
@@ -38,7 +38,7 @@ class SignUpScreen extends StatelessWidget {
                     Text(NameValues.singUP.tr,
                         textAlign: TextAlign.center,
                         style: context
-                            .theme.textTheme.headline3
+                            .theme.textTheme.displaySmall
                             ?.copyWith(
                             fontWeight: FontWeight.bold)
 

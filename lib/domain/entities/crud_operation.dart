@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:dip_menu/domain/entities/status_reques.dart';
+import 'package:dipmenu_ios/domain/entities/status_reques.dart';
 import 'check_internet.dart';
 import 'dio_exception.dart';
 

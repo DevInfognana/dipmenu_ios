@@ -1,10 +1,10 @@
-import 'package:dip_menu/presentation/logic/controller/privacy_policy_controller.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/privacy_policy_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:get/get.dart';
 
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 class PrivacyPolicyScreen extends StatelessWidget {
   PrivacyPolicyScreen({Key? key}) : super(key: key);
@@ -150,7 +150,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
                   textAlign: TextAlign.start,
                   style: Theme.of(context)
                       .textTheme
-                      .headline4
+                      .headlineLarge
                       ?.copyWith(fontWeight: FontWeight.bold))))
     ]);
   }
@@ -175,7 +175,8 @@ class WebViewScreen extends StatelessWidget {
       ),
       body: InAppWebView(
         initialUrlRequest: URLRequest(
-          url: Uri.parse(url), // Compatible with older version
+          url: WebUri(url),
+          // url: Uri.parse(url), // Compatible with older version
         ),
         initialOptions: InAppWebViewGroupOptions(
           android: AndroidInAppWebViewOptions(
@@ -191,6 +192,7 @@ class WebViewScreen extends StatelessWidget {
           print("Load error: $description");
         },
       ),
+
     );
   }
 }

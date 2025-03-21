@@ -1,7 +1,7 @@
-import 'package:dip_menu/core/config/theme.dart';
-import 'package:dip_menu/extra/common_widgets/text_scalar_factor.dart';
-import 'package:dip_menu/presentation/logic/controller/payment_detail_controller.dart';
-import 'package:dip_menu/presentation/pages/payment_detail/widget/values_show.dart';
+import 'package:dipmenu_ios/core/config/theme.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_scalar_factor.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/payment_detail_controller.dart';
+import 'package:dipmenu_ios/presentation/pages/payment_detail/widget/values_show.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -71,7 +71,7 @@ class PaymentDetailScreen extends StatelessWidget {
                                   children: [
                                     Text(NameValues.yourOrders,
                                     style: context
-                                        .theme.textTheme.headline2),
+                                        .theme.textTheme.displayMedium),
                                   ],
                                 ),
                                 DividerView(values: 0,colorValues: Colors.grey),
@@ -87,7 +87,7 @@ class PaymentDetailScreen extends StatelessWidget {
                                           title: Text(
                                             '${controller.cardList[index].product!.name}',
                                             style:  context
-                                                .theme.textTheme.headline5?.copyWith(fontWeight: FontWeight.bold),
+                                                .theme.textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold),
                                           ),
                                           subtitle: Column(
                                             children: [
@@ -101,12 +101,12 @@ class PaymentDetailScreen extends StatelessWidget {
                                                   Text(
                                                     'Qty : ${controller.cardList[index].quantity}',
                                                     style: context
-                                                        .theme.textTheme.headline5
+                                                        .theme.textTheme.headlineMedium
                                                   ),
                                                   Text(
                                                     '${controller.cardList[index].defaultSizeName}',
                                                     style: context
-                                                        .theme.textTheme.headline6?.copyWith( color: Colors.grey),
+                                                        .theme.textTheme.headlineSmall?.copyWith( color: Colors.grey),
                                                   ),
                                                   if (controller.cardList[index]
                                                           .reward ==
@@ -114,7 +114,7 @@ class PaymentDetailScreen extends StatelessWidget {
                                                     Text(
                                                       '\$ ${numberFormat.format(((controller.cardList[index].totalCost! / controller.cardList[index].quantity!) * controller.cardList[index].quantity!))}',
                                                       style: context
-                                                          .theme.textTheme.headline5?.copyWith(
+                                                          .theme.textTheme.headlineMedium?.copyWith(
                                                         fontWeight:  FontWeight.bold,
                                                       ),
                                                     )
@@ -122,7 +122,7 @@ class PaymentDetailScreen extends StatelessWidget {
                                                     Text(
                                                       '${(controller.cardList[index].totalCost! / controller.cardList[index].quantity!).round() * controller.cardList[index].quantity!} pts',
                                                       style: context
-                                                          .theme.textTheme.headline5?.copyWith(
+                                                          .theme.textTheme.headlineMedium?.copyWith(
                                                         fontWeight:  FontWeight.bold,
                                                       ),
                                                     ),
@@ -136,7 +136,7 @@ class PaymentDetailScreen extends StatelessWidget {
                                                           child: Text(
                                                             richTextFactor(controller.cardList[index].defaultCustom!,controller.cardList[index].reward!,controller.cardList[index].itemNames)+'  : ${controller.cardList[index].itemNames}',
                                                             style: context
-                                                                .theme.textTheme.bodyText1
+                                                                .theme.textTheme.bodyLarge
                                                           ),
                                                         ),
                                                       ],
@@ -149,7 +149,7 @@ class PaymentDetailScreen extends StatelessWidget {
                                 ),
                                 Text(NameValues.orderTotal,
                                     style: context
-                                        .theme.textTheme.headline2
+                                        .theme.textTheme.displayMedium
                                 ),
                                 DividerView(values: 0,colorValues: Colors.grey),
                                 sizedBoxValues(),
@@ -196,7 +196,7 @@ class PaymentDetailScreen extends StatelessWidget {
                                 //     children: [
                                 //       Text(
                                 //         'GiftCard',
-                                //         style: TextStore.textTheme.headline5!
+                                //         style: TextStore.textTheme.headlineMedium!
                                 //             .copyWith(
                                 //           color: Colors.black,
                                 //           fontWeight: FontWeight.bold,
@@ -271,7 +271,7 @@ class PaymentDetailScreen extends StatelessWidget {
                       (paymentDetailController.isTotalValueZero! == true)
                           ? NameValues.orderNow
                           : NameValues.proceedToPay,
-                      style: TextStore.textTheme.headline4!
+                      style: TextStore.textTheme.headlineLarge!
                           .copyWith(color: Colors.white))),
             ),
           );

@@ -1,6 +1,6 @@
 /*
-import 'package:dip_menu/domain/provider/http_request.dart';
-import 'package:dip_menu/presentation/logic/controller/cart_controller.dart';
+import 'package:dipmenu_ios/domain/provider/http_request.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/cart_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:sizer/sizer.dart';
@@ -44,7 +44,7 @@ class CartScreenCardState extends State<CartScreenCard> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(widget.data![index].product!.name ?? '',
-                                style: TextStore.textTheme.headline3!.copyWith(
+                                style: TextStore.textTheme.displaySmall!.copyWith(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w900)),
                             SizedBox(height: 0.5.h),
@@ -53,13 +53,13 @@ class CartScreenCardState extends State<CartScreenCard> {
                               children: [
                                 Text(
                                     '\$ ${double.parse(widget.data![index].totalCost!) * widget.data![index].quantity!}',
-                                    style: TextStore.textTheme.headline3!
+                                    style: TextStore.textTheme.displaySmall!
                                         .copyWith(
                                             color: mainColor,
                                             fontWeight: FontWeight.bold)),
                                 SizedBox(width: 1.h),
                                 Text('${widget.data![index].defaultSizeName}',
-                                    style: TextStore.textTheme.headline3!
+                                    style: TextStore.textTheme.displaySmall!
                                         .copyWith(
                                             color: Colors.grey, fontSize: 18)),
                               ],
@@ -149,7 +149,7 @@ class CartScreenCardState extends State<CartScreenCard> {
                 borderRadius: BorderRadius.circular(3), color: Colors.white),
             child: Center(
               child: Text('${widget.data![index].quantity!}',
-                  style: TextStore.textTheme.headline3!
+                  style: TextStore.textTheme.displaySmall!
                       .copyWith(color: mainColor, fontWeight: FontWeight.bold)),
             )),
         InkWell(
@@ -171,14 +171,14 @@ class CartScreenCardState extends State<CartScreenCard> {
 }
 */
 
-import 'package:dip_menu/presentation/logic/controller/cart_controller.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/cart_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../data/model/cartlist_model.dart';
 import '../../../../extra/common_widgets/description_text.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 // ignore: must_be_immutable
@@ -232,13 +232,13 @@ class CartScreenCardState extends State<CartScreenCard> {
                                       widget.data![index].product!.name!,
                                       style: Theme.of(context)
                                           .textTheme
-                                          .headline4
+                                          .headlineLarge
                                           ?.copyWith(
                                               fontWeight: FontWeight.w900)):Wrap(
                   children:[
                     Text( widget.data![index].product!.name!,
                         textAlign: TextAlign.left,
-                        style: Get.context!.theme.textTheme.headline4
+                        style: Get.context!.theme.textTheme.headlineLarge
                             ?.copyWith(fontWeight: FontWeight.bold)),
                     const ImageIcon(AssetImage(ImageAsset.rewardIcon)),
                   ]
@@ -253,7 +253,7 @@ class CartScreenCardState extends State<CartScreenCard> {
                                         '\$ ${numberFormat.format(widget.data![index].totalCost!)}',
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline4
+                                            .headlineLarge
                                             ?.copyWith(
                                                 color: mainColor,
                                                 fontWeight: FontWeight.bold))
@@ -263,7 +263,7 @@ class CartScreenCardState extends State<CartScreenCard> {
                                         '${widget.data![index].totalCost!} pts',
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline4
+                                            .headlineLarge
                                             ?.copyWith(
                                                 color: mainColor,
                                                 fontWeight: FontWeight.bold)),
@@ -274,7 +274,7 @@ class CartScreenCardState extends State<CartScreenCard> {
                                         overflow: TextOverflow.ellipsis,
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline4
+                                            .headlineLarge
                                             ?.copyWith(
                                             color: Colors.grey)
                                     ),
@@ -528,7 +528,7 @@ class CartScreenCardState extends State<CartScreenCard> {
                 borderRadius: BorderRadius.circular(3), color: Colors.white),
             child: Center(
               child: Text('${widget.data![index].quantity!}',
-                  style: context.theme.textTheme.headline3!
+                  style: context.theme.textTheme.displaySmall!
                       .copyWith(color: mainColor, fontWeight: FontWeight.bold)),
             )),
         InkWell(
@@ -552,18 +552,18 @@ class CartScreenCardState extends State<CartScreenCard> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(richTextFactor(defaultCustom, reward, names!),
-            style: context.theme.textTheme.headline5!.copyWith(
+            style: context.theme.textTheme.headlineMedium!.copyWith(
                 color: richTextFactor1(defaultCustom, reward),
                 fontWeight: FontWeight.bold)),
         names.isNotEmpty
             ? (names.length < 64
                 ? Text(names,
-                    style: context.theme.textTheme.headline6!
+                    style: context.theme.textTheme.headlineSmall!
                         .copyWith(color:  Get.isDarkMode ? Colors.white : borderColor))
                 : ExpandableText("$names'", trimLines: 1))
             : Text(names,
                 style:
-                context.theme.textTheme.headline6!.copyWith(color: Get.isDarkMode ? Colors.white : borderColor))
+                context.theme.textTheme.headlineSmall!.copyWith(color: Get.isDarkMode ? Colors.white : borderColor))
       ],
     );
     // if (defaultCustom == 0) {
@@ -571,7 +571,7 @@ class CartScreenCardState extends State<CartScreenCard> {
     //   crossAxisAlignment: CrossAxisAlignment.start,
     //   children: [
     //     Text('Customized Items   ',
-    //         style: TextStore.textTheme.headline5!
+    //         style: TextStore.textTheme.headlineMedium!
     //             .copyWith(color: mainColor, fontWeight: FontWeight.bold)),
     //     ExpandableText("$names'", trimLines: 2)
     //   ],
@@ -581,7 +581,7 @@ class CartScreenCardState extends State<CartScreenCard> {
     //     crossAxisAlignment: CrossAxisAlignment.start,
     //     children: [
     //       Text('Reward Product Items   ',
-    //           style: TextStore.textTheme.headline5!
+    //           style: TextStore.textTheme.headlineMedium!
     //               .copyWith(color: mainColor, fontWeight: FontWeight.bold)),
     //       ExpandableText("$names'", trimLines: 2)
     //     ],
@@ -591,7 +591,7 @@ class CartScreenCardState extends State<CartScreenCard> {
     //     crossAxisAlignment: CrossAxisAlignment.start,
     //     children: [
     //       Text('Default Items  ',
-    //           style: TextStore.textTheme.headline5!
+    //           style: TextStore.textTheme.headlineMedium!
     //               .copyWith(color:Colors.blue , fontWeight: FontWeight.bold)),
     //       ExpandableText("$names'", trimLines: 2)
     //     ],

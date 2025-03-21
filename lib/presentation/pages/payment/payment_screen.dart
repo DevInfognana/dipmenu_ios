@@ -1,10 +1,10 @@
-import 'package:dip_menu/core/config/icon_config.dart';
-import 'package:dip_menu/core/config/theme.dart';
-import 'package:dip_menu/extra/common_widgets/text_scalar_factor.dart';
-import 'package:dip_menu/presentation/logic/controller/payment_controller.dart';
-import 'package:dip_menu/presentation/pages/payment/widget/card_month_input_formater.dart';
-import 'package:dip_menu/presentation/pages/payment/widget/card_number_validator.dart';
-import 'package:dip_menu/presentation/pages/payment/widget/payment_textfiled.dart';
+import 'package:dipmenu_ios/core/config/icon_config.dart';
+import 'package:dipmenu_ios/core/config/theme.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_scalar_factor.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/payment_controller.dart';
+import 'package:dipmenu_ios/presentation/pages/payment/widget/card_month_input_formater.dart';
+import 'package:dipmenu_ios/presentation/pages/payment/widget/card_number_validator.dart';
+import 'package:dipmenu_ios/presentation/pages/payment/widget/payment_textfiled.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 // import 'package:flutter_multi_formatter/flutter_multi_formatter.dart';
@@ -273,7 +273,7 @@ class PaymentScreen extends StatelessWidget {
                                   fixedSize: Size(2.w, 6.h)),
                               child: Text(
                                 'Pay \$ ${paymentController.argumentData['Total'].toString()}',
-                                style: TextStore.textTheme.headline4!
+                                style: TextStore.textTheme.headlineLarge!
                                     .copyWith(color: Colors.white),
                               )),
                         ),

@@ -1,4 +1,4 @@
-import 'package:dip_menu/core/config/theme.dart';
+import 'package:dipmenu_ios/core/config/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -34,7 +34,7 @@ class AuthTextFromField extends StatelessWidget {
       obscureText: obscureText!,
       cursorColor: mainColor,
       validator: (value) => validator!(value),
-      style:  context.theme.textTheme.headline5,
+      style:  context.theme.textTheme.headlineMedium,
       readOnly: readOnly!,
       keyboardType: keyboardType,
       textInputAction: textInputAction,

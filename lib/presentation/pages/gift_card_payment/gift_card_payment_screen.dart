@@ -1,6 +1,6 @@
 import 'dart:collection';
 
-import 'package:dip_menu/extra/common_widgets/leading_space_handle.dart';
+import 'package:dipmenu_ios/extra/common_widgets/leading_space_handle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
@@ -301,7 +301,8 @@ class GiftPaymentScreen extends StatelessWidget {
                                     child: InAppWebView(
 
                                       initialUrlRequest: URLRequest(
-                                          url: Uri.parse(
+                                          url: WebUri(
+                                          // url: Uri.parse(
                                               paymentController.paymentUrl!)),
                                       initialUserScripts:
                                           UnmodifiableListView<UserScript>([]),
@@ -420,7 +421,7 @@ class GiftPaymentScreen extends StatelessWidget {
                                 fixedSize: Size(2.w, 6.h)),
                             child: Text(
                               'Pay  \$${numberFormat.format(double.parse(paymentController.giftCardAmount!))}',
-                              style: TextStore.textTheme.headline4!
+                              style: TextStore.textTheme.headlineLarge!
                                   .copyWith(color: Colors.white),
                             )),
                       ),

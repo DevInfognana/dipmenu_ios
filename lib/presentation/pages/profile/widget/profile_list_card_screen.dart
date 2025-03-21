@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 class ProfileListValues extends StatefulWidget {
@@ -29,7 +29,7 @@ class _ProfileListValuesState extends State<ProfileListValues> {
         child: Icon(widget.icon, color: color, size: 16.sp),
       ),
       title: Text(widget.title!,
-          style: Theme.of(context).textTheme.headline4?.copyWith(
+          style: Theme.of(context).textTheme.headlineLarge?.copyWith(
               color: color, fontWeight: FontWeight.w400),
       ),
       trailing: Icon(
@@ -77,7 +77,7 @@ class _ProfileExpanisonValuesState extends State<ProfileExpanisonValues> {
       ),
       title: Text(
         widget.title!,
-          style: context.theme.textTheme.headline4!
+          style: context.theme.textTheme.headlineLarge!
               .copyWith(color: color, fontWeight: FontWeight.w400)),
       trailing: Icon(
         Icons.arrow_forward_ios,
@@ -95,7 +95,7 @@ class _ProfileExpanisonValuesState extends State<ProfileExpanisonValues> {
           //   child: Icon(widget.icon, color: borderColor, size: 16.sp),
           // ),
           title: Text(widget.title1!,
-              style: context.theme.textTheme.headline4!
+              style: context.theme.textTheme.headlineLarge!
                   .copyWith(color: color, fontWeight: FontWeight.w400)),
           // trailing: Icon(
           //   Icons.arrow_forward_ios,
@@ -114,7 +114,7 @@ class _ProfileExpanisonValuesState extends State<ProfileExpanisonValues> {
           //   child: Icon(widget.icon, color: borderColor, size: 16.sp),
           // ),
           title: Text(widget.title2!,
-              style: context.theme.textTheme.headline4!
+              style: context.theme.textTheme.headlineLarge!
                   .copyWith(color: color, fontWeight: FontWeight.w400)),
           // trailing: Icon(
           //   Icons.arrow_forward_ios,
@@ -132,7 +132,7 @@ class _ProfileExpanisonValuesState extends State<ProfileExpanisonValues> {
           //   child: Icon(widget.icon, color: borderColor, size: 16.sp),
           // ),
           title: Text(widget.title3!,
-              style: context.theme.textTheme.headline4!
+              style: context.theme.textTheme.headlineLarge!
                   .copyWith(color: color, fontWeight: FontWeight.w400)),
           // trailing: Icon(
           //   Icons.arrow_forward_ios,

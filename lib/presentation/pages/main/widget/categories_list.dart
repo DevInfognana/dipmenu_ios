@@ -1,5 +1,5 @@
-// import 'package:dip_menu/core/config/app_textstyle.dart';
-// import 'package:dip_menu/presentation/routes/routes.dart';
+// import 'package:dipmenu_ios/core/config/app_textstyle.dart';
+// import 'package:dipmenu_ios/presentation/routes/routes.dart';
 // import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 // import 'package:sizer/sizer.dart';
@@ -77,7 +77,7 @@
 //                                     padding: const EdgeInsets.all(10),
 //                                     child: Text(
 //                                         controller.homeCategoryList[index].name!,
-//                                         style: TextStore.textTheme.headline4!
+//                                         style: TextStore.textTheme.headlineLarge!
 //                                             .copyWith(
 //                                                 color: Colors.black,
 //                                                 fontWeight: FontWeight.bold)),

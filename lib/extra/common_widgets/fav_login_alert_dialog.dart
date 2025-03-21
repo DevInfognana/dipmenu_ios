@@ -1,5 +1,5 @@
-import 'package:dip_menu/extra/common_widgets/text_form_field_2.dart';
-import 'package:dip_menu/extra/common_widgets/text_scalar_factor.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_form_field_2.dart';
+import 'package:dipmenu_ios/extra/common_widgets/text_scalar_factor.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
@@ -41,7 +41,7 @@ class FavLoginPopUp {
                         children: [
                           Text(NameValues.singIn.tr,
                               textAlign: TextAlign.center,
-                              style: TextStore.textTheme.headline2!.copyWith(
+                              style: TextStore.textTheme.displayMedium!.copyWith(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold)),
                           SizedBox(height: 1.5.h),

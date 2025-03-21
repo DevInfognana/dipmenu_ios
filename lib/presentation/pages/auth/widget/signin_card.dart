@@ -4,7 +4,7 @@ import '../../../../extra/common_widgets/text_form_field_2.dart';
 import '../../../logic/controller/authentication_controller.dart';
 import 'forgot_password.dart';
 import 'no_have_account.dart';
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 class LoginScreen extends StatelessWidget {
@@ -35,14 +35,14 @@ class LoginScreen extends StatelessWidget {
                             Text(NameValues.singIn.tr,
                                 textAlign: TextAlign.center,
                                 style:  context
-                                    .theme.textTheme.headline3
+                                    .theme.textTheme.displaySmall
                                     ?.copyWith(
                                     fontWeight: FontWeight.bold)
                             ),
                             Text(NameValues.singInWithYourEmail.tr,
                                 textAlign: TextAlign.center,
                                 style:  context
-                                    .theme.textTheme.headline3
+                                    .theme.textTheme.displaySmall
                                     ?.copyWith(
                                     fontWeight: FontWeight.w300)
                             ),

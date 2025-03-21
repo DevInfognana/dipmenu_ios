@@ -1,7 +1,7 @@
-import 'package:dip_menu/domain/reporties/contact_us_api.dart';
+import 'package:dipmenu_ios/domain/reporties/contact_us_api.dart';
 import 'package:get/get.dart';
 import '../../../data/model/contact_us_model.dart';
-import 'package:dip_menu/presentation/logic/controller/Controller_Index.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 
 
 class ContactUsController extends GetxController with StateMixin {

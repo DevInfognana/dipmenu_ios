@@ -1,4 +1,4 @@
-import 'package:dip_menu/presentation/logic/controller/recent_order_controller.dart';
+import 'package:dipmenu_ios/presentation/logic/controller/recent_order_controller.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,7 +8,7 @@ import '../../../data/model/recent_order_model.dart';
 import '../../../extra/common_widgets/bottom_navigation.dart';
 import '../../logic/controller/main_controller.dart';
 import 'package:timezone/timezone.dart' as tz;
-import 'package:dip_menu/presentation/pages/index.dart';
+import 'package:dipmenu_ios/presentation/pages/index.dart';
 
 
 class RecentOrderScreen extends StatefulWidget {
@@ -61,7 +61,7 @@ class RecentOrderScreenState extends State<RecentOrderScreen> {
                     SizedBox(height: 5.h),
                     Text(NameValues.youHaveNoOrders,
                         textAlign: TextAlign.center,
-                        style: context.theme.textTheme.headline3!.copyWith(
+                        style: context.theme.textTheme.displaySmall!.copyWith(
                             color: Colors.grey, fontWeight: FontWeight.w600))
                   ],
                 ),
@@ -243,7 +243,7 @@ class OrderingView extends StatelessWidget {
                       padding: EdgeInsets.symmetric(
                           vertical: 1.2.h, horizontal: 6.w)),
                   child: Text('View Order',
-                      style: context.theme.textTheme.headline4!.copyWith(
+                      style: context.theme.textTheme.headlineLarge!.copyWith(
                           color: Colors.white, fontWeight: FontWeight.normal))),
             ],
           ),
@@ -272,11 +272,11 @@ class OrderingView extends StatelessWidget {
       TextSpan(children: [
         TextSpan(
             text: labelText!,
-            style: context?.theme.textTheme.headline5
+            style: context?.theme.textTheme.headlineMedium
                 ?.copyWith(color: colorValues, fontWeight: FontWeight.bold)),
         TextSpan(
             text: valuesText!,
-            style: context?.theme.textTheme.headline5
+            style: context?.theme.textTheme.headlineMedium
                 ?.copyWith(color: colorValues1, fontWeight: FontWeight.bold)),
       ]),
     );
