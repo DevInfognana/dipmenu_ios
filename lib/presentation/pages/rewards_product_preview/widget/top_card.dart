@@ -51,14 +51,15 @@ class _MenuCategoryItemState extends State<MenuCategoryItem1> {
             padding: EdgeInsets.only(top: 1.h, bottom: 1.h),
             child: Text(
                 widget.controller.isWeightCheck != '1'? widget.controller.productMinsValues(widget.minMaxValues['min'] , widget.minMaxValues['max'],widget.isHybrid!):"Weight :${widget.controller.weightValues}",
-                style: TextStore.textTheme.titleLarge!
+                style: TextStore.textTheme.headlineSmall!
+                // style: TextStore.textTheme.titleLarge!
                     .copyWith(color:  Get.isDarkMode ? Colors.white : Colors.black)
             )
         ),
         Padding(
             padding: const EdgeInsets.symmetric(vertical: 5),
             child: Text(widget.title,
-                style: TextStore.textTheme.titleMedium!.copyWith(
+                style: TextStore.textTheme.headlineSmall!.copyWith(
                     color: Colors.transparent, fontWeight: FontWeight.bold)
             )),
         // widget.controller.categoryIdValues == 4

@@ -182,6 +182,24 @@ class ThemesApp {
     primaryColor: mainColor,
     secondaryHeaderColor: Colors.grey.shade100,
     cardColor: const Color(0xffFFFFFF),
+    ///original
+    // textTheme: TextTheme(
+    //   displayLarge: GoogleFonts.poppins(                                                             // headline1
+    //       fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 22.sp : 44),
+    //   displayMedium: GoogleFonts.poppins(                                                             // headline2
+    //       fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 18.sp : 28, color: Colors.black),
+    //   displaySmall: GoogleFonts.poppins(                                                              // headline3
+    //       fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 16.sp : 25, color: Colors.black),
+    //   headlineLarge: GoogleFonts.poppins(                                                             // headline4
+    //       fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 14.sp : 20, color: Colors.black),
+    //   headlineMedium: GoogleFonts.poppins(                                                            // headline5
+    //       fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 12.sp : 17, color: Colors.black),
+    //   headlineSmall: GoogleFonts.poppins(                                                             // headline6
+    //       fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 10.sp : 14, color: Colors.black),
+    //   bodyLarge: GoogleFonts.poppins(                                                                 // bodyText1
+    //       fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 8.sp : 12, color: Colors.black),
+    // ),
+    ///for testing purpose
     textTheme: TextTheme(
       displayLarge: GoogleFonts.poppins(                                                             // headline1
           fontSize: DeviceTypeValues.getDeviceType() == 'phone' ? 22.sp : 44),

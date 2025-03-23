@@ -54,7 +54,8 @@ class _MenuCategoryItemState extends State<MenuCategoryItem> {
               padding: EdgeInsets.only(top: 1.h, bottom: 1.h),
               child: Text(
                   widget.controller.isWeightCheck != '1'? widget.controller.productMinsValues(widget.minMaxValues['min'] , widget.minMaxValues['max'],widget.isHybrid!):"Weight :${widget.controller.weightValues}",
-                  style: TextStore.textTheme.titleLarge!
+                  style: TextStore.textTheme.headlineSmall!
+                  // style: TextStore.textTheme.titleLarge!
                       .copyWith(color:  Get.isDarkMode ? Colors.white : Colors.black)
               )
           ),
@@ -63,7 +64,7 @@ class _MenuCategoryItemState extends State<MenuCategoryItem> {
               : Padding(
                   padding: EdgeInsets.symmetric(vertical: 1.w),
                   child: Text(widget.title,
-                      style: TextStore.textTheme.titleMedium!.copyWith(
+                      style: TextStore.textTheme.headlineSmall!.copyWith(
                         fontSize: 2,
                           color: Colors.transparent, fontWeight: FontWeight.bold)
                   )),

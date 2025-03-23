@@ -751,7 +751,7 @@ class HomeController extends GetxController with StateMixin {
                         textStyle: TextStore.textTheme.headlineMedium!
                             .copyWith(color: Colors.white),
                         elevation: 6),
-                    child: const Text('Back')),
+                    child: const Text('Back',style: TextStyle(color: Colors.white),)),
               ),
             ],
           ),

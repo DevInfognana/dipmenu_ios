@@ -17,7 +17,8 @@ class TextScaleFactorClamper extends StatelessWidget {
 
 class DeviceTypeValues {
   static String getDeviceType() {
-    final data = MediaQueryData.fromWindow(WidgetsBinding.instance.window);
+    final data = MediaQueryData.fromView(WidgetsBinding.instance.platformDispatcher.views.first);
+    // final data = MediaQueryData.fromWindow(WidgetsBinding.instance.window);
     return data.size.shortestSide < 600 ? 'phone' : 'tablet';
   }
 }

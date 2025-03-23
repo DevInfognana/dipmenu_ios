@@ -52,7 +52,7 @@ class _MenuCategoryItemState extends State<ResMenuCategoryItem> {
             padding: EdgeInsets.only(top: 1.h, bottom: 1.h),
             child: Text(
                 widget.controller.isWeightCheck != '1'? widget.controller.productMinsValues(widget.minMaxValues['min'] , widget.minMaxValues['max'],widget.isHybrid!):"Weight :${widget.controller.weightValues}",
-                style: TextStore.textTheme.titleLarge!
+                style: TextStore.textTheme.headlineSmall!
                     .copyWith(color:  Get.isDarkMode ? Colors.white : Colors.black)
             )
         ),

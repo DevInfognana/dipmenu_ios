@@ -485,7 +485,7 @@ class PaymentDetailController extends GetxController with StateMixin {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          SizedBox(width: 1.w),
+                          SizedBox(width: 0.5.w),
                           ElevatedButton(
                               onPressed: () {
                                 Get.back();
@@ -520,7 +520,7 @@ class PaymentDetailController extends GetxController with StateMixin {
                               child: Text(NameValues.orderNow,
                                   style: TextStore.textTheme.headlineMedium!
                                       .copyWith(color: Colors.white))),
-                          SizedBox(width: 1.w),
+                          SizedBox(width: 0.5.w),
                         ],
                       ),
                     )

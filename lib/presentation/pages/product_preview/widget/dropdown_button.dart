@@ -69,7 +69,8 @@ class _DropdownMethodState extends State<DropdownMethod> {
                       // },
                       child: TextScaleFactorClamper(
                         child: Text(item.description!.trim(),
-                            style: TextStore.textTheme.titleLarge
+                            style: TextStore.textTheme.headlineSmall
+                            // style: TextStore.textTheme.titleLarge
                                 ?.copyWith(color: titleColor)),
                       ),
                     ))

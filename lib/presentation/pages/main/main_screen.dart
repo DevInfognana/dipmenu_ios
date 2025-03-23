@@ -259,7 +259,8 @@ class _HomeScreenState extends State<HomeScreen> {
             fixedSize: Size(30.w, 4.h),
             textStyle:
             TextStore.textTheme.headlineMedium!.copyWith(color: Colors.white),
-            elevation: 6),
+            elevation: 6,
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5))),
         onPressed: () {
           if (SharedPrefs.instance.getString('token') != null) {
             if(homeController.statusRequestRecentOrder==StatusRequest.success){
@@ -269,7 +270,7 @@ class _HomeScreenState extends State<HomeScreen> {
             homeController.emptyListDialog(context);
           }
         },
-        child: TextScaleFactorClamper(child: Text('Check-in')),
+        child: TextScaleFactorClamper(child: Text('Check-in',style: TextStyle(color: Colors.white, fontSize: 11.sp, fontWeight: FontWeight.bold))),
       ),
     );
 
@@ -331,7 +332,9 @@ class HomeScreenCardView extends StatelessWidget {
   }
 
   static String getDeviceType() {
-    final data = MediaQueryData.fromWindow(WidgetsBinding.instance.window);
+    final data = MediaQueryData.fromView(WidgetsBinding.instance.platformDispatcher.views.first);
+    // final data = MediaQueryData.fromWindow(WidgetsBinding.instance.window);
     return data.size.shortestSide < 600 ? 'phone' : 'tablet';
   }
+
 }

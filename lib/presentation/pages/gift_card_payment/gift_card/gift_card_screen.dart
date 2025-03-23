@@ -102,6 +102,7 @@ class _GiftCardScreenState extends State<GiftCardScreen>
                                 .reset();
                           }
                         },
+                        indicatorPadding: EdgeInsets.symmetric(horizontal: -28),
                         indicator: BoxDecoration(
                             borderRadius: BorderRadius.circular(25.0),
                             color: Colors.redAccent[100]),
