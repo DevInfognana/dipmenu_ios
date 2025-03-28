@@ -50,7 +50,7 @@ class ShowDialogBox {
                                   borderRadius: BorderRadius.circular(3.w)),
                               backgroundColor: Colors.grey),
                           child: Text(textBackButton!,style: TextStore.textTheme.headlineMedium!
-                              .copyWith(color: Colors.white))),
+                              .copyWith(color:Get.isDarkMode? Colors.white:Colors.black))),
                       SizedBox(width: 2.w),
                       ElevatedButton(
                           onPressed: () {
@@ -64,7 +64,7 @@ class ShowDialogBox {
                                   borderRadius: BorderRadius.circular(3.w)),
                               backgroundColor: mainColor),
                           child: Text(textOkButton!,style: TextStore.textTheme.headlineMedium!
-                              .copyWith(color: Colors.white)))
+                              .copyWith(color:Get.isDarkMode? Colors.white:Colors.black)))
                     ],
                   ),
                 ],
@@ -82,13 +82,13 @@ class ShowDialogBox {
                         content!,style: TextStore.textTheme.headlineMedium!),
                     actions: <Widget>[
                       CupertinoDialogAction(
-                        child: Text(textBackButton!,style: TextStore.textTheme.headlineMedium!),
+                        child: Text(textBackButton!,style: TextStore.textTheme.headlineMedium!.copyWith(color:Get.isDarkMode? Colors.white:Colors.black)),
                         onPressed: () {
                           Get.back();
                         },
                       ),
                       CupertinoDialogAction(
-                        child: Text(textOkButton!,style: TextStore.textTheme.headlineMedium!),
+                        child: Text(textOkButton!,style: TextStore.textTheme.headlineMedium!.copyWith(color:Get.isDarkMode? Colors.white:Colors.black)),
                         onPressed: () {
                           onButtonTapped!();
                         },
@@ -187,7 +187,7 @@ class ShowDialogBox {
                               28.w, getDeviceType == "phone" ? 8.h : 6.h),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(3.w)),),
-                        child: Text(textOkButton!)),
+                        child: Text(textOkButton!,style: TextStyle(color: Get.isDarkMode? Colors.white:Colors.black),)),
                   ],
                 ),
               ],
@@ -223,7 +223,7 @@ class ShowDialogBox {
             ),
             actions: <Widget>[
               CupertinoDialogAction(
-                child: Text(textOkButton!,style: TextStore.textTheme.headlineMedium!),
+                child: Text(textOkButton!,style: TextStore.textTheme.headlineMedium!.copyWith(color:Get.isDarkMode? Colors.white:Colors.black)),
                 onPressed: () {
                   Get.back();
                 },
@@ -260,12 +260,12 @@ class ShowDialogBox {
                     onPressed: () {
                       //action code for "Yes" button
                     },
-                    child: const Text('Yes')),
+                    child: const Text('Yes',style: TextStyle(color: Colors.white))),
                 TextButton(
                   onPressed: () {
                     Navigator.pop(context); //close Dialog
                   },
-                  child: const Text('Close'),
+                  child: const Text('Close',style: TextStyle(color: Colors.white)),
                 )
               ],
             );
@@ -282,12 +282,12 @@ class ShowDialogBox {
                     onPressed: () {
                       //action code for "Yes" button
                     },
-                    child: const Text('Yes')),
+                    child: Text('Yes',style: TextStyle(color:Get.isDarkMode? Colors.white:Colors.black))),
                 TextButton(
                   onPressed: () {
                     Navigator.pop(context); //close Dialog
                   },
-                  child: const Text('Close'),
+                  child: Text('Close',style: TextStyle(color:Get.isDarkMode? Colors.white:Colors.black)),
                 )
               ],
             );
@@ -326,7 +326,7 @@ class ShowDialogBox {
                     TextSpan(
                         text: values==0?'Maximum Selection Limit Reached for ':'Maximum Weight Limit Reached for product ',
                         style: TextStore.textTheme.headlineMedium!
-                            .copyWith(color: borderColor)),
+                            .copyWith(color: borderColor,)),
                     TextSpan(
                         text:values==0? content :" ",
                         style: TextStore.textTheme.headlineMedium!.copyWith(
@@ -351,7 +351,7 @@ class ShowDialogBox {
                                 borderRadius: BorderRadius.circular(3.w))),
                         child: Text(textOkButton!,
                             style: TextStore.textTheme.headlineMedium!
-                                .copyWith(color: Colors.white))),
+                                .copyWith(color: Get.isDarkMode? Colors.white:Colors.black))),
                   ],
                 ),
               ],
@@ -381,7 +381,7 @@ class ShowDialogBox {
                 ),
               actions: <Widget>[
                 CupertinoDialogAction(
-                  child: Text(textOkButton!,style: TextStore.textTheme.headlineMedium!),
+                  child: Text(textOkButton!,style: TextStore.textTheme.headlineMedium!.copyWith(color:Get.isDarkMode? Colors.white:Colors.black)),
                   onPressed: () {
                     Get.back();
                   },
@@ -540,7 +540,7 @@ class ShowDialogBox {
                 ),
               actions: <Widget>[
                 CupertinoDialogAction(
-                  child: Text(textOkButton!,style: TextStore.textTheme.headlineMedium!),
+                  child: Text(textOkButton!,style: TextStore.textTheme.headlineMedium!.copyWith(color:Get.isDarkMode? Colors.white:Colors.black)),
                   onPressed: () {
                     Get.back();
                   },

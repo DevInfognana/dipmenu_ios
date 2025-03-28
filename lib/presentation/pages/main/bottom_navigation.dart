@@ -377,7 +377,7 @@ class _MainScreenState extends State<MainScreen> {
                     textStyle: context.theme.textTheme.headlineLarge!
                         .copyWith(color: Colors.black),
                   ),
-                  child: Text(NameValues.tryAgain),
+                  child: Text(NameValues.tryAgain,style: TextStyle(color: Colors.white)),
                 ),
               ],
             ),

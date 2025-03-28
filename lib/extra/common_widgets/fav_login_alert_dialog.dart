@@ -137,7 +137,7 @@ class FavLoginPopUp {
                                   },
                                   style: ElevatedButton.styleFrom(
                                       backgroundColor: Colors.grey),
-                                  child: const Text('Back')),
+                                  child: Text('Back',style: TextStyle(color: Colors.white))),
                               SizedBox(width: 3.w),
                               ElevatedButton(
                                   onPressed: () {
@@ -149,7 +149,7 @@ class FavLoginPopUp {
                                   },
                                   style: ElevatedButton.styleFrom(
                                       backgroundColor: mainColor),
-                                  child: const Text('Login'))
+                                  child: const Text('Login',style: TextStyle(color: Colors.white)))
                             ],
                           )
                         ],
