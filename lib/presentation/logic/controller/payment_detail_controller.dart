@@ -330,7 +330,7 @@ class PaymentDetailController extends GetxController with StateMixin {
                             homeController.emptyListDialog(context);
                           }
                         },
-                        child: Text('Check-in'),
+                        child: Text('Check-in',style: TextStyle(color: Colors.white)),
                       ),
                       // Text("Once your order arrive",
                       //     style: TextStore.textTheme.headlineSmall!
@@ -451,7 +451,7 @@ class PaymentDetailController extends GetxController with StateMixin {
                           "Schedule for later",
                           textAlign: TextAlign.center,
                           style: TextStore.textTheme.headlineMedium!
-                              // .copyWith(color: Colors.black),
+                              .copyWith(color: Colors.white),
                         )),
                     TextButton(
                         onPressed: () {
@@ -558,7 +558,7 @@ class PaymentDetailController extends GetxController with StateMixin {
                             change(paymentConfirmationValues = false);
                           },
                           child: Text("Back",
-                              style: TextStore.textTheme.headlineMedium!
+                              style: TextStore.textTheme.headlineMedium!.copyWith(color: Colors.white)
                                  )),
                       TextButton(
                           onPressed: () {

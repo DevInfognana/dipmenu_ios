@@ -236,7 +236,7 @@ class AuthController extends GetxController with StateMixin {
         Get.offAllNamed(Routes.loginScreen);
         change(null, status: RxStatus.success());
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       final errorMessage = DioExceptions.fromDioError(e).toString();
 
       showSnackBar(errorMessage);
@@ -291,7 +291,7 @@ class AuthController extends GetxController with StateMixin {
         Get.offAllNamed(Routes.loginScreen,
             arguments: afterChangePasswordLogoutValues());
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       final errorMessage = DioExceptions.fromDioError(e).toString();
       showSnackBar(errorMessage);
       change(null, status: RxStatus.error('Invalid User Name or Password'));

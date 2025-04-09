@@ -511,7 +511,14 @@ class GooglePaymentIntegrationController extends GetxController
             TranscantionI: UniqueReference);
 
         // if(kReleaseMode){
+
+        // int i=0;
+        // if(i ==0){
+        //create order pdf
         createPdf(orderId: orderId);
+        //   i++;
+        // }
+
         // }
         change(null, status: RxStatus.success());
       } else {
@@ -524,6 +531,7 @@ class GooglePaymentIntegrationController extends GetxController
   Future createPdf({var orderId}) async {
     final uservalues = await PaymentApi().createPdf(orderId);
     if (uservalues != null) {
+
       // final values = OrderUpdateValues.fromJson(uservalues);
       // if (values.orderStatus == 4) {
       //   change(null, status: RxStatus.success());
@@ -885,7 +893,7 @@ class GooglePaymentIntegrationController extends GetxController
                               homeController.emptyListDialog(context);
                             }
                           },
-                          child: const Text('Check-in'),
+                          child:  Text('Check-in',style: TextStyle(color: Colors.white)),
                         ),
                       ),
                       // TextScaleFactorClamper(

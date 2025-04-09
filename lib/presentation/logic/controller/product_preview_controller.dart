@@ -1249,7 +1249,7 @@ class ProductPreviewController extends GetxController with StateMixin {
       required int defaultCustom,
       required String itemNames}) async {
     change(null, status: RxStatus.loading());
-
+    // print('=======>just:${SharedPrefs.instance.getString('tempToken')}');
     var response = await ProductPreviewServices.addCart(
         productId: argumentData['id'].toString(),
         quanity: productQuality.toInt(),

@@ -367,7 +367,7 @@ confirmOrderAlertDialog(
                       onPressed: () {
                         null;
                       },
-                      child: const Text('Check-in'),
+                      child: const Text('Check-in',style: TextStyle(color: Colors.white)),
                     ),
                   ),
                   // TextScaleFactorClamper(

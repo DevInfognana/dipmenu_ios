@@ -37,6 +37,7 @@ class MainController extends GetxController with StateMixin {
     super.onInit();
     cartListApi();
     navigationMoved();
+    // print("===>check from the main screen: ${SharedPrefs.instance.getString('tempToken')}");
   }
 
   navigationMoved() {
