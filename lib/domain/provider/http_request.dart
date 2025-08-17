@@ -6,7 +6,8 @@ class BaseAPI {
   static var base='https://api.dipmenu.com';
   // static var base='https://dipmenu-api-uat.demomywebapp.com';
   // static var base='http://172.16.0.121:3000';
-  static var api = "$base/api/v1";
+  static var api = "$base/api/v2";
+  // static var api = "$base/api/v1";
   static var signInAPI = "$api/auth/signin";
   static var signUpAPI = "$api/auth/signup";
   static var profileAPI = "$api/user/profile";

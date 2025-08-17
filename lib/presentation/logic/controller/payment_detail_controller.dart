@@ -50,9 +50,11 @@ class PaymentDetailController extends GetxController with StateMixin {
   bool checkBoxValue = false;
   bool? paymentConfirmationValues;
   bool? isTotalValueZero = false;
+  String deviceType = Platform.isAndroid ? "Android" : "iOS";
 
   @override
   void onInit() {
+    print('Device type: $deviceType');
     super.onInit();
     scheduletime();
     walletValue = double.parse(SharedPrefs.instance.getString('wallet')!);
@@ -211,10 +213,11 @@ class PaymentDetailController extends GetxController with StateMixin {
             orderModeNummberValues ?? '',
         "order_mode": '',
         "ordered_from" : "mobile",
+        "mobile_type" : deviceType,
         "orderMode_details": ""
       }
     });
-    // print(body);
+    print("from gift card api & payload_val: $body");
 
     await Dio()
         .post(BaseAPI.newOrder,
@@ -238,6 +241,7 @@ class PaymentDetailController extends GetxController with StateMixin {
 
   Future createPdf({var orderId}) async {
     final uservalues = await PaymentApi().createPdf(orderId);
+    print('check on walletpart-->createpdf function: ${uservalues}');
     if (uservalues != null) {
       // final values = OrderUpdateValues.fromJson(uservalues);
       // if (values.orderStatus == 4) {
@@ -319,18 +323,26 @@ class PaymentDetailController extends GetxController with StateMixin {
                             elevation: 6),
                         onPressed: () {
                           // null;
-                          // print('ready...');
+                          print('ready...working on check-in button');
                           // var pref_tkn_val = SharedPrefs.instance.getString('token');
                           // print('===>tkn val: $pref_tkn_val');
-                          if (SharedPrefs.instance.getString('token') != null) {
-                            if(homeController.statusRequestRecentOrder==StatusRequest.success){
-                              homeController.mobileOrder(values: 0);
-                            }
-                          } else {
-                            homeController.emptyListDialog(context);
-                          }
+                          // if (SharedPrefs.instance.getString('token') != null) {
+                          //   if(homeController.statusRequestRecentOrder==StatusRequest.success){
+                          //     homeController.mobileOrder(values: 0);
+                          //   }
+                          // } else {
+                          //   homeController.emptyListDialog(context);
+                          // }
                         },
-                        child: Text('Check-in',style: TextStyle(color: Colors.white)),
+                        // child: Text('Check-in',style: TextStyle(color: Colors.white)),
+                        child: Text(
+                          'Check-in',
+                          style: TextStore.textTheme.headlineMedium?.copyWith(
+                            color: Colors.white,
+                            fontSize: 11.sp, // Use scalable pixels (sp) if available
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
                       ),
                       // Text("Once your order arrive",
                       //     style: TextStore.textTheme.headlineSmall!
@@ -566,11 +578,11 @@ class PaymentDetailController extends GetxController with StateMixin {
                             change(paymentConfirmationValues = true);
                             if (finalTotalValue == 0.0) {
                               walletValue = finalTotalValue.toDouble();
-                              giftCardApi(rewardValue.toDouble());
+                              giftCardApi(rewardValue.toDouble());         //cupertino-wallet order functionality
                             } else {
                               double walletValues =
                                   totalAndTaxValue.toDouble() -
-                                      finalTotalValue.toDouble();
+                                      finalTotalValue.toDouble();          //cupertino-payment order resp
                               Map value = {
                                 'order_sub_total':
                                     totalCost.value.toStringAsFixed(2),
@@ -586,8 +598,11 @@ class PaymentDetailController extends GetxController with StateMixin {
                                     ? walletValues.toStringAsFixed(2)
                                     : null,
                                 'pointsvalues': rewardValue.round(),
-                                'view': 'OrderPage'
+                                'view': 'OrderPage',
+                                'mobile_type': deviceType
                               };
+                              // print("Running on: ${Platform.isAndroid ? 'Android' : 'iOS'}");
+                              print("CupertinoAlert:going to googlePaymentScreen and Payload_val-->:$value");
                               Get.toNamed(Routes.googlePaymentScreen,
                                   arguments: value);
 
@@ -639,11 +654,11 @@ class PaymentDetailController extends GetxController with StateMixin {
                                 change(paymentConfirmationValues = true);
                                 if (finalTotalValue == 0.0) {
                                   walletValue = finalTotalValue.toDouble();
-                                  giftCardApi(rewardValue.toDouble());
+                                  giftCardApi(rewardValue.toDouble());        //android-wallet order functionality
                                 } else {
                                   double walletValues =
                                       totalAndTaxValue.toDouble() -
-                                          finalTotalValue.toDouble();
+                                          finalTotalValue.toDouble();         //android-payment order resp
                                   Map value = {
                                     'order_sub_total':
                                         totalCost.value.toStringAsFixed(2),
@@ -659,8 +674,10 @@ class PaymentDetailController extends GetxController with StateMixin {
                                         ? walletValues.toStringAsFixed(2)
                                         : null,
                                     'pointsvalues': rewardValue.round(),
-                                    'view': 'OrderPage'
+                                    'view': 'OrderPage',
+                                    'mobile_type': deviceType
                                   };
+                                  print("AndroidAlert:going to googlePaymentScreen and Payload_val-->:$value");
                                   Get.toNamed(Routes.googlePaymentScreen,
                                       arguments: value);
 

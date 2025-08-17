@@ -254,10 +254,10 @@ class PaymentDetailScreen extends StatelessWidget {
                           true) {
                         // print("welcome");
                       } else {
-                        paymentDetailController.discliamerDialog(context);
+                        paymentDetailController.discliamerDialog(context);   //confirm order both wallet & payment
                       }
                     } else {
-                      paymentDetailController.showAlertDialog(context);
+                      paymentDetailController.showAlertDialog(context);    //schedule time based order
                     }
                   },
                   style: ElevatedButton.styleFrom(

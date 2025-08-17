@@ -133,7 +133,15 @@ class MainController extends GetxController with StateMixin {
       Get.offAllNamed(Routes.mainScreen, arguments: 0);
     } else if (index == 3) {
       Get.offAllNamed(Routes.mainScreen, arguments: 3);
-       profileController.profile(iD: SharedPrefs.instance.getString('user_id')!);
+       // profileController.profile(iD: SharedPrefs.instance.getString('user_id')!);
+      final userId = SharedPrefs.instance.getString('user_id');
+      if (userId != null) {
+        profileController.profile(iD: userId);
+      } else {
+        // Handle missing user_id
+        print("User ID is null. Redirecting to login...");
+        Get.offAllNamed(Routes.loginScreen);
+      }
     }
   }
 

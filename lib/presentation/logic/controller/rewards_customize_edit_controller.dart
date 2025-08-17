@@ -93,6 +93,9 @@ class RewardsCustomizeEditController extends GetxController with StateMixin {
   // hybrid new  version
   int?  hybridProduct =0;
 
+  //ignore multiple time click add button
+  bool _isAdding = false;
+
   @override
   void onInit() async {
     super.onInit();
@@ -1030,9 +1033,17 @@ class RewardsCustomizeEditController extends GetxController with StateMixin {
       required double totalCost,
       required int defaultCustom,
       required String itemNames}) async {
+    if (_isAdding) {
+      debugPrint("AddCart called again while already processing.");
+      return; // Ignore repeated taps
+    }
+
+    _isAdding = true;
+
     startLoding();
 
-    var response = await ProductPreviewServices.UpdateCart(
+    try {
+      var response = await ProductPreviewServices.UpdateCart(
         productId: argumentData['id'].toString(),
         quanity: custProductQuanity.toInt(),
         productPrice: defaultPrice.toString(),
@@ -1060,6 +1071,12 @@ class RewardsCustomizeEditController extends GetxController with StateMixin {
       Get.offAllNamed(Routes.cartScreen);
     } else {
       showSnackBar("Oops! Something went wrong.");
+    }
+    } catch (e) {
+      debugPrint("Exception in addCart: $e");
+      showSnackBar("Failed to add product.");
+    } finally {
+      _isAdding = false;
     }
   }
 }

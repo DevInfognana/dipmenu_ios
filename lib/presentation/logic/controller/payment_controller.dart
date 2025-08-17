@@ -367,7 +367,15 @@ confirmOrderAlertDialog(
                       onPressed: () {
                         null;
                       },
-                      child: const Text('Check-in',style: TextStyle(color: Colors.white)),
+                      // child: const Text('Check-in',style: TextStyle(color: Colors.white)),
+                      child: Text(
+                        'Check-in',
+                        style: TextStore.textTheme.headlineMedium?.copyWith(
+                          color: Colors.white,
+                          fontSize: 11.sp, // Use scalable pixels (sp) if available
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
                     ),
                   ),
                   // TextScaleFactorClamper(

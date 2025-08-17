@@ -183,7 +183,7 @@ class PaymentApi {
         'x-access-token': SharedPrefs.instance.getString('token'),
       }),
     );
-    // print(response);
+    print('paymentOrder_response:-->$response');
     int? statusCode = response.statusCode;
 
     if (statusCode == 200) {
@@ -218,14 +218,14 @@ class PaymentApi {
 
   Future createPdf(String? cardNumber) async {
     var url = '${BaseAPI.createPdf}$cardNumber';
-    // print(url);
+    print('Create pdf Url--->: $url');
 
     var response = await Dio().get(url,
         options: Options(headers: {
           'x-access-token': SharedPrefs.instance.getString('token'),
         }));
 // print(SharedPrefs.instance.getString('token'));
-//     print(response);
+    print('Create pdf Response on payment_api.dart--->: $response');
     if (response.statusCode == 200) {
       return response.data;
     } else {

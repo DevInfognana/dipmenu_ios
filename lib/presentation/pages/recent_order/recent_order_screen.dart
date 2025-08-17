@@ -297,10 +297,12 @@ class OrderingView extends StatelessWidget {
             ? ' Confirmed'
             : values == 2
                 ? ' Refund'
-                : values == 4
-                    ? ' CheckIn Pending'
-                    : values == 5
-                        ? ' Delivered'
-                        : '';
+                : values == 3
+                    ? ' Payment Failed'
+                    : values == 4
+                        ? ' CheckIn Pending'
+                        : values == 5
+                            ? ' Delivered'
+                            : '';
   }
 }

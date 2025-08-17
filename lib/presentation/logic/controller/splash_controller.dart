@@ -30,12 +30,13 @@ class SplashScreenController extends GetxController with StateMixin {
     try {
       PackageInfo packageInfo = await PackageInfo.fromPlatform();
       String currentVersion = packageInfo.version;
+      // String latestVersion = '3.5.0';//need to higher
       String latestVersion = await VersionService.getLatestVersion();
 
-      // print("---->SplashScreen: Current App Version: $currentVersion");
-      // print("---->SplashScreen: Latest App Version from Json: $latestVersion");
+      print("---->SplashScreen: Current App Version: $currentVersion");
+      print("---->SplashScreen: Latest App Version from Json: $latestVersion");
       bool updateAvailable =await VersionHelper().isUpdateAvailable(packageInfo.version, latestVersion);
-      // print("----> [checkAppVersion] Is update available? $updateAvailable");
+      print("----> [checkAppVersion] Is update available? $updateAvailable");
       if (updateAvailable && !isUpdateDialogShown) {
         isUpdateDialogShown = true; // Prevent multiple dialogs
         await showUpdateDialog(Get.context!); // Wait for user response
@@ -188,7 +189,7 @@ class VersionService {
     try {
       final response = await Dio().get(BaseAPI.getAppVersionAPI);   //cartListTaxGetApi
       // final response = await dio.get('https://jsonkeeper.com/b/7S9V');
-      // print("check===>API: $response");
+      print("check===>API: $response");
       if (response.statusCode == 200) {
         final data = response.data;
 

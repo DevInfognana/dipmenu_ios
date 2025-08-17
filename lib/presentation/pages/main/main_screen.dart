@@ -300,7 +300,8 @@ class HomeScreenCardView extends StatelessWidget {
                     padding: EdgeInsets.all(0.5.h),
                     child: Text(
                       categoryData!.name!,
-                      style: context.theme.textTheme.headlineLarge
+                      style: context.theme.textTheme.displayMedium
+                      // style: context.theme.textTheme.headlineLarge
                           ?.copyWith(fontWeight: FontWeight.bold),
                     )),
               ),

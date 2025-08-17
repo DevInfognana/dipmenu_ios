@@ -19,6 +19,7 @@ class RecentOrderController extends GetxController with StateMixin {
                 'x-access-token': SharedPrefs.instance.getString('token')
               }))
           .then((response) {
+            print('recent_order_url:-->${response.data}');
         if (response.statusCode == 200) {
           try {
             recentOrderData = RecentOrderData.fromJson(response.data);

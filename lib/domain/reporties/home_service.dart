@@ -21,12 +21,15 @@ class HomeServices {
   static viewHomeCategoryRequest() async {
     var url = '${BaseAPI.api}/website/category';
 
+    print('==>homescreen: $url');
     var response = await Crud.getData(url);
     return response.fold((l) => l, (r) => r);
   }
 
   static generalSettingApi() async {
     var url = BaseAPI.cartListTaxGetApi;
+
+    print('==>homescreen: $url');
     var response = await Crud.getData(url);
     return response.fold((l) => l, (r) => r);
   }

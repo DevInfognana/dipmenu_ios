@@ -3,6 +3,7 @@ import 'package:dipmenu_ios/data/model/product_preview/item_size_data.dart';
 import 'package:dipmenu_ios/presentation/logic/controller/Controller_Index.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../data/model/price.dart';
 import '../../../data/model/product_preview/product_preview_data.dart';
 import '../../../data/model/product_preview/product_preview_model.dart';
@@ -100,7 +101,10 @@ class ProductPreviewController extends GetxController with StateMixin {
   int countValues = 0;
 
   // hybrid new  version
-  int?  hybridProduct =0;
+  int? hybridProduct = 0;
+
+  //ignore multiple time click add button
+  bool _isAdding = false;
 
   @override
   void onInit() async {
@@ -140,7 +144,7 @@ class ProductPreviewController extends GetxController with StateMixin {
         maxData = element.customMenuMax!.split(',');
         categoryIdValues = element.categoryId;
         subCategoryIdValues = element.subcategoryId;
-        hybridProduct=element.hybridProduct!;
+        hybridProduct = element.hybridProduct!;
         element.customSize!.isNotEmpty
             ? customSizeValues = element.customSize!
             : customSizeValues.clear();
@@ -271,8 +275,7 @@ class ProductPreviewController extends GetxController with StateMixin {
       if (StatusRequest.success == statusRequestCustomMenu) {
         if (response['errors'] == "Product Not Found.!") {
           customMenuBoolValues.value = true;
-        } else
-        {
+        } else {
           final itemSizeDataValues = (response['data'] as List)
               .map((e) => CustomMenuData.fromJson(e))
               .toList();
@@ -765,6 +768,7 @@ class ProductPreviewController extends GetxController with StateMixin {
           itemNames: '');
     }
   }
+
   findSizeCode(String? values) {
     for (var element in itemSize) {
       if (element.code == values) {
@@ -782,26 +786,28 @@ class ProductPreviewController extends GetxController with StateMixin {
     statusRequestFavourite = StatusRequest.loading;
 
     var response = await ProductPreviewServices.newFavouriteAdded(
-        productId: argumentData['id'].toString(),
-        quanity: productQuality.toInt(),
-        // productPrice: totalPrice.toStringAsFixed(2),
-        productPrice: totalPrice.toString(),
-        itemPrice: itemPrize,
-        itemId: itemID,
-        // totalCost: double.parse(priceCalculation1(productQuality.toInt(),
-        //         double.parse(totalPrice.toStringAsFixed(2)))
-        //     .toString()),
+      productId: argumentData['id'].toString(),
+      quanity: productQuality.toInt(),
+      // productPrice: totalPrice.toStringAsFixed(2),
+      productPrice: totalPrice.toString(),
+      itemPrice: itemPrize,
+      itemId: itemID,
+      // totalCost: double.parse(priceCalculation1(productQuality.toInt(),
+      //         double.parse(totalPrice.toStringAsFixed(2)))
+      //     .toString()),
 
-        totalCost: double.parse(
-            priceCalculation1(productQuality.toInt(), totalPrice).toString()),
-        status: 1,
-        defaultSize: productSize,
-        defaultCustom: defaultCustom,
-        defaultSizeName: findSizeName(selectedValue),
+      totalCost: double.parse(
+          priceCalculation1(productQuality.toInt(), totalPrice).toString()),
+      status: 1,
+      defaultSize: productSize,
+      defaultCustom: defaultCustom,
+      defaultSizeName: findSizeName(selectedValue),
 
-        itemNames: itemNames,
-        rewards: false,
-        description: productDescription!, defaultSizeCode: findSizeCode(selectedValue),);
+      itemNames: itemNames,
+      rewards: false,
+      description: productDescription!,
+      defaultSizeCode: findSizeCode(selectedValue),
+    );
     statusRequestFavourite = handlingData(response);
     if (StatusRequest.success == statusRequestFavourite) {
       showSnackBar('Favorite product added successfully');
@@ -1174,7 +1180,7 @@ class ProductPreviewController extends GetxController with StateMixin {
       return values;
     } else if (hybridProduct == 1) {
       if (isHybrid == '1') {
-        int totalValues=hybridWeightCalculation();
+        int totalValues = hybridWeightCalculation();
         if (totalValues != 0) {
           values = totalValues / int.parse(size['max'].toString());
         } else {
@@ -1248,41 +1254,61 @@ class ProductPreviewController extends GetxController with StateMixin {
       required double totalCost,
       required int defaultCustom,
       required String itemNames}) async {
+    if (_isAdding) {
+      debugPrint("AddCart called again while already processing.");
+      return; // Ignore repeated taps
+    }
+
+    _isAdding = true;
     change(null, status: RxStatus.loading());
     // print('=======>just:${SharedPrefs.instance.getString('tempToken')}');
-    var response = await ProductPreviewServices.addCart(
-        productId: argumentData['id'].toString(),
-        quanity: productQuality.toInt(),
-        productPrice: totalPrice.toString(),
-        itemPrice: itemPrize,
-        itemId: itemID,
-        // totalCost: double.parse(priceCalculation1(productQuality.toInt(),
-        //         double.parse(totalPrice.toStringAsFixed(2)))
-        //     .toString()),
+    SharedPreferences.getInstance().then((value) async {
+      String temp_token = value.getString('tempToken') ?? '';
+      if (value.getString('tempToken') != null) {
+        try {
+          var response = await ProductPreviewServices.addCart(
+              productId: argumentData['id'].toString(),
+              quanity: productQuality.toInt(),
+              productPrice: totalPrice.toString(),
+              itemPrice: itemPrize,
+              itemId: itemID,
+              // totalCost: double.parse(priceCalculation1(productQuality.toInt(),
+              //         double.parse(totalPrice.toStringAsFixed(2)))
+              //     .toString()),
 
-        totalCost: double.parse(
-            priceCalculation1(productQuality.toInt(), totalPrice).toString()),
-        status: 1,
-        tempToken: SharedPrefs.instance.getString('tempToken')!,
-        defaultSize: productSize,
-        defaultCustom: defaultCustom,
-        defaultSizeName: findSizeName(selectedValue),
-        defaultSizeCode: findSizeCode(selectedValue),
-        itemNames: itemNames,
-        rewards: false,
-        description: productDescription!,
-        actualPrice: double.parse(
-                priceCalculation1(productQuality.toInt(), defaultPrice)
-                    .toString())
-            .toString());
-    change(null, status: RxStatus.success());
-    debugPrint(response);
-    if (response != null) {
-      showSnackBar(
-          "Product added successfully! Your item has been added to the cart");
-      Get.offAllNamed(Routes.mainScreen);
-    } else {
-      showSnackBar("Oops! Something went wrong.");
-    }
+              totalCost: double.parse(
+                  priceCalculation1(productQuality.toInt(), totalPrice)
+                      .toString()),
+              status: 1,
+              tempToken: value.getString('tempToken')!,
+              //tempToken: SharedPrefs.instance.getString('tempToken')!,
+              defaultSize: productSize,
+              defaultCustom: defaultCustom,
+              defaultSizeName: findSizeName(selectedValue),
+              defaultSizeCode: findSizeCode(selectedValue),
+              itemNames: itemNames,
+              rewards: false,
+              description: productDescription!,
+              actualPrice: double.parse(
+                      priceCalculation1(productQuality.toInt(), defaultPrice)
+                          .toString())
+                  .toString());
+          change(null, status: RxStatus.success());
+          debugPrint(response);
+          if (response != null) {
+            showSnackBar(
+                "Product added successfully! Your item has been added to the cart");
+            Get.offAllNamed(Routes.mainScreen);
+          } else {
+            showSnackBar("Oops! Something went wrong.");
+          }
+        } catch (e) {
+          debugPrint("Exception in addCart: $e");
+          showSnackBar("Failed to add product.");
+        } finally {
+          _isAdding = false;
+        }
+      }
+    });
   }
 }

@@ -151,12 +151,13 @@ class GooglePaymentIntegrationController extends GetxController
         "order_mode": '0',
         "orderMode_details": "",
         "ordered_from" : "mobile",
+        "mobile_type": "iOS",
         "mobileToken":Platform.isIOS?randomToken:''
       }
     });
     // print('--temptoken---${randomToken!}');
 
-    // print(cardInput);
+    print('payload with paymentOrder on google_payment_integration_controller.dart: $cardInput');
 
     try {
       var response = await Dio().post(
@@ -226,7 +227,7 @@ class GooglePaymentIntegrationController extends GetxController
     change(paymentUrl =
     'https://payments.worldnettps.com/merchant/paymentpage?TERMINALID=256572001&ORDERID=${orderId.toString()}&PAGES=ORDER&CURRENCY=USD&DATETIME=$dateAndTIme&AMOUNT=$totalAmount&HASH=${shaEncrypt().toString()}');
     // 'https://testpayments.worldnettps.com/merchant/paymentpage?TERMINALID=5271001&ORDERID=${orderId.toString()}&PAGES=ORDER&CURRENCY=USD&DATETIME=$dateAndTIme&AMOUNT=$totalAmount&HASH=${shaEncrypt().toString()}');
-    // print(paymentUrl);
+    print('paymentUrl-->:$paymentUrl');
     // launchInWebViewOrVC(Uri.parse(paymentUrl!));
     change(null, status: RxStatus.success());
 
@@ -414,7 +415,7 @@ class GooglePaymentIntegrationController extends GetxController
       if(values.mobileWalletData !=null){
         closeWebViewAfterDelay();
         stopTimer();
-        // print(values.mobileWalletData);
+        print('Mobilewallet_check data fromm giftcard part: ${values.mobileWalletData}');
         if (values.mobileWalletData?.code != null ) {
           final sharvalues=MobileWalletData.fromJson(uservalues['data']);
            shareCouponCodeController.text =sharvalues.code!;
@@ -431,6 +432,7 @@ class GooglePaymentIntegrationController extends GetxController
     change(null, status: RxStatus.loading());
     if (uservalues != null) {
       final values = MobileWalletModel.fromJson(uservalues);
+      print('Mobilewallet_check data fromm payment part: ${values.mobileWalletData}');
       if(values.mobileWalletData !=null){
         closeWebViewAfterDelay();
         stopTimer();
@@ -515,7 +517,7 @@ class GooglePaymentIntegrationController extends GetxController
         // int i=0;
         // if(i ==0){
         //create order pdf
-        createPdf(orderId: orderId);
+        // createPdf(orderId: orderId);//Just command for the double printed issue on 01july25
         //   i++;
         // }
 
@@ -528,9 +530,10 @@ class GooglePaymentIntegrationController extends GetxController
     }
   }
 
-  Future createPdf({var orderId}) async {
-    final uservalues = await PaymentApi().createPdf(orderId);
-    if (uservalues != null) {
+  //Just command for the double printed issue on 01july25
+  // Future createPdf({var orderId}) async {
+  //   final uservalues = await PaymentApi().createPdf(orderId);
+  //   if (uservalues != null) {
 
       // final values = OrderUpdateValues.fromJson(uservalues);
       // if (values.orderStatus == 4) {
@@ -539,8 +542,8 @@ class GooglePaymentIntegrationController extends GetxController
       //   // failedOrderAlertDialog(Get.context!);
       //   change(null, status: RxStatus.error('something went wrong'));
       // }
-    }
-  }
+  //   }
+  // }
 
   failedOrderAlertDialog(BuildContext context) {
     showDialog(
@@ -885,15 +888,24 @@ class GooglePaymentIntegrationController extends GetxController
                               elevation: 6),
                           onPressed: () {
                             // null;
-                            if (SharedPrefs.instance.getString('token') != null) {
-                              if(homeController.statusRequestRecentOrder==StatusRequest.success){
-                                homeController.mobileOrder(values: 0);
-                              }
-                            } else {
-                              homeController.emptyListDialog(context);
-                            }
+                            print('check-in button working on payment part');
+                            // if (SharedPrefs.instance.getString('token') != null) {
+                            //   if(homeController.statusRequestRecentOrder==StatusRequest.success){
+                            //     homeController.mobileOrder(values: 0);
+                            //   }
+                            // } else {
+                            //   homeController.emptyListDialog(context);
+                            // }
                           },
-                          child:  Text('Check-in',style: TextStyle(color: Colors.white)),
+                          // child:  Text('Check-in',style: TextStyle(color: Colors.white)),
+                          child: Text(
+                            'Check-in',
+                            style: TextStore.textTheme.headlineMedium?.copyWith(
+                              color: Colors.white,
+                              fontSize: 11.sp, // Use scalable pixels (sp) if available
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
                         ),
                       ),
                       // TextScaleFactorClamper(
